@@ -23,4 +23,17 @@ d3.json("uk-postcode-area.json", function(error, uk) {
 		.attr("class", "feature")
 		.attr("d", path);
 
-});	
+	// Add boundary detection using a topojson mesh
+
+	svg.append("path")
+		.datum(topojson.mesh(uk, uk.objects['uk-postcode-area'], function(a,b) { return a!==b;}))
+		.attr("class", "mesh")
+		.attr("d", path);
+	d3.select(".mesh")
+		.attr("fill", "none")
+		.attr("stroke", "#fff")
+		.attr("stroke-width", ".5px")
+		.attr("stroke-linejoin", "round");
+});
+
+
