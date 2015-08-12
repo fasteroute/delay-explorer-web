@@ -52,7 +52,11 @@ d3.json("uk-postcode-area.json", function(error, uk) {
 			} else {
 				return "#AAA";
 			}
-		});
+		})
+		.append("svg:title")
+			.attr("transform", function (d) { return "translate(" + path.centroid(d) + ")"; })
+			.attr("dy", ".35em")
+			.text(function(d) { return d.id;});
 	// Add boundary detection using a topojson mesh
 
 	svg.append("path")
