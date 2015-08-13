@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+		<script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
+		<style>
+			#map {
+				height:700px;
+				width:60%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<script type="text/javascript">
+			var map = new mxn.Mapstraction('map', 'openlayers');
+			//var latlon = new mxn.LatLonPoint(51.4, 0);
+			//map.setCenterAndZoom(latlon, 15);
+			var lbg = new mxn.LatLonPoint(51.505, -0.086);
+			var nxg = new mxn.LatLonPoint(51.4755, -0.0402);
+			var byc = new mxn.LatLonPoint(51.4645, -0.0369);
+			var hpa = new mxn.LatLonPoint(51.4501, -0.0456);
+			var foh = new mxn.LatLonPoint(51.439, -0.053);
+			var syd = new mxn.LatLonPoint(51.4254, -0.0544);
+			var nwd = new mxn.LatLonPoint(51.3972, -0.075);
+			var ecr = new mxn.LatLonPoint(51.3752, -0.0923);
+			var stations = [lbg, nxg, byc, hpa, foh, syd, nwd, ecr]
+			for (i=0; i<stations.length-1; ++i) {
+				var pline = new mxn.Polyline([stations[i], stations[i+1]]);
+				var colr = '#'+Math.random().toString(16).substr(-6);
+				pline.addData({color: colr, width: 4});
+				map.addPolyline(pline);
+			}
+			map.autoCenterAndZoom();
+		</script>
+	</body>
+</html>
+
+
