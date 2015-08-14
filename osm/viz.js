@@ -32,7 +32,6 @@ d3.json('individual.json', function(error, json) {
 			return d;
 		});
 		cells.enter().append("td")
-		.text(function(d) {return d;})
 		.style("background-color", function(d) { if(d==0) {return "rgb(49,163,84)"} else {return color(d)};})
 		.classed("cell", true)
 		.style("width", cell_size+'px')
