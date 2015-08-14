@@ -29,7 +29,6 @@ d3.json('individual.json', function(error, json) {
 	//rows.selectAll("th").data(stations, function(d) {return d;}).enter().append("th").text(function(d) {return d;})
 	var cells = rows.selectAll("td")
 		.data(function(d,i) {
-			console.log(d); 
 			return d;
 		});
 		cells.enter().append("td")
@@ -42,9 +41,30 @@ d3.json('individual.json', function(error, json) {
 
 
 	}
-	d3.selectAll("table").selectAll("th").data(periods,function(d,i) { return d;}).enter().insert("th", "tr").classed("rotate", true).append("div").style("width", cell_size+'px').append("span").text(function(d) {return d;})
-//d3.selectAll("th").append("br");
 
+// Adds days to top headers of all tables
+d3.selectAll("table").selectAll("th").data(periods,function(d,i) { return d;}).enter().insert("th", "tr").classed("rotate", true).append("div").style("width", cell_size+'px').append("span").text(function(d) {return d;})
+
+// Adds station names to headers on first table
 tables = d3.selectAll("table");
-for (i=0; i<2; i++) { var current_table = tables[0][i]; var rowHeaderList; if (i == 0) {rowHeaderList=stations} else {rowHeaderList=trains}; var children = current_table.childNodes; var counter = 0; for (j=0; j<children.length; j++) { curr_child = children[j]; if (curr_child.tagName == "TR") { var rowHeader = document.createElement("th"); rowHeader.innerHTML = rowHeaderList[counter]; counter++; curr_child.insertBefore(rowHeader, curr_child.childNodes[0])} } }
+for (i=0; i<2; i++) { 
+	var current_table = tables[0][i]; 
+	var rowHeaderList; 
+	if (i == 0) {rowHeaderList=stations} else {rowHeaderList=trains}; 
+	var children = current_table.childNodes; 
+	var counter = 0; 
+	for (j=0; j<children.length; j++) {
+		curr_child = children[j]; 
+		if (curr_child.tagName == "TR") { 
+			curr_child.setAttribute("stn",counter)
+			var rowHeader = document.createElement("th"); 
+			rowHeader.innerHTML = rowHeaderList[counter];
+			counter++; 
+			curr_child.insertBefore(rowHeader, curr_child.childNodes[0])
+		} 
+	} 
+}
+
+// Adds station ids to markers on Map
+d3.selectAll("div[id^=OL_Icon]").attr("stn", function(d,i) {return i;})
 });
