@@ -19,7 +19,7 @@ d3.json('individual.json', function(error, json) {
 	periods = json["days"];
 	trains = json["trains"];
 	var canvas_width = d3.select("div#viz").node().getBoundingClientRect().width
-	var graph_width = canvas_width*0.5
+	var graph_width = canvas_width*0.4
 	var cell_size = (graph_width - 12)/7;
 	for (i=0; i<2; i++) {
 		tbl = data[i];
@@ -67,4 +67,21 @@ for (i=0; i<2; i++) {
 
 // Adds station ids to markers on Map
 d3.selectAll("div[id^=OL_Icon]").attr("stn", function(d,i) {return i;})
+	.on("mouseover", function() {
+		var stn_id = this.getAttribute("stn");
+		d3.select("tr[stn='"+stn_id+"']")
+			.style("background-color", "white")
+			.transition()
+			.duration(500)
+			.style("background-color","rgb(254, 240, 217)");
+	})
+	.on("mouseout", function() {
+		var stn_id = this.getAttribute("stn");
+		d3.select("tr[stn='"+stn_id+"']")
+			.transition()
+			.duration(750)
+			.style("background-color","rgb(255, 255, 255)");
+
+	});
+
 });

@@ -4,7 +4,7 @@ import json
 
 num_days = 7
 
-num_stations = 7
+num_stations = 8
 num_trains = 4
 num_delay_items = num_days
 num_tables = 2
@@ -26,7 +26,8 @@ for train in range(num_trains):
 
 tables = [stations, trains]
 data = { "days": ["","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-         "stations": ["London Bridge", "New Cross Gate", "Brockley", "Forest Hill", "Sydenham", "Norwood Junction", "London St. Pancras International"],
+         "stations": ["London Bridge", "New Cross Gate", "Brockley","Honor Oak Park",
+         "Forest Hill", "Sydenham", "Norwood Junction", "London St. Pancras International"],
          "trains": ["17:30", "18:30", "19:30", "20:30"],
          "data": tables
 }
