@@ -17,10 +17,29 @@
 			}
 			table {
 				table-layout: fixed;
+				float:right;
 			}
 			.cell {
 				text-align:center;
-				border-radius: 25%;
+				border-radius: 15%;
+			}
+			th.rotate {
+				/* Something you can count on */
+				height: 35px;
+				white-space: nowrap;
+			}
+			th.rotate > div {
+				/* Magic Numbers */
+			transform:
+			translate(2px, 6px)
+			/* 45 deg is really 360-45 */
+			rotate(315deg);
+			}
+
+			th.rotate > div > span {
+			
+				//border-bottom: 1px solid #ccc;
+				  //padding: 5px 10px;
 			}
 		</style>
 	</head>

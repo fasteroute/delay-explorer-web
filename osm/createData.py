@@ -25,6 +25,11 @@ for train in range(num_trains):
     trains.append(curr_train)
 
 tables = [stations, trains]
+data = { "days": ["","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+         "stations": ["London Bridge", "New Cross Gate", "Brockley", "Forest Hill", "Sydenham", "Norwood Junction", "London St. Pancras International"],
+         "trains": ["17:30", "18:30", "19:30", "20:30"],
+         "data": tables
+}
 file = open("individual.json", "w")
-file.write(json.dumps(tables, indent=4))
+file.write(json.dumps(data, indent=4))
 file.close()
