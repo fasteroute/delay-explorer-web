@@ -3,15 +3,30 @@
 	<head>
 		<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
 		<script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
+		 <script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
 		<style>
 			#map {
 				height:700px;
-				width:60%;
+				width:50%;
+				float: left;
+			}
+			#viz {
+				height:700px;
+				width:50%;
+				float: left;
+			}
+			table {
+				table-layout: fixed;
+			}
+			.cell {
+				text-align:center;
+				border-radius: 25%;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="map"></div>
+		<div id="viz"></div>
 		<script type="text/javascript">
 			var map = new mxn.Mapstraction('map', 'openlayers');
 			//var latlon = new mxn.LatLonPoint(51.4, 0);
@@ -33,6 +48,7 @@
 			}
 			map.autoCenterAndZoom();
 		</script>
+		<script src="viz.js"></script>
 	</body>
 </html>
 
