@@ -27,7 +27,7 @@ for train in range(num_trains):
 tables = [stations, trains]
 data = { "days": ["","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
          "stations": ["London Bridge", "New Cross Gate", "Brockley","Honor Oak Park",
-         "Forest Hill", "Sydenham", "Norwood Junction", "London St. Pancras International"],
+         "Forest Hill", "Sydenham", "Norwood Junction", "East Croydon"],
          "trains": ["17:30", "18:30", "19:30", "20:30"],
          "data": tables
 }

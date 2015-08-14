@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>19:30 London Bridge to East Croydon</title>
 		<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
 		<script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
-		 <script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
+
+		<script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<style>
 			#map {
 				height:700px;
+				//float: left;
+				position:fixed;
+				left:0px;
+				top:50px;
 				width:50%;
-				float: left;
 			}
 			#viz {
-				height:700px;
-				width:50%;
-				float: left;
+//				height:700px;
+			}
+			.hidden {
+				display:none;
 			}
 			table {
 				table-layout: fixed;
-				float:right;
+				//	border-spacing: 40px;
+				margin:auto;
 			}
 			.cell {
 				text-align:center;
-				border-radius: 15%;
+				border-radius: 25%;
 			}
 			th.rotate {
 				/* Something you can count on */
-				height: 35px;
+				height: 45px;
 				white-space: nowrap;
 			}
 			th.rotate > div {
@@ -40,45 +53,76 @@
 			
 				//border-bottom: 1px solid #ccc;
 				  //padding: 5px 10px;
+			 }
+			th.rowHeader {
+				text-align: center;
+			}
+			.section {
+				border-bottom-color: #1f40c2;
+				border-bottom-style: solid;
+				border-bottom-width: 3px;
+				margin-bottom:10px;
+				padding-bottom:20px;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="map"></div>
-		<div id="viz"></div>
+		<nav class="navbar navbar-default navbar-fixed-top"></nav>
+      <div class="container-fluid" style="height: 100%">
+	      <div class="row" style="height: 100%" id="multiscroll">
+		      <div class="ms-left col-md-6">
+			      <div class="ms-section" id="map">
+			      </div>
+		      </div>
+		      <div class="col-md-6 ms-right" style="height: 100%;">
+			      <div class="section" id="start">
+				<form>
+					<div class="form-group">
+						<label for="from">From</label>
+						<input type="text" class="form-control" id="trainFrom" placeholder="London Bridge">
+					</div>
+					<div class="form-group">
+						<label for="to">To</label>
+						<input type="text" class="form-control" id="trainTo" placeholder="East Croydon">
+					</div>
+					<a class="btn btn-default" id="findTrains" role="button" href="#">Find Trains</a>
+
+			      </div>
+
+
+			      <div id="viz">
+				      <a name="overview"></a>
+				      <div class="section hidden" id="tables">
+				      </div>
+			      </div>
+		      </div>
+
+	</div>
+</div>
 		<script type="text/javascript">
-			var map = new mxn.Mapstraction('map', 'openlayers');
-			//var latlon = new mxn.LatLonPoint(51.4, 0);
-			//map.setCenterAndZoom(latlon, 15);
-			var lbg = new mxn.LatLonPoint(51.505, -0.086);
-			var nxg = new mxn.LatLonPoint(51.4755, -0.0402);
-			var byc = new mxn.LatLonPoint(51.4645, -0.0369);
-			var hpa = new mxn.LatLonPoint(51.4501, -0.0456);
-			var foh = new mxn.LatLonPoint(51.439, -0.053);
-			var syd = new mxn.LatLonPoint(51.4254, -0.0544);
-			var nwd = new mxn.LatLonPoint(51.3972, -0.075);
-			var ecr = new mxn.LatLonPoint(51.3752, -0.0923);
+			$(document).ready(function() {
+				$("a").click(function() {
+					switch (this.id) {
+						case "findTrains":
+							$("#tables").removeClass("hidden");
+							getTrainOverview();
+							$('html,body').animate({
+								scrollTop: $("#tables").offset().top
+								}, 1000);
+							break;
+						default:
+							break;
 
-			var station_points = [lbg, nxg, byc, hpa, foh, syd, nwd, ecr]
-			for (i=0; i<station_points.length-1; ++i) {
-				var pline = new mxn.Polyline([station_points[i], station_points[i+1]]);
-				var colr = '#'+Math.random().toString(16).substr(-6);
-				pline.addData({color: colr, width: 4});
-				map.addPolyline(pline);
-				var marker = new mxn.Marker(station_points[i]);
-				marker.setShadowIcon('train20.png',48);
-				map.addMarker(marker);
-				marker.icon.url = marker.iconShadowUrl;
-				marker.setLabel("Station");
-			}
-			var marker = new mxn.Marker(station_points[i]);
-			marker.setShadowIcon('train20.png',48);
-			map.addMarker(marker);
-			marker.icon.url = marker.iconShadowUrl;
-			marker.setLabel("Station");
 
-			map.autoCenterAndZoom();
+					}
+
+				})
+
+			});
+
 		</script>
+
+		<script src="map.js"></script>
 		<script src="viz.js"></script>
 	</body>
 </html>
