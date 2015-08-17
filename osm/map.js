@@ -1,7 +1,10 @@
 var map = new mxn.Mapstraction('map', 'openlayers');
+
+			var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
+			map.setBounds(UK);
                         //var latlon = new mxn.LatLonPoint(51.4, 0);
                         //map.setCenterAndZoom(latlon, 15);
-                        var lbg = new mxn.LatLonPoint(51.505, -0.086);
+ /*                       var lbg = new mxn.LatLonPoint(51.505, -0.086);
                         var nxg = new mxn.LatLonPoint(51.4755, -0.0402);
                         var byc = new mxn.LatLonPoint(51.4645, -0.0369);
                         var hpa = new mxn.LatLonPoint(51.4501, -0.0456);
@@ -29,3 +32,5 @@ var map = new mxn.Mapstraction('map', 'openlayers');
                         marker.setLabel("Station");
 
                         map.autoCenterAndZoom();
+
+			*/

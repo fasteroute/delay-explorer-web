@@ -1,0 +1,129 @@
+{
+    "trains": [
+        {
+            "name": "17:30 Caterham",
+            "route": 2
+        },
+        {
+            "name": "17:45 Brighton (East Sussex)",
+            "route": 0
+        },
+        {
+            "name": "17:59 Tattenham Corner",
+            "route": 1
+        },
+        {
+            "name": "18:02 Caterham",
+            "route": 2
+        }
+    ],
+    "routes": [
+        [
+            "lbg",
+            "ecr"
+        ],
+        [
+            "lbg",
+            "nwd",
+            "ecr"
+        ],
+        [
+            "lbg",
+            "nxg",
+            "bcy",
+            "hpa",
+            "foh",
+            "syd",
+            "nwd",
+            "ecr"
+        ]
+    ],
+    "stations": [
+        {
+            "lat": 51.505,
+            "name": "London Bridge",
+            "lon": -0.086,
+            "crs": "lbg"
+        },
+        {
+            "lat": 51.4755,
+            "name": "New Cross Gate",
+            "lon": -0.0402,
+            "crs": "nxg"
+        },
+        {
+            "lat": 51.4645,
+            "name": "Brockley",
+            "lon": -0.0369,
+            "crs": "bcy"
+        },
+        {
+            "lat": 51.4501,
+            "name": "Honor Oak Park",
+            "lon": -0.0456,
+            "crs": "hpa"
+        },
+        {
+            "lat": 51.439,
+            "name": "Forest Hill",
+            "lon": -0.053,
+            "crs": "foh"
+        },
+        {
+            "lat": 51.4254,
+            "name": "Sydenham",
+            "lon": -0.0544,
+            "crs": "syd"
+        },
+        {
+            "lat": 51.3972,
+            "name": "Norwood Junction",
+            "lon": -0.075,
+            "crs": "nwd"
+        },
+        {
+            "lat": 51.3752,
+            "name": "East Croydon",
+            "lon": -0.0923,
+            "crs": "ecr"
+        }
+    ],
+    "data": [
+        [
+            18,
+            17,
+            6,
+            0,
+            18,
+            18,
+            10
+        ],
+        [
+            4,
+            4,
+            7,
+            8,
+            6,
+            17,
+            3
+        ],
+        [
+            1,
+            13,
+            10,
+            2,
+            3,
+            5,
+            3
+        ],
+        [
+            17,
+            12,
+            13,
+            17,
+            12,
+            15,
+            14
+        ]
+    ]
+}
