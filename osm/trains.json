@@ -1,4 +1,54 @@
 {
+    "stations": [
+        {
+            "crs": "lbg",
+            "lat": 51.505,
+            "lon": -0.086,
+            "name": "London Bridge"
+        },
+        {
+            "crs": "nxg",
+            "lat": 51.4755,
+            "lon": -0.0402,
+            "name": "New Cross Gate"
+        },
+        {
+            "crs": "bcy",
+            "lat": 51.4645,
+            "lon": -0.0369,
+            "name": "Brockley"
+        },
+        {
+            "crs": "hpa",
+            "lat": 51.4501,
+            "lon": -0.0456,
+            "name": "Honor Oak Park"
+        },
+        {
+            "crs": "foh",
+            "lat": 51.439,
+            "lon": -0.053,
+            "name": "Forest Hill"
+        },
+        {
+            "crs": "syd",
+            "lat": 51.4254,
+            "lon": -0.0544,
+            "name": "Sydenham"
+        },
+        {
+            "crs": "nwd",
+            "lat": 51.3972,
+            "lon": -0.075,
+            "name": "Norwood Junction"
+        },
+        {
+            "crs": "ecr",
+            "lat": 51.3752,
+            "lon": -0.0923,
+            "name": "East Croydon"
+        }
+    ],
     "routes": [
         [
             "lbg",
@@ -20,110 +70,60 @@
             "ecr"
         ]
     ],
-    "stations": [
+    "trains": [
         {
-            "name": "London Bridge",
-            "crs": "lbg",
-            "lat": 51.505,
-            "lon": -0.086
+            "route": 2,
+            "name": "17:30 Caterham"
         },
         {
-            "name": "New Cross Gate",
-            "crs": "nxg",
-            "lat": 51.4755,
-            "lon": -0.0402
+            "route": 0,
+            "name": "17:45 Brighton (East Sussex)"
         },
         {
-            "name": "Brockley",
-            "crs": "bcy",
-            "lat": 51.4645,
-            "lon": -0.0369
+            "route": 1,
+            "name": "17:59 Tattenham Corner"
         },
         {
-            "name": "Honor Oak Park",
-            "crs": "hpa",
-            "lat": 51.4501,
-            "lon": -0.0456
-        },
-        {
-            "name": "Forest Hill",
-            "crs": "foh",
-            "lat": 51.439,
-            "lon": -0.053
-        },
-        {
-            "name": "Sydenham",
-            "crs": "syd",
-            "lat": 51.4254,
-            "lon": -0.0544
-        },
-        {
-            "name": "Norwood Junction",
-            "crs": "nwd",
-            "lat": 51.3972,
-            "lon": -0.075
-        },
-        {
-            "name": "East Croydon",
-            "crs": "ecr",
-            "lat": 51.3752,
-            "lon": -0.0923
+            "route": 2,
+            "name": "18:02 Caterham"
         }
     ],
     "data": [
         [
+            9,
+            12,
+            11,
             8,
-            16,
-            0,
+            9,
             14,
-            16,
-            13,
-            19
+            16
         ],
         [
-            11,
             12,
-            13,
-            1,
-            15,
-            6,
-            2
-        ],
-        [
-            16,
-            11,
-            2,
-            19,
-            4,
-            12,
-            14
-        ],
-        [
             3,
-            14,
-            17,
-            16,
-            17,
+            1,
             19,
+            16,
+            11,
+            15
+        ],
+        [
+            16,
+            5,
+            12,
+            15,
+            12,
+            2,
             18
+        ],
+        [
+            16,
+            16,
+            1,
+            1,
+            14,
+            0,
+            10
         ]
-    ],
-    "trains": [
-        {
-            "name": "17:30 Caterham",
-            "route": 2
-        },
-        {
-            "name": "17:45 Brighton (East Sussex)",
-            "route": 0
-        },
-        {
-            "name": "17:59 Tattenham Corner",
-            "route": 1
-        },
-        {
-            "name": "18:02 Caterham",
-            "route": 2
-        }
     ]
 }

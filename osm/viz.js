@@ -1,7 +1,7 @@
 
 var data;
 var stations;
-var days = ["","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var days = ["","M", "T", "W", "T", "F", "S", "S"];
 var tbl;
 var trains;
 var color = d3.scale.quantize().range([
@@ -39,7 +39,23 @@ function plotGridWithData(data, rowHeaders) {
 		trigger:'hover'
 	});*/
 	// Adds days to top headers of all tables
-	tbl.selectAll("th").data(days,function(d,i) { return d;}).enter().insert("th", "tr").classed("rotate", true).append("div").style("width", cell_size+'px').append("span").text(function(d) {return d;})
+	tbl.selectAll("th")
+		.data(d3.range(0,days.length,1),function(d,i) { 
+			// Have to use a range rather than the actual days array
+			// because d3 doesn't like duplicate values in arrays
+			return i;
+		})
+		.enter()
+		.insert("th", "tr")
+		.classed("rotate", false)
+		.append("div")
+		.style("width", cell_size+'px')
+		.style("text-align","center")
+		.append("span")
+		.text( function(d) {
+			return days[d];
+		});
+
 	return tbl;
 }
 
@@ -65,7 +81,7 @@ function createMapOverview(routes, stations) {
 		});
 
 		var pline = new mxn.Polyline(stnList);
-		var colr = '#'+Math.random().toString(16).substr(-6);
+		var colr = "#1f40c2";// '#'+Math.random().toString(16).substr(-6);
 		pline.addData({color: colr, width:4});
 		map.addPolyline(pline);
 		
@@ -75,8 +91,9 @@ function createMapOverview(routes, stations) {
 	for (var stn in stationDict) {
 		
 		marker = new mxn.Marker(stationDict[stn]);
-		marker.addData({"icon": "train20.png"});
-		//marker.setShadowIcon('train20.png',48);
+		marker.addData({"icon": "pin.png"});
+		marker.setIconSize([42,42]);
+		//marker.setShadowIcon('train20.png',96px);
 		map.addMarker(marker);
 		//marker.icon.url = marker.iconShadowUrl;
 		//marker.icon.url = 'train20.png';
@@ -211,11 +228,18 @@ function getTrainOverview() {
 					console.log("on")
 
 				});
-			})
+			});
+		d3.selectAll('td,th')
 			.on("mouseout", function() {
 
 				//$(this).popover('hide');
-				$(this).webuiPopover('destroy')
+				$('td').webuiPopover('destroy')
+					console.log("off")
+			})
+		d3.selectAll('table,th,tr')
+			.on("mouseover", function() {
+				//$(this).popover('hide');
+				$('td').webuiPopover('destroy')
 					console.log("off")
 			})
 	/* Adds clearfix after tables to clear float

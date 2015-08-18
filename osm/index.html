@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="jquery.webui-popover.css">
 		<script src="jquery.webui-popover.js"></script>
 		<style>
+			body { padding-bottom: 70px; }
 			#map {
 				height:700px;
 				position:fixed;
@@ -31,7 +32,8 @@
 			}
 			table {
 				table-layout: fixed;
-				//	border-spacing: 40px;
+				border-collapse: separate;
+				border-spacing: 5px;
 				margin:auto;
 			}
 			.cell {
@@ -60,9 +62,9 @@
 				text-align: center;
 			}
 			.section {
-				border-bottom-color: #1f40c2;
+				border-bottom-color:#ccc;
 				border-bottom-style: solid;
-				border-bottom-width: 3px;
+				border-bottom-width: 5px;
 				margin-bottom:10px;
 				padding-bottom:20px;
 			}
@@ -78,6 +80,17 @@
 			.x.axis path {
 				display: none;
 			}
+			div.section form input,
+			div.section form select {
+				border-color: #1f40c2;
+				
+				
+			}
+			div.section form a {
+				background-color:#28abe3;
+				border-style:none;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -86,28 +99,47 @@
       <div class="container-fluid" style="">
 	      <div class="row" style="" id="multiscroll">
 		      <div class="ms-left col-md-6">
-			      <div class="ms-section" id="map">
+			      <div class="" id="map">
 			      </div>
 		      </div>
 		      <div class="col-md-6 ms-right" style="">
 			      <div class="section" id="start">
-				<form>
+				<form class="form-horizontal">
 					<div class="form-group">
-						<label for="from">From</label>
-						<input type="text" class="form-control" id="trainFrom" placeholder="London Bridge">
+						<label for="trainFrom" class="col-sm-1 control-label">From:</label>
+						<div class="col-sm-11">
+							<input type="text" class="form-control" id="trainFrom" placeholder="London Bridge">
+						</div>
 					</div>
 					<div class="form-group">
-						<label for="to">To</label>
-						<input type="text" class="form-control" id="trainTo" placeholder="East Croydon">
+						<label for="trainTo" class="col-sm-1 control-label">To:</label>
+						<div class="col-sm-11">
+							<input type="text" class="form-control" id="trainTo" placeholder="East Croydon">
+						</div>
 					</div>
-					<a class="btn btn-default" id="findTrains" role="button" href="#">Find Trains</a>
+					<div class="form-group">
+						<label for="trainSchedule" class="col-sm-1">Type:</label>
+						<div class="col-sm-3">
+							<select id="trainSchedule" class="form-control">
+								<option>Weekdays</option>
+								<option>Weekends</option>
+							</select>
+						</div>
+						<label for="trainTime" class="col-sm-1 col-sm-offset-5">Time:</label>
+						<div class="col-sm-2">
+						<input type="time" class="form-control" id="trainTime">
+						</div>
+					</div>
+					<a class="btn btn-default btn-lg pull-right" id="findTrains" role="button" href="#">Find Trains</a>
+					<div class="clearfix"></div>
+				</form>
 
 			      </div>
 
 
 			      <div id="viz">
 				      <a name="overview"></a>
-				      <div class="section hidden" id="tables">
+				      <div class="hidden" id="tables">
 				      </div>
 			      </div>
 		      </div>
@@ -118,6 +150,9 @@
 	<h4 id="dayDetailTitle"></h4>
 	<svg id="dayDetailGraph"></svg>
 </div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+
+</nav>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("a").click(function() {
