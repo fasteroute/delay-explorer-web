@@ -12,10 +12,12 @@
 		<script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="jquery.webui-popover.css">
+		<script src="jquery.webui-popover.js"></script>
 		<style>
 			#map {
 				height:700px;
-				//float: left;
 				position:fixed;
 				left:0px;
 				top:50px;
@@ -64,17 +66,30 @@
 				margin-bottom:10px;
 				padding-bottom:20px;
 			}
+			.axis text {
+				font: 10px sans-serif;
+			}
+			.axis path,
+			.axis line {
+				fill:none;
+				stroke: #000;
+				shape-rendering: crispEdges;
+			}
+			.x.axis path {
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-default navbar-fixed-top"></nav>
-      <div class="container-fluid" style="height: 100%">
-	      <div class="row" style="height: 100%" id="multiscroll">
+		<nav class="navbar navbar-default navbar-fixed-top">
+      </nav>
+      <div class="container-fluid" style="">
+	      <div class="row" style="" id="multiscroll">
 		      <div class="ms-left col-md-6">
 			      <div class="ms-section" id="map">
 			      </div>
 		      </div>
-		      <div class="col-md-6 ms-right" style="height: 100%;">
+		      <div class="col-md-6 ms-right" style="">
 			      <div class="section" id="start">
 				<form>
 					<div class="form-group">
@@ -98,6 +113,10 @@
 		      </div>
 
 	</div>
+</div>
+<div id="dayDetail" style="width:25%; visibility: hidden">
+	<h4 id="dayDetailTitle"></h4>
+	<svg id="dayDetailGraph"></svg>
 </div>
 		<script type="text/javascript">
 			$(document).ready(function() {

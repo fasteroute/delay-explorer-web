@@ -51,6 +51,23 @@ train_data = {
             ],
          "data": trains
 }
+
+percent = 100;
+ontime = round(random.random()*percent)
+percent -= ontime
+fifteenmin = round(random.random()*percent)
+percent -= fifteenmin
+thirtymin = round(random.random()*percent)
+percent -= thirtymin
+cancelled = percent
+day_detail_data = {
+        "data": [
+            {"period":"On Time", "value": ontime},
+            {"period":"15m Late", "value": fifteenmin},
+            {"period":"30m Late", "value": thirtymin},
+            {"period":"Cancelled", "value":cancelled}
+        ]
+        }
 detail_data = {
          "stations": ["London Bridge", "New Cross Gate", "Brockley","Honor Oak Park",
          "Forest Hill", "Sydenham", "Norwood Junction", "East Croydon"],
@@ -62,3 +79,7 @@ file.close()
 file = open("stations.json", "w")
 file.write(json.dumps(detail_data, indent=4))
 file.close()
+file = open("daydetail.json", "w")
+file.write(json.dumps(day_detail_data, indent=4))
+file.close()
+

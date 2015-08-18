@@ -30,7 +30,14 @@ function plotGridWithData(data, rowHeaders) {
 		.classed("cell", true)
 		.style("width", cell_size+'px')
 		.style("height", cell_size+'px')
-
+	/*$('td').webuiPopover({
+		title:'Title', 
+		content:function() {
+			var svg = getTrainDayDetail("Last Month");
+			return "";
+		},
+		trigger:'hover'
+	});*/
 	// Adds days to top headers of all tables
 	tbl.selectAll("th").data(days,function(d,i) { return d;}).enter().insert("th", "tr").classed("rotate", true).append("div").style("width", cell_size+'px').append("span").text(function(d) {return d;})
 	return tbl;
@@ -77,6 +84,77 @@ function createMapOverview(routes, stations) {
 
 }
 
+function getTrainDayDetail(callback) {
+	
+	var detailSVG = d3.select("svg#dayDetailGraph")
+	
+	detailSVG.selectAll("g").remove()
+	var width = d3.select("div#dayDetail").node().getBoundingClientRect().width;
+	var Containerheight = d3.select("#dayDetail").node().getBoundingClientRect().height;
+	console.log(Containerheight);
+	var title = d3.select("#dayDetailTitle")
+	var Titleheight = title.node().clientHeight + 2*parseInt(title.style.marginTop || window.getComputedStyle(title.node()).marginTop);
+	console.log(Titleheight);
+	var height = Containerheight - Titleheight-20;
+	console.log(height);
+	
+	d3.json('daydetails.php', function(error, json) {
+
+
+		d3.select("#dayDetail").style("height", Containerheight+"px");
+		detailSVG
+			.attr("width", width)
+			.attr("height", height+20);
+		var yScale = d3.scale.ordinal()
+			.domain(["On Time","15m Late", "30m Late", "Cancelled"])
+			.rangeBands([0,height],.1)
+		var bar = detailSVG
+			.selectAll("g")
+			.data(json["data"])
+			.enter()
+			.append("g")
+			.attr("transform", function(d) { 
+				return "translate(0,"+yScale(d.period)+")";
+			});
+		var txt = bar.append("text")
+			.text(function(d) { return d.period;})
+			.attr("transform", "translate(0,"+yScale.rangeBand()/2+")")
+			.attr("fill","black");
+		var maxTxtLength=0;
+		txt[0].forEach(function(node, inx) { 
+			if (maxTxtLength < node.clientWidth) {
+				maxTxtLength = node.clientWidth;
+			}
+		});
+		var xScale = d3.scale.linear()
+			.domain([0,100])
+			.range([maxTxtLength+5,width-10])
+		var rects = bar.append("rect")
+			.attr("width", function(d) { 
+				//return (d.value/100)*(width-maxTxtLength);
+				return xScale(d.value) - (maxTxtLength+5);
+			})
+			.attr("height", function(d) { 
+				return yScale.rangeBand();
+			});
+
+		maxTxtLength += 5;
+		rects.attr("transform", "translate("+(maxTxtLength)+",0)");
+
+		var xAxis = d3.svg.axis()
+			.scale(xScale)
+			.orient("bottom")
+
+		detailSVG.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + (height) + ")")
+			.call(xAxis)
+		return callback(detailSVG);
+	});
+
+
+}
+
 function getTrainOverview() {
 
 	d3.json('trains.json', function(error, json) {
@@ -110,6 +188,36 @@ function getTrainOverview() {
 		} 
 		// Adds station names to headers on first table
 		tables = d3.selectAll("table");
+		
+		d3.selectAll("td")
+			.on("mouseover", function() {
+				var current_cell = $(this);
+				getTrainDayDetail(function(svg) {
+					current_cell.webuiPopover({
+						type: 'html',
+						title:'Last 4 weeks',
+						content:svg.node().outerHTML, 
+						trigger:'manual',
+						width: svg.node().clientWidth+30,
+						height:svg.node().clientHeight+20
+					})
+					current_cell.webuiPopover('show');
+					console.log(svg);
+					/*$(this).popover({
+						content: svg.node().outerHTML,
+						trigger: 'manual'
+					});
+					$(this).popover('show');*/
+					console.log("on")
+
+				});
+			})
+			.on("mouseout", function() {
+
+				//$(this).popover('hide');
+				$(this).webuiPopover('destroy')
+					console.log("off")
+			})
 	/* Adds clearfix after tables to clear float
 	d3.select("div#tables").append("div").style({"overflow": "auto","zoom": 1})
 		// Adds station ids to markers on Map
