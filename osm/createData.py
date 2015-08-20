@@ -2,6 +2,8 @@
 import random
 import json
 
+
+
 num_days = 7
 
 num_stations = 8
@@ -44,11 +46,27 @@ train_data = {
             {"name": "East Croydon", "crs": "ecr", "lat":51.3752, "lon":-0.0923},
         ],
         "trains": [
-            {"name":"17:30 Caterham", "route":2},
-            {"name":"17:45 Brighton (East Sussex)", "route":0},
-            {"name":"17:59 Tattenham Corner", "route":1}, 
-            {"name":"18:02 Caterham", "route":2}
-            ],
+            {
+                "name":"17:30 Caterham",
+                "route":2,
+                "service":"7db628469132d0728b2a24b324dcf8"
+            },
+            {
+                "name":"17:45 Brighton (East Sussex)",
+                "route":0,
+                "service":"7367a1280397eb44e2cc5ae648539"
+            },
+            {
+                "name":"17:59 Tattenham Corner",
+                "route":1,
+                "service":"662c8d51623a306f259478761e649d"
+            },
+            {
+                "name":"18:02 Caterham",
+                "route":2,
+                "service":"7b672582baecfa8cb599262929880a"
+            }
+        ],
          "data": trains
 }
 

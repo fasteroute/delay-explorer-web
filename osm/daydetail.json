@@ -1,19 +1,19 @@
 {
     "data": [
         {
-            "value": 60,
+            "value": 85,
             "period": "On Time"
         },
         {
-            "value": 1,
+            "value": 8,
             "period": "15m Late"
         },
         {
-            "value": 7,
+            "value": 4,
             "period": "30m Late"
         },
         {
-            "value": 32,
+            "value": 3,
             "period": "Cancelled"
         }
     ]

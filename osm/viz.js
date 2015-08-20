@@ -25,7 +25,17 @@ function plotGridWithData(data, rowHeaders) {
 		.data(function(d,i) {
 			return d;
 		}); 
-	cells.enter().append("td")
+
+	/**
+	  * Next we insert a div into each cell of the table
+	  * This allows us to modify the appearance of the divs, while being able to change their backgrounds
+	  * of the td elements behind them.
+	*/
+
+	cells.enter()
+		.append("td")
+		.style("padding","5px")
+		.append("div")
 		.style("background-color", function(d) { if(d==0) {return "rgb(49,163,84)"} else {return color(d)};})
 		.classed("cell", true)
 		.style("width", cell_size+'px')
@@ -123,12 +133,9 @@ function getTrainDayDetail(callback) {
 	detailSVG.selectAll("g").remove()
 	var width = d3.select("div#dayDetail").node().getBoundingClientRect().width;
 	var Containerheight = d3.select("#dayDetail").node().getBoundingClientRect().height;
-	console.log(Containerheight);
 	var title = d3.select("#dayDetailTitle")
 	var Titleheight = title.node().clientHeight + 2*parseInt(title.style.marginTop || window.getComputedStyle(title.node()).marginTop);
-	console.log(Titleheight);
 	var height = Containerheight - Titleheight-20;
-	console.log(height);
 	
 	d3.json('daydetails.php', function(error, json) {
 
@@ -154,6 +161,10 @@ function getTrainDayDetail(callback) {
 			.attr("fill","black");
 		var maxTxtLength=0;
 		txt[0].forEach(function(node, inx) {
+			if (node == null) {
+				console.log('node was null');
+				return;
+			}
 			ndWth = node.getBoundingClientRect().width
 			if (maxTxtLength < ndWth) {
 				maxTxtLength = ndWth;
@@ -241,13 +252,11 @@ function getTrainOverview() {
 						height:svg.node().getBoundingClientRect().height+20
 					})
 					current_cell.webuiPopover('show');
-					console.log(svg);
 					/*$(this).popover({
 						content: svg.node().outerHTML,
 						trigger: 'manual'
 					});
 					$(this).popover('show');*/
-					console.log("on")
 
 				});
 			});
@@ -256,13 +265,11 @@ function getTrainOverview() {
 
 				//$(this).popover('hide');
 				$('td').webuiPopover('destroy')
-					console.log("off")
 			})
 		d3.selectAll('table,th,tr')
 			.on("mouseover", function() {
 				//$(this).popover('hide');
 				$('td').webuiPopover('destroy')
-					console.log("off")
 			})
 	/* Adds clearfix after tables to clear float
 	d3.select("div#tables").append("div").style({"overflow": "auto","zoom": 1})
