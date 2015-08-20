@@ -279,13 +279,23 @@ function getTrainOverview() {
 			.on("mouseover", function() {
 				d3.select(this)
 					.style("background-color","#ccc")
+				var route_id = this.getAttribute("route");
+				var curr_route = routeDict[parseInt(route_id)];
+				curr_route.setColor("#28abe3");
+				map.addPolyline(curr_route, true);
+
 			})
 			.on("mouseout", function() {
 				d3.select(this)
 					.style("background-color","transparent")
+				var route_id = this.getAttribute("route");
+				var curr_route = routeDict[parseInt(route_id)];
+				curr_route.setColor("rgb(31, 64, 194)");
+				map.addPolyline(curr_route, true);
 			})
 			.on("click", function() {
 				var schedule_id = this.getAttribute("schedule");
+				
 				//d3.json('stations.json', function(error,json) {
 
 
