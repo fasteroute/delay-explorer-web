@@ -1,113 +1,63 @@
 {
     "trains": [
         {
-            "service": "7db628469132d0728b2a24b324dcf8",
-            "route": 2,
-            "name": "17:30 Caterham"
+            "schedule": "7db628469132d0728b2a24b324dcf8",
+            "name": "17:30 Caterham",
+            "route": 2
         },
         {
-            "service": "7367a1280397eb44e2cc5ae648539",
-            "route": 0,
-            "name": "17:45 Brighton (East Sussex)"
+            "schedule": "7367a1280397eb44e2cc5ae648539",
+            "name": "17:45 Brighton (East Sussex)",
+            "route": 0
         },
         {
-            "service": "662c8d51623a306f259478761e649d",
-            "route": 1,
-            "name": "17:59 Tattenham Corner"
+            "schedule": "662c8d51623a306f259478761e649d",
+            "name": "17:59 Tattenham Corner",
+            "route": 1
         },
         {
-            "service": "7b672582baecfa8cb599262929880a",
-            "route": 2,
-            "name": "18:02 Caterham"
+            "schedule": "7b672582baecfa8cb599262929880a",
+            "name": "18:02 Caterham",
+            "route": 2
         }
     ],
     "data": [
         [
-            10,
-            3,
-            1,
+            17,
             9,
-            16,
-            10,
+            7,
+            9,
+            18,
+            2,
             14
         ],
         [
-            16,
-            18,
-            20,
-            5,
-            6,
-            15,
-            2
-        ],
-        [
-            8,
-            15,
-            3,
             9,
+            1,
+            0,
             6,
-            16,
-            9
+            20,
+            11,
+            7
         ],
         [
-            15,
+            7,
             12,
-            17,
+            16,
+            16,
+            2,
+            13,
+            17
+        ],
+        [
+            12,
+            12,
+            11,
             14,
             8,
-            6,
-            17
+            13,
+            11
         ]
-    ],
-    "stations": [
-        {
-            "crs": "lbg",
-            "lat": 51.505,
-            "lon": -0.086,
-            "name": "London Bridge"
-        },
-        {
-            "crs": "nxg",
-            "lat": 51.4755,
-            "lon": -0.0402,
-            "name": "New Cross Gate"
-        },
-        {
-            "crs": "bcy",
-            "lat": 51.4645,
-            "lon": -0.0369,
-            "name": "Brockley"
-        },
-        {
-            "crs": "hpa",
-            "lat": 51.4501,
-            "lon": -0.0456,
-            "name": "Honor Oak Park"
-        },
-        {
-            "crs": "foh",
-            "lat": 51.439,
-            "lon": -0.053,
-            "name": "Forest Hill"
-        },
-        {
-            "crs": "syd",
-            "lat": 51.4254,
-            "lon": -0.0544,
-            "name": "Sydenham"
-        },
-        {
-            "crs": "nwd",
-            "lat": 51.3972,
-            "lon": -0.075,
-            "name": "Norwood Junction"
-        },
-        {
-            "crs": "ecr",
-            "lat": 51.3752,
-            "lon": -0.0923,
-            "name": "East Croydon"
-        }
     ],
     "routes": [
         [
@@ -129,5 +79,55 @@
             "nwd",
             "ecr"
         ]
+    ],
+    "stations": [
+        {
+            "lon": -0.086,
+            "lat": 51.505,
+            "name": "London Bridge",
+            "crs": "lbg"
+        },
+        {
+            "lon": -0.0402,
+            "lat": 51.4755,
+            "name": "New Cross Gate",
+            "crs": "nxg"
+        },
+        {
+            "lon": -0.0369,
+            "lat": 51.4645,
+            "name": "Brockley",
+            "crs": "bcy"
+        },
+        {
+            "lon": -0.0456,
+            "lat": 51.4501,
+            "name": "Honor Oak Park",
+            "crs": "hpa"
+        },
+        {
+            "lon": -0.053,
+            "lat": 51.439,
+            "name": "Forest Hill",
+            "crs": "foh"
+        },
+        {
+            "lon": -0.0544,
+            "lat": 51.4254,
+            "name": "Sydenham",
+            "crs": "syd"
+        },
+        {
+            "lon": -0.075,
+            "lat": 51.3972,
+            "name": "Norwood Junction",
+            "crs": "nwd"
+        },
+        {
+            "lon": -0.0923,
+            "lat": 51.3752,
+            "name": "East Croydon",
+            "crs": "ecr"
+        }
     ]
 }

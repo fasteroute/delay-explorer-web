@@ -16,11 +16,13 @@ function plotGridWithData(data, rowHeaders) {
 	
 	d3.select("div#tables").selectAll("table").remove();
 	var canvas_width = d3.select("div#viz").node().getBoundingClientRect().width
-		var graph_width = canvas_width*0.5;
+	var graph_width = canvas_width*0.5;
 	var cell_size = (graph_width - 12)/7;
 	var tbl = d3.select("div#tables").append("table");
 	var rows = tbl.selectAll("tr").data(data);
-	rows.enter().append("tr");
+	rows.enter()
+		.append("tr")
+		.attr("schedule", function(d,i) {return rowHeaders[i].schedule;});
 	var cells = rows.selectAll("td")
 		.data(function(d,i) {
 			return d;
@@ -48,7 +50,9 @@ function plotGridWithData(data, rowHeaders) {
 		},
 		trigger:'hover'
 	});*/
-	// Adds days to top headers of all tables
+
+	// Adds days to top headers of the table
+	// At this point no header elements exist yet.
 	tbl.selectAll("th")
 		.data(d3.range(0,days.length,1),function(d,i) { 
 			// Have to use a range rather than the actual days array
@@ -57,7 +61,6 @@ function plotGridWithData(data, rowHeaders) {
 		})
 		.enter()
 		.insert("th", "tr")
-		.classed("rotate", false)
 		.append("div")
 		.style("width", cell_size+'px')
 		.style("text-align","center")
@@ -99,7 +102,7 @@ function createMapOverview(routes, stations) {
 		});
 
 		var pline = new mxn.Polyline(stnList);
-		var colr = "#1f40c2";// '#'+Math.random().toString(16).substr(-6);
+		var colr = "#1f40c2";
 		pline.addData({color: colr, width:4});
 		map.addPolyline(pline);
 		
@@ -111,10 +114,7 @@ function createMapOverview(routes, stations) {
 		marker = new mxn.Marker(stationDict[stn]);
 		marker.addData({"icon": "pin.png"});
 		marker.setIconSize([42,42]);
-		//marker.setShadowIcon('train20.png',96px);
 		map.addMarker(marker);
-		//marker.icon.url = marker.iconShadowUrl;
-		//marker.icon.url = 'train20.png';
 	}
 
 }
@@ -135,7 +135,7 @@ function getTrainDayDetail(callback) {
 	var Containerheight = d3.select("#dayDetail").node().getBoundingClientRect().height;
 	var title = d3.select("#dayDetailTitle")
 	var Titleheight = title.node().clientHeight + 2*parseInt(title.style.marginTop || window.getComputedStyle(title.node()).marginTop);
-	var height = Containerheight - Titleheight-20;
+	var height = Containerheight - Titleheight - 20;
 	
 	d3.json('daydetails.php', function(error, json) {
 
@@ -143,10 +143,10 @@ function getTrainDayDetail(callback) {
 		d3.select("#dayDetail").style("height", Containerheight+"px");
 		detailSVG
 			.attr("width", width)
-			.attr("height", height+20);
+			.attr("height", height + 20);
 		var yScale = d3.scale.ordinal()
 			.domain(["On Time","15m Late", "30m Late", "Cancelled"])
-			.rangeBands([0,height],.1)
+			.rangeBands([0,height], .1)
 		var bar = detailSVG
 			.selectAll("g")
 			.data(json["data"])
@@ -176,7 +176,7 @@ function getTrainDayDetail(callback) {
 		var rects = bar.append("rect")
 			.attr("width", function(d) { 
 				//return (d.value/100)*(width-maxTxtLength);
-				return xScale(d.value) - (maxTxtLength+5);
+				return xScale(d.value) - (maxTxtLength + 5);
 			})
 			.attr("height", function(d) { 
 				return yScale.rangeBand();
@@ -212,12 +212,8 @@ function getTrainOverview() {
 		var trains = json["trains"];
 		var routes = json["routes"];
 		var stations = json["stations"];
-		var rowHeaders = [];
 
-		trains.forEach(function(elem,idx) {
-			rowHeaders.push(elem["name"]);
-		});
-		var newTbl = plotGridWithData(json["data"], rowHeaders);
+		var newTbl = plotGridWithData(json["data"], trains);
 
 		createMapOverview(routes, stations);
 		map.autoCenterAndZoom();
@@ -230,7 +226,7 @@ function getTrainOverview() {
 			if (curr_child.tagName == "TR") { 
 				//curr_child.setAttribute("stn",counter)
 					var rowHeader = document.createElement("th"); 
-				rowHeader.innerHTML = rowHeaders[counter];
+				rowHeader.innerHTML = trains[counter].name;
 				counter++;
 				rowHeader.setAttribute("class", "rowHeader");
 				curr_child.insertBefore(rowHeader, curr_child.childNodes[0])
