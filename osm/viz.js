@@ -61,6 +61,14 @@ function plotGridWithData(data, rowHeaders) {
 
 var stationDict = {};
 var marker;
+/**
+ * createMapOverview() plots the set of the supplied train routes onto the map
+ * also placing pins at the location of each station on each route.
+ *
+ * @param {[[String]]} routes
+ * @param {[Object]} stations {lat,lon,crs,name}
+ *
+ */
 function createMapOverview(routes, stations) {
 	map.removeAllMarkers()
 	map.removeAllPolylines()
@@ -100,7 +108,14 @@ function createMapOverview(routes, stations) {
 	}
 
 }
-
+/**
+ *
+ *  getTrainDayDetail() plots the delay histogram of trains on a particular day
+ *  over the current time period.
+ *
+ *  @param {function} callback
+ *  @return {SVGElement} detailSVG
+ */
 function getTrainDayDetail(callback) {
 	
 	var detailSVG = d3.select("svg#dayDetailGraph")
@@ -173,6 +188,12 @@ function getTrainDayDetail(callback) {
 
 }
 
+/**
+ *
+ * getTrainOverview() calls the api and provides coarse data on the perfomance of a
+ * train on each day of the week, over the user-defined time period.
+ *
+ */
 function getTrainOverview() {
 
 	d3.json('trains.json', function(error, json) {
