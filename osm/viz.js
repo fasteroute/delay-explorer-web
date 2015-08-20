@@ -138,9 +138,10 @@ function getTrainDayDetail(callback) {
 			.attr("transform", "translate(0,"+yScale.rangeBand()/2+")")
 			.attr("fill","black");
 		var maxTxtLength=0;
-		txt[0].forEach(function(node, inx) { 
-			if (maxTxtLength < node.clientWidth) {
-				maxTxtLength = node.clientWidth;
+		txt[0].forEach(function(node, inx) {
+			ndWth = node.getBoundingClientRect().width
+			if (maxTxtLength < ndWth) {
+				maxTxtLength = ndWth;
 			}
 		});
 		var xScale = d3.scale.linear()
@@ -215,8 +216,8 @@ function getTrainOverview() {
 						title:'Last 4 weeks',
 						content:svg.node().outerHTML, 
 						trigger:'manual',
-						width: svg.node().clientWidth+30,
-						height:svg.node().clientHeight+20
+						width: svg.node().getBoundingClientRect().width+30,
+						height:svg.node().getBoundingClientRect().height+20
 					})
 					current_cell.webuiPopover('show');
 					console.log(svg);
