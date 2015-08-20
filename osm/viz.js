@@ -4,6 +4,7 @@ var stations;
 var days = ["","M", "T", "W", "T", "F", "S", "S"];
 var tbl;
 var trains;
+var routeDict={};
 var color = d3.scale.quantize().range([
 		"rgb(254,240,217)",
 		"rgb(253,204,138)",
@@ -22,7 +23,8 @@ function plotGridWithData(data, rowHeaders) {
 	var rows = tbl.selectAll("tr").data(data);
 	rows.enter()
 		.append("tr")
-		.attr("schedule", function(d,i) {return rowHeaders[i].schedule;});
+		.attr("schedule", function(d,i) {return rowHeaders[i].schedule;})
+		.attr("route", function(d,i) {return rowHeaders[i].route;});
 	var cells = rows.selectAll("td")
 		.data(function(d,i) {
 			return d;
@@ -105,6 +107,7 @@ function createMapOverview(routes, stations) {
 		var colr = "#1f40c2";
 		pline.addData({color: colr, width:4});
 		map.addPolyline(pline);
+		routeDict[idx] = pline;
 		
 
 	});
@@ -267,6 +270,28 @@ function getTrainOverview() {
 				//$(this).popover('hide');
 				$('td').webuiPopover('destroy')
 			})
+
+
+		// Add event lister to table row for clicks
+		// When clicks occur we want to insert our new rows seamlessly
+		
+		d3.selectAll('tr')
+			.on("mouseover", function() {
+				d3.select(this)
+					.style("background-color","#ccc")
+			})
+			.on("mouseout", function() {
+				d3.select(this)
+					.style("background-color","transparent")
+			})
+			.on("click", function() {
+				var schedule_id = this.getAttribute("schedule");
+				//d3.json('stations.json', function(error,json) {
+
+
+				//});
+			});
+
 	/* Adds clearfix after tables to clear float
 	d3.select("div#tables").append("div").style({"overflow": "auto","zoom": 1})
 		// Adds station ids to markers on Map
