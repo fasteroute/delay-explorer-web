@@ -46,14 +46,6 @@ function plotGridWithData(data, rowHeaders) {
 		.classed("cell", true)
 		.style("width", cell_size+'px')
 		.style("height", cell_size+'px')
-    /*$('td').webuiPopover({
-      title:'Title',
-      content:function() {
-        var svg = getTrainDayDetail("Last Month");
-        return "";
-      },
-      trigger:'hover'
-    });*/
 
 	// Adds days to top headers of the table
 	// At this point no header elements exist yet.
@@ -237,8 +229,6 @@ function getTrainOverview() {
 				curr_child.insertBefore(rowHeader, curr_child.childNodes[0])
 			}
 		}
-		// Adds station names to headers on first table
-		tables = d3.selectAll("table");
 
 		d3.selectAll("td")
 			.on("mouseover", function() {
@@ -250,32 +240,29 @@ function getTrainOverview() {
 						title:'Last 4 weeks',
 						content:svgHTML,
 						trigger:'manual',
-						width: svg.node().getBoundingClientRect().width+30,
-						height:svg.node().getBoundingClientRect().height+20
+						width: svg.node().getBoundingClientRect().width + 30,
+						height:svg.node().getBoundingClientRect().height + 20
 					})
+
 					current_cell.webuiPopover('show');
-					/*$(this).popover({
-						content: svg.node().outerHTML,
-						trigger: 'manual'
-					});
-					$(this).popover('show');*/
 
 				});
 			});
 		d3.selectAll('td,th')
 			.on("mouseout", function() {
 
-				//$(this).popover('hide');
 				$('td').webuiPopover('destroy')
-			})
+
+      })
 		d3.selectAll('table,th,tr')
 			.on("mouseover", function() {
-				//$(this).popover('hide');
+
 				$('td').webuiPopover('destroy')
-			})
+
+      })
 
 
-		// Add event lister to table row for clicks
+		// Add event listener to table row for clicks
 		// When clicks occur we want to insert our new rows seamlessly
 
 		d3.selectAll('tr')
@@ -385,78 +372,6 @@ function getTrainOverview() {
                 currRow = newRow;
 
           })
-         /* var rows;
-					if (sibling != null) {
-						var siblingID = sibling.getAttribute("schedule");
-						d3.select(sibling)
-							.data(data)
-							.enter().insert('tr','[schedule="'+siblingID+'"]')
-							.attr("crs", function(d,i) {
-
-								return stns[i];
-							});
-					} else {
-						sibling = selRow.parentNode;
-            data.forEach( function(delays, i) {
-              var row = d3.select(sibling)
-                .append("tr")
-                .attr("crs", function() {
-                  return stns[i];
-							});
-              // Add header to current row
-              row
-                .append("th")
-                .classed("rowHeader",true)
-                .text(function() {
-                  return stationDict[stns[i]].name;
-                });
-
-              // Adds cells to existing row
-
-              var delayRange = d3.range(0, delays.length)
-              row.selectAll("td")
-                .data(delayRange, function(index) {
-                  return index;
-                })
-                .enter()
-                .append("td")
-							  .style("padding","5px")
-                .append("div")
-                .style("background-color", function(index) {
-                  var d = delays[index];
-                  if(d==0) {
-                    return "rgb(49,163,84)";
-                  } else {
-                    return color(d);
-                  }
-                })
-                .classed("cell", true)
-                .style("width", cell_size+'px')
-                .style("height", cell_size+'px')
-                .classed("active-train", true);
-
-
-            })
-
-					}
-						/*var cells = rows
-							.selectAll('td')
-							.data( function(d) { return d;})
-							.enter().append('td')
-							.append("div")
-
-             rows
-              .selectAll('th')
-              .data( function(d,i) {
-                console.log(d,i);
-                return i;
-              })
-              .append('th')
-              .text(function(d) {
-                console.log(d);
-                return d;
-              })
-*/
 				});
 			});
 
