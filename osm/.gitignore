@@ -1,0 +1,4 @@
+.*.swp
+local/
+*.sh
+*.map
