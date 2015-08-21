@@ -45,7 +45,7 @@ function plotGridWithData(data, rowHeaders) {
 		.style("width", cell_size+'px')
 		.style("height", cell_size+'px')
 	/*$('td').webuiPopover({
-		title:'Title', 
+		title:'Title',
 		content:function() {
 			var svg = getTrainDayDetail("Last Month");
 			return "";
@@ -56,15 +56,15 @@ function plotGridWithData(data, rowHeaders) {
 	// Adds days to top headers of the table
 	// At this point no header elements exist yet.
 	tbl.selectAll("th")
-		.data(d3.range(0,days.length,1),function(d,i) { 
+		.data(d3.range(0,days.length,1),function(d,i) {
 			// Have to use a range rather than the actual days array
 			// because d3 doesn't like duplicate values in arrays
 			return i;
 		})
 		.enter()
-		.insert("th", "tr")
+    .insert("th", "tr")
 		.append("div")
-		.style("width", cell_size+'px')
+    .style("width", cell_size+'px')
 		.style("text-align","center")
 		.append("span")
 		.text( function(d) {
@@ -108,12 +108,12 @@ function createMapOverview(routes, stations) {
 		pline.addData({color: colr, width:4});
 		map.addPolyline(pline);
 		routeDict[idx] = pline;
-		
+
 
 	});
 	// Draw markers last so they are above routes
 	for (var stn in stationDict) {
-		
+
 		marker = new mxn.Marker(stationDict[stn]);
 		marker.addData({"icon": "pin.png"});
 		marker.setIconSize([42,42]);
@@ -130,16 +130,16 @@ function createMapOverview(routes, stations) {
  *  @return {SVGElement} detailSVG
  */
 function getTrainDayDetail(callback) {
-	
+
 	var detailSVG = d3.select("svg#dayDetailGraph")
-	
+
 	detailSVG.selectAll("g").remove()
 	var width = d3.select("div#dayDetail").node().getBoundingClientRect().width;
 	var Containerheight = d3.select("#dayDetail").node().getBoundingClientRect().height;
 	var title = d3.select("#dayDetailTitle")
 	var Titleheight = title.node().clientHeight + 2*parseInt(title.style.marginTop || window.getComputedStyle(title.node()).marginTop);
 	var height = Containerheight - Titleheight - 20;
-	
+
 	d3.json('daydetails.php', function(error, json) {
 
 
@@ -155,7 +155,7 @@ function getTrainDayDetail(callback) {
 			.data(json["data"])
 			.enter()
 			.append("g")
-			.attr("transform", function(d) { 
+			.attr("transform", function(d) {
 				return "translate(0,"+yScale(d.period)+")";
 			});
 		var txt = bar.append("text")
@@ -177,11 +177,11 @@ function getTrainDayDetail(callback) {
 			.domain([0,100])
 			.range([maxTxtLength+5,width-10])
 		var rects = bar.append("rect")
-			.attr("width", function(d) { 
+			.attr("width", function(d) {
 				//return (d.value/100)*(width-maxTxtLength);
 				return xScale(d.value) - (maxTxtLength + 5);
 			})
-			.attr("height", function(d) { 
+			.attr("height", function(d) {
 				return yScale.rangeBand();
 			});
 
@@ -211,7 +211,7 @@ function getTrainDayDetail(callback) {
 function getTrainOverview() {
 
 	d3.json('trains.json', function(error, json) {
-		
+
 		var trains = json["trains"];
 		var routes = json["routes"];
 		var stations = json["stations"];
@@ -222,30 +222,31 @@ function getTrainOverview() {
 		map.autoCenterAndZoom();
 
 		// For trains add train and destination info
-		var children = newTbl.node().childNodes; 
-		var counter = 0; 
+		var children = newTbl.node().childNodes;
+		var counter = 0;
 		for (j=0; j<children.length; j++) {
-			curr_child = children[j]; 
-			if (curr_child.tagName == "TR") { 
+			curr_child = children[j];
+			if (curr_child.tagName == "TR") {
 				//curr_child.setAttribute("stn",counter)
-					var rowHeader = document.createElement("th"); 
+					var rowHeader = document.createElement("th");
 				rowHeader.innerHTML = trains[counter].name;
 				counter++;
 				rowHeader.setAttribute("class", "rowHeader");
 				curr_child.insertBefore(rowHeader, curr_child.childNodes[0])
-			} 
-		} 
+			}
+		}
 		// Adds station names to headers on first table
 		tables = d3.selectAll("table");
-		
+
 		d3.selectAll("td")
 			.on("mouseover", function() {
 				var current_cell = $(this);
 				getTrainDayDetail(function(svg) {
+          var svgHTML = $('<div>').append($(svg.node()).clone()).html();
 					current_cell.webuiPopover({
 						type: 'html',
 						title:'Last 4 weeks',
-						content:svg.node().outerHTML, 
+						content:svgHTML,
 						trigger:'manual',
 						width: svg.node().getBoundingClientRect().width+30,
 						height:svg.node().getBoundingClientRect().height+20
@@ -274,7 +275,7 @@ function getTrainOverview() {
 
 		// Add event lister to table row for clicks
 		// When clicks occur we want to insert our new rows seamlessly
-		
+
 		d3.selectAll('tr')
 			.on("mouseover", function() {
 				d3.select(this)
@@ -295,11 +296,45 @@ function getTrainOverview() {
 			})
 			.on("click", function() {
 				var schedule_id = this.getAttribute("schedule");
-				
-				//d3.json('stations.json', function(error,json) {
+				var selRow = this;
+		/*		d3.json('stations.json', function(error,json) {
 
+					var sibling = selRow.nextSibling
+					var stns = json["stations"];
+					var data = json["data"];
+					if (sibling != null) {
+						var siblingID = sibling.getAttribute("schedule");
+						d3.select(sibling)
+							.data(data)
+							.enter().insert('tr','[schedule="'+siblingID+'"]')
+							.attr("crs", function(d,i) {
 
-				//});
+								return stns[i];
+							});
+					} else {
+						sibling = selRow.parentNode;
+						rows = d3.select(sibling)
+							.selectAll('tr')
+							.data(data)
+							.enter().append('tr')
+							.attr("crs", function(d,i) {
+								return stns[i];
+							});
+
+						var cells = rows
+							.selectAll('td')
+							.data( function(d) { return d;})
+							.enter().append('td')
+							style("padding","5px")
+							.append("div")
+							.style("background-color", function(d) { if(d==0) {return "rgb(49,163,84)"} else {return color(d)};})
+							.classed("cell", true)
+							.style("width", cell_size+'px')
+							.style("height", cell_size+'px')
+							.classed("active-train", true);
+					}
+
+				});*/
 			});
 
 	/* Adds clearfix after tables to clear float
@@ -326,5 +361,5 @@ function getTrainOverview() {
 
 	});
 */
-	}); 
+	});
 }
