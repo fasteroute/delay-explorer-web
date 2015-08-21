@@ -374,9 +374,7 @@ function getTrainOverview() {
           })
 				});
 			});
-
-	/* Adds clearfix after tables to clear float
-	d3.select("div#tables").append("div").style({"overflow": "auto","zoom": 1})
+/*
 		// Adds station ids to markers on Map
 		d3.selectAll("div[id^=OL_Icon]").attr("stn", function(d,i) {return i;})
 		.on("mouseover", function() {
