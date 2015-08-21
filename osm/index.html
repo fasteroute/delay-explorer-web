@@ -1,188 +1,171 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>19:30 London Bridge to East Croydon</title>
-		<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
-		<script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>19:30 London Bridge to East Croydon</title>
+    <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
 
 		<script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="jquery.webui-popover.css">
-		<script src="jquery.webui-popover.js"></script>
-		<style>
-			body { padding-bottom: 70px; }
-			#map {
-				height:700px;
-				position:fixed;
-				left:0px;
-				top:50px;
-				width:50%;
-			}
-			#viz {
-//				height:700px;
-			}
-			.hidden {
-				display:none;
-			}
-			table {
-				table-layout: fixed;
-				margin:auto;
-			}
-			.cell {
-				text-align:center;
-				border-radius: 25%;
-			}
-			th.rotate {
-				/* Something you can count on */
-				height: 45px;
-				white-space: nowrap;
-			}
-			th.rotate > div {
-				/* Magic Numbers */
-			transform:
-			translate(2px, 6px)
-			/* 45 deg is really 360-45 */
-			rotate(315deg);
-			}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="jquery.webui-popover.css">
+    <script src="jquery.webui-popover.js"></script>
+    <style>
+      body { padding-bottom: 70px; }
+      #map {
+        height:700px;
+        position:fixed;
+        left:0px;
+        top:50px;
+        width:50%;
+      }
+      .hidden {
+        display:none;
+      }
+      table {
+        table-layout: fixed;
+        margin:auto;
+      }
+      .cell {
+        text-align:center;
+        border-radius: 25%;
+      }
+      th.rowHeader {
+        text-align: center;
+      }
+      .section {
+        border-bottom-color:#ccc;
+        border-bottom-style: solid;
+        border-bottom-width: 5px;
+        margin-bottom:10px;
+        padding-bottom:20px;
+      }
+      .axis text {
+        font: 10px sans-serif;
+      }
+      .axis path,
+      .axis line {
+        fill:none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+      .x.axis path {
+        display: none;
+      }
+      div.section form input,
+      div.section form select {
+        border-color: #1f40c2;
 
-			th.rotate > div > span {
-			
-				//border-bottom: 1px solid #ccc;
-				  //padding: 5px 10px;
-			 }
-			th.rowHeader {
-				text-align: center;
-			}
-			.section {
-				border-bottom-color:#ccc;
-				border-bottom-style: solid;
-				border-bottom-width: 5px;
-				margin-bottom:10px;
-				padding-bottom:20px;
-			}
-			.axis text {
-				font: 10px sans-serif;
-			}
-			.axis path,
-			.axis line {
-				fill:none;
-				stroke: #000;
-				shape-rendering: crispEdges;
-			}
-			.x.axis path {
-				display: none;
-			}
-			div.section form input,
-			div.section form select {
-				border-color: #1f40c2;
-
-			}
-			div.section form a {
-				background-color:#28abe3;
-				border-style:none;
-			}
+      }
+      div.section form a {
+        background-color:#28abe3;
+        border-style:none;
+      }
       .active-train {
         background-color:#eee !important;
       }
       [crs] {
         background-color:#ccc;
       }
-		</style>
-	</head>
-	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-      </nav>
-      <div class="container-fluid" style="">
-	      <div class="row" style="" id="multiscroll">
-		      <div class="ms-left col-md-6">
-			      <div class="" id="map">
-			      </div>
-		      </div>
-		      <div class="col-md-6 ms-right" style="">
-			      <div class="section" id="start">
-				<form class="form-horizontal">
-					<div class="form-group">
-						<label for="trainFrom" class="col-sm-1 control-label">From:</label>
-						<div class="col-sm-11">
-							<input type="text" class="form-control" id="trainFrom" placeholder="London Bridge">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="trainTo" class="col-sm-1 control-label">To:</label>
-						<div class="col-sm-11">
-							<input type="text" class="form-control" id="trainTo" placeholder="East Croydon">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="trainSchedule" class="col-sm-1">Type:</label>
-						<div class="col-sm-3">
-							<select id="trainSchedule" class="form-control">
-								<option>Weekdays</option>
-								<option>Weekends</option>
-							</select>
-						</div>
-						<label for="trainTime" class="col-sm-1 col-sm-offset-4">Time:</label>
-						<div class="col-sm-3">
-						<input type="time" class="form-control" id="trainTime">
-						</div>
-					</div>
-					<a class="btn btn-default btn-lg pull-right" id="findTrains" role="button" href="#">Find Trains</a>
-					<div class="clearfix"></div>
-				</form>
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #28abe3">
+    </nav>
+    <div class="container-fluid" style="">
+      <div class="row" style="" id="multiscroll">
+        <div class="ms-left col-md-6">
+          <div class="" id="map">
+          </div>
+        </div>
+        <div class="col-md-6 ms-right" style="">
+          <div class="section" id="start">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="trainFrom" class="col-sm-1 control-label">From:</label>
+                <div class="col-sm-11">
+                  <input type="text" class="form-control" id="trainFrom" placeholder="London Bridge">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="trainTo" class="col-sm-1 control-label">To:</label>
+                <div class="col-sm-11">
+                  <input type="text" class="form-control" id="trainTo" placeholder="East Croydon">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="trainSchedule" class="col-sm-1">Type:</label>
+                <div class="col-sm-3">
+                  <select id="trainSchedule" class="form-control">
+                    <option>Weekdays</option>
+                    <option>Weekends</option>
+                  </select>
+                </div>
+                <label for="trainTime" class="col-sm-1 col-sm-offset-4">Time:</label>
+                <div class="col-sm-3">
+                  <input type="time" class="form-control" id="trainTime">
+                </div>
+              </div>
+              <a class="btn btn-default btn-lg pull-right" id="findTrains" role="button" href="#">Find Trains</a>
+              <div class="clearfix"></div>
+            </form>
 
-			      </div>
-
-
-			      <div id="viz">
-				      <a name="overview"></a>
-				      <div class="hidden" id="tables">
-				      </div>
-			      </div>
-		      </div>
-
-	</div>
-</div>
-<div id="dayDetail" style="width:25%; visibility: hidden">
-	<h4 id="dayDetailTitle"></h4>
-	<svg id="dayDetailGraph"></svg>
-</div>
-<nav class="navbar navbar-default navbar-fixed-bottom">
-</nav>
-<div id="dummy" class="hidden"></div>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$("a").click(function() {
-					switch (this.id) {
-						case "findTrains":
-							$("#tables").removeClass("hidden");
-							getTrainOverview();
-							$('html,body').animate({
-								scrollTop: $("#tables").offset().top - 50
-								}, 1000);
-							break;
-						default:
-							break;
+          </div>
 
 
-					}
+          <div id="viz">
+            <a name="overview"></a>
+            <div class="hidden" id="tables">
+            </div>
+          </div>
+        </div>
 
-				})
+      </div>
+    </div>
+    <div id="dayDetail" style="width:25%; visibility: hidden">
+      <h4 id="dayDetailTitle"></h4>
+      <svg id="dayDetailGraph"></svg>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+    </nav>
+    <div id="dummy" class="hidden"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("a").click(function() {
+            switch (this.id) {
+              case "findTrains":
+                $("#tables").removeClass("hidden");
+                getTrainOverview();
+                $('html,body').animate({
+                  scrollTop: $("#tables").offset().top - 50
+                }, 1000);
+                break;
+            default:
+              break;
 
-			});
 
-		</script>
+            }
 
-		<script src="map.js"></script>
-		<script src="viz.js"></script>
-	</body>
+            })
+
+          // Initialise Map
+          var map = new mxn.Mapstraction('map', 'openlayers');
+
+          var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
+          map.setBounds(UK);
+
+      });
+</script>
+
+<script src="viz.js"></script>
+  </body>
 </html>
 
 
