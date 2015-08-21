@@ -83,14 +83,18 @@
 			div.section form input,
 			div.section form select {
 				border-color: #1f40c2;
-				
-				
+
 			}
 			div.section form a {
 				background-color:#28abe3;
 				border-style:none;
 			}
-
+      .active-train {
+        background-color:#eee !important;
+      }
+      [crs] {
+        background-color:#ccc;
+      }
 		</style>
 	</head>
 	<body>
@@ -151,8 +155,8 @@
 	<svg id="dayDetailGraph"></svg>
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
-
 </nav>
+<div id="dummy" class="hidden"></div>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("a").click(function() {

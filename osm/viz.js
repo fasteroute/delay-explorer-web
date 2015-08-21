@@ -13,12 +13,14 @@ var color = d3.scale.quantize().range([
 		"rgb(179,0,0)"]);
 color.domain([0,20]);
 
+var cell_size;
+
 function plotGridWithData(data, rowHeaders) {
-	
+
 	d3.select("div#tables").selectAll("table").remove();
 	var canvas_width = d3.select("div#viz").node().getBoundingClientRect().width
 	var graph_width = canvas_width*0.5;
-	var cell_size = (graph_width - 12)/7;
+	cell_size = (graph_width - 12)/7;
 	var tbl = d3.select("div#tables").append("table");
 	var rows = tbl.selectAll("tr").data(data);
 	rows.enter()
@@ -28,7 +30,7 @@ function plotGridWithData(data, rowHeaders) {
 	var cells = rows.selectAll("td")
 		.data(function(d,i) {
 			return d;
-		}); 
+		});
 
 	/**
 	  * Next we insert a div into each cell of the table
@@ -44,14 +46,14 @@ function plotGridWithData(data, rowHeaders) {
 		.classed("cell", true)
 		.style("width", cell_size+'px')
 		.style("height", cell_size+'px')
-	/*$('td').webuiPopover({
-		title:'Title',
-		content:function() {
-			var svg = getTrainDayDetail("Last Month");
-			return "";
-		},
-		trigger:'hover'
-	});*/
+    /*$('td').webuiPopover({
+      title:'Title',
+      content:function() {
+        var svg = getTrainDayDetail("Last Month");
+        return "";
+      },
+      trigger:'hover'
+    });*/
 
 	// Adds days to top headers of the table
 	// At this point no header elements exist yet.
@@ -94,10 +96,10 @@ function createMapOverview(routes, stations) {
 		latlon.name = elem["name"];
 		stationDict[latlon.crs] = latlon;
 	});
-	
+
 	var stnList = []
 	routes.forEach(function(elem,idx) {
-	
+
 		stnList = [];
 		elem.forEach(function(stn,indx) {
 			stnList.push(stationDict[stn]);
@@ -295,13 +297,95 @@ function getTrainOverview() {
 				map.addPolyline(curr_route, true);
 			})
 			.on("click", function() {
-				var schedule_id = this.getAttribute("schedule");
-				var selRow = this;
-		/*		d3.json('stations.json', function(error,json) {
 
-					var sibling = selRow.nextSibling
+
+        // First of all we reset any previously shown data,
+
+        var activeTrain = d3.select(".active-train")
+        if (activeTrain.empty() == false) {
+          activeTrain.classed("active-train", false);
+          d3.selectAll('[crs]').remove();
+
+          if (activeTrain.node() == this) {
+            return;
+          }
+        }
+
+        // Now we create the new tables
+				var schedule_id = this.getAttribute("schedule");
+        var route_id = this.getAttribute("route");
+				var selRow = this;
+
+        // Special css for clicked train schedule
+        d3.select(selRow).classed("active-train", true);
+
+				var currRow = $(this)
+
+				d3.json('stations.json?schedule='+schedule_id, function(error,json) {
+
 					var stns = json["stations"];
 					var data = json["data"];
+
+          data.forEach( function(delays,index) {
+            var newRow = d3.select('div#dummy').append('tr')
+              .attr("crs", function() { return stns[index];})
+              .attr("route", function() {return route_id;})
+              .on("mouseover", function() {
+                var route_id = this.getAttribute("route");
+                var curr_route = routeDict[parseInt(route_id)];
+                curr_route.setColor("#28abe3");
+                map.addPolyline(curr_route, true);
+
+              })
+              .on("mouseout", function() {
+                var route_id = this.getAttribute("route");
+                var curr_route = routeDict[parseInt(route_id)];
+                curr_route.setColor("rgb(31, 64, 194)");
+                map.addPolyline(curr_route, true);
+              })
+              .on("click", function() {
+                $('.active-train').click();
+
+              })
+
+            // Add row header for station name
+            newRow
+              .append("th")
+              .classed("rowHeader",true)
+              .text(function() {
+                return stationDict[stns[index]].name
+              })
+
+              // Adds cells to existing row
+
+              var delayRange = d3.range(0, delays.length)
+              newRow.selectAll("td")
+                .data(delayRange, function(index) {
+                  return index;
+                })
+                .enter()
+                .append("td")
+							  .style("padding","5px")
+                .append("div")
+                .style("background-color", function(i) {
+                  var d = delays[i];
+                  if(d==0) {
+                    return "rgb(49,163,84)";
+                  } else {
+                    return color(d);
+                  }
+                })
+                .classed("cell", true)
+                .style("width", cell_size+'px')
+                .style("height", cell_size+'px')
+
+                newRow = $(newRow.node());
+                var newRowHTML = $('<div>').append(newRow.clone()).html();
+                currRow.after(newRow);
+                currRow = newRow;
+
+          })
+         /* var rows;
 					if (sibling != null) {
 						var siblingID = sibling.getAttribute("schedule");
 						d3.select(sibling)
@@ -313,28 +397,67 @@ function getTrainOverview() {
 							});
 					} else {
 						sibling = selRow.parentNode;
-						rows = d3.select(sibling)
-							.selectAll('tr')
-							.data(data)
-							.enter().append('tr')
-							.attr("crs", function(d,i) {
-								return stns[i];
+            data.forEach( function(delays, i) {
+              var row = d3.select(sibling)
+                .append("tr")
+                .attr("crs", function() {
+                  return stns[i];
 							});
+              // Add header to current row
+              row
+                .append("th")
+                .classed("rowHeader",true)
+                .text(function() {
+                  return stationDict[stns[i]].name;
+                });
 
-						var cells = rows
+              // Adds cells to existing row
+
+              var delayRange = d3.range(0, delays.length)
+              row.selectAll("td")
+                .data(delayRange, function(index) {
+                  return index;
+                })
+                .enter()
+                .append("td")
+							  .style("padding","5px")
+                .append("div")
+                .style("background-color", function(index) {
+                  var d = delays[index];
+                  if(d==0) {
+                    return "rgb(49,163,84)";
+                  } else {
+                    return color(d);
+                  }
+                })
+                .classed("cell", true)
+                .style("width", cell_size+'px')
+                .style("height", cell_size+'px')
+                .classed("active-train", true);
+
+
+            })
+
+					}
+						/*var cells = rows
 							.selectAll('td')
 							.data( function(d) { return d;})
 							.enter().append('td')
-							style("padding","5px")
 							.append("div")
-							.style("background-color", function(d) { if(d==0) {return "rgb(49,163,84)"} else {return color(d)};})
-							.classed("cell", true)
-							.style("width", cell_size+'px')
-							.style("height", cell_size+'px')
-							.classed("active-train", true);
-					}
 
-				});*/
+             rows
+              .selectAll('th')
+              .data( function(d,i) {
+                console.log(d,i);
+                return i;
+              })
+              .append('th')
+              .text(function(d) {
+                console.log(d);
+                return d;
+              })
+*/
+				});
 			});
 
 	/* Adds clearfix after tables to clear float
