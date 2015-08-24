@@ -79,39 +79,73 @@ var marker;
  *
  */
 function createMapOverview(routes, stations) {
-	map.removeAllMarkers()
-	map.removeAllPolylines()
+	//map.removeAllMarkers()
+	//map.removeAllPolylines()
 
 	stations.forEach(function(elem,idx) {
-		var latlon = new mxn.LatLonPoint(elem["lat"], elem["lon"]);
+		var latlon = new L.latLng(elem["lat"], elem["lon"]);
 		latlon.crs = elem["crs"];
 		latlon.name = elem["name"];
 		stationDict[latlon.crs] = latlon;
 	});
 
 	var stnList = []
+  var stnSet = new Set()
+	var colr = "#1f40c2";
+	var options = {color: colr, weight:4};
+  var maximumLon=null;
+  var maximumLat=null;
+  var minimumLon=null;
+  var minimumLat=null;
 	routes.forEach(function(elem,idx) {
 
 		stnList = [];
 		elem.forEach(function(stn,indx) {
-			stnList.push(stationDict[stn]);
+			var point = stationDict[stn];
+      stnList.push(point);
+      stnSet.add(point);
+      if (indx == 0) {
+        maximumLat = point.lat;
+        maximumLon = point.lng;
+        minimumLat = point.lat;
+        minimumLon = point.lng;
+      } else {
+        if (point.lat > maximumLat) {
+          maximumLat = point.lat;};
+        if (point.lng > maximumLon) {
+          maximumLon = point.lng;};
+        if (point.lat < minimumLat) {
+          minimumLat = point.lat;};
+        if (point.lng < minimumLon) {
+          minimumLon = point.lng;};
+      }
 		});
 
-		var pline = new mxn.Polyline(stnList);
-		var colr = "#1f40c2";
-		pline.addData({color: colr, width:4});
-		map.addPolyline(pline);
+		var pline = L.polyline(stnList, options)
+    pline.addTo(map)
 		routeDict[idx] = pline;
 
 
 	});
+
+  map.fitBounds(
+    L.latLngBounds(
+      [
+      L.latLng(minimumLat, minimumLon),
+      L.latLng(maximumLat, maximumLon)
+      ]
+    )
+  );
+      var pinIcon = L.icon({
+    iconUrl: 'pin.png',
+    iconSize: [42,42],
+    iconAnchor: [ 21,42]
+  });
+
 	// Draw markers last so they are above routes
 	for (var stn in stationDict) {
-
-		marker = new mxn.Marker(stationDict[stn]);
-		marker.addData({"icon": "pin.png"});
-		marker.setIconSize([42,42]);
-		map.addMarker(marker);
+    marker = L.marker(stationDict[stn], {icon: pinIcon});
+    marker.addTo(map);
 	}
 
 }
@@ -213,7 +247,6 @@ function getTrainOverview() {
 		var newTbl = plotGridWithData(json["data"], trains);
 
 		createMapOverview(routes, stations);
-		map.autoCenterAndZoom();
 
 		// For trains add train and destination info
 		var children = newTbl.node().childNodes;
@@ -271,8 +304,8 @@ function getTrainOverview() {
 					.style("background-color","#ccc")
 				var route_id = this.getAttribute("route");
 				var curr_route = routeDict[parseInt(route_id)];
-				curr_route.setColor("#28abe3");
-				map.addPolyline(curr_route, true);
+				//curr_route.setColor("#28abe3");
+				//map.addPolyline(curr_route, true);
 
 			})
 			.on("mouseout", function() {
@@ -280,8 +313,8 @@ function getTrainOverview() {
 					.style("background-color","transparent")
 				var route_id = this.getAttribute("route");
 				var curr_route = routeDict[parseInt(route_id)];
-				curr_route.setColor("rgb(31, 64, 194)");
-				map.addPolyline(curr_route, true);
+				//curr_route.setColor("rgb(31, 64, 194)");
+				//map.addPolyline(curr_route, true);
 			})
 			.on("click", function() {
 
@@ -320,15 +353,15 @@ function getTrainOverview() {
               .on("mouseover", function() {
                 var route_id = this.getAttribute("route");
                 var curr_route = routeDict[parseInt(route_id)];
-                curr_route.setColor("#28abe3");
-                map.addPolyline(curr_route, true);
+                //curr_route.setColor("#28abe3");
+                //map.addPolyline(curr_route, true);
 
               })
               .on("mouseout", function() {
                 var route_id = this.getAttribute("route");
                 var curr_route = routeDict[parseInt(route_id)];
-                curr_route.setColor("rgb(31, 64, 194)");
-                map.addPolyline(curr_route, true);
+                //curr_route.setColor("rgb(31, 64, 194)");
+                //map.addPolyline(curr_route, true);
               })
               .on("click", function() {
                 $('.active-train').click();

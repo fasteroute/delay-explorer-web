@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>19:30 London Bridge to East Croydon</title>
-    <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
-    <script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
+<!--
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.8.2/css/ol.css" type="text/css">
+    <script src="http://openlayers.org/en/v3.8.2/build/ol.js"></script>
+    -->
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
 		<script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="jquery.webui-popover.css">
@@ -158,11 +162,39 @@
 
 
       });
-      // Initialise Map
-      var map = new mxn.Mapstraction('map', 'openlayers');
+// Initialise Map
+maxLng = 58.86;
+maxLat = 2.57;
+minLng = 49.95;
+minLat = -12.76;
+/*
+var map = new ol.Map({
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.Stamen({
+        layer: 'toner'
+      })
+    })
+  ],
+  target: 'map',
+  view: new ol.View({
+    center: ol.proj.fromLonLat([(minLat+maxLat)/2,(minLng+maxLng)/2]),
+    zoom: 1
+  })
+  });
+var ext = ol.proj.transformExtent([minLat,minLng, maxLat,maxLng], 'EPSG:4326', 'EPSG:3857');
+map.getView().fit(ext, map.getSize());
+//map.zoomToExtent(new OpenLayers.Bounds(minLng,minLat,maxLng,maxLat).transform("EPSG:4326", "EPSG:900913"))
+      //var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
+      //map.setBounds(UK);
+ */
+  var map = L.map('map').setView([(minLat+maxLat)/2,(minLng+maxLng)/2], 2);
+  L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          maxZoom: 18
+          }).addTo(map);
 
-      var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
-      map.setBounds(UK);
+  map.fitBounds([[minLng,minLat], [maxLng,maxLat]]);
 </script>
 
 <script src="viz.js"></script>
