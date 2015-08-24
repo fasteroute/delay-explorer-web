@@ -68,8 +68,22 @@ function plotGridWithData(data, rowHeaders) {
 	return tbl;
 }
 
+var markerList=[];
+
+function clearMap() {
+
+for (routeID in routeDict) {
+  var l = routeDict[routeID];
+  map.removeLayer(l);
+}
+for (markerID in markerList) {
+  var m = markerList[markerID];
+  map.removeLayer(m);
+}
+
+
+}
 var stationDict = {};
-var marker;
 /**
  * createMapOverview() plots the set of the supplied train routes onto the map
  * also placing pins at the location of each station on each route.
@@ -79,8 +93,9 @@ var marker;
  *
  */
 function createMapOverview(routes, stations) {
-	//map.removeAllMarkers()
-	//map.removeAllPolylines()
+
+  // First we have to make sure all existing markers and polylines are cleared from the map
+  clearMap();
 
 	stations.forEach(function(elem,idx) {
 		var latlon = new L.latLng(elem["lat"], elem["lon"]);
@@ -144,8 +159,11 @@ function createMapOverview(routes, stations) {
 
 	// Draw markers last so they are above routes
 	for (var stn in stationDict) {
-    marker = L.marker(stationDict[stn], {icon: pinIcon});
+
+    var marker = L.marker(stationDict[stn], {icon: pinIcon});
     marker.addTo(map);
+    markerList.push(marker);
+
 	}
 
 }
@@ -304,7 +322,8 @@ function getTrainOverview() {
 					.style("background-color","#ccc")
 				var route_id = this.getAttribute("route");
 				var curr_route = routeDict[parseInt(route_id)];
-				//curr_route.setColor("#28abe3");
+				curr_route.setStyle({color:"#28abe3"});
+        curr_route.redraw();
 				//map.addPolyline(curr_route, true);
 
 			})
@@ -313,7 +332,8 @@ function getTrainOverview() {
 					.style("background-color","transparent")
 				var route_id = this.getAttribute("route");
 				var curr_route = routeDict[parseInt(route_id)];
-				//curr_route.setColor("rgb(31, 64, 194)");
+				curr_route.setStyle({color:"rgb(31, 64, 194)"});
+        curr_route.redraw();
 				//map.addPolyline(curr_route, true);
 			})
 			.on("click", function() {
@@ -353,6 +373,8 @@ function getTrainOverview() {
               .on("mouseover", function() {
                 var route_id = this.getAttribute("route");
                 var curr_route = routeDict[parseInt(route_id)];
+                curr_route.setStyle({color:"#28abe3"});
+                curr_route.redraw();
                 //curr_route.setColor("#28abe3");
                 //map.addPolyline(curr_route, true);
 
@@ -360,6 +382,8 @@ function getTrainOverview() {
               .on("mouseout", function() {
                 var route_id = this.getAttribute("route");
                 var curr_route = routeDict[parseInt(route_id)];
+                curr_route.setStyle({color:"rgb(31, 64, 194)"});
+                curr_route.redraw();
                 //curr_route.setColor("rgb(31, 64, 194)");
                 //map.addPolyline(curr_route, true);
               })
