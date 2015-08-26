@@ -15,6 +15,39 @@ color.domain([0,20]);
 
 var cell_size;
 
+var circleList=[];
+
+function delayHeatMap(bounds) {
+  var hue = d3.scale.quantize().range([
+      "rgb(254,240,217)",
+      "rgb(253,204,138)",
+      "rgb(252,141,89)",
+      "rgb(227,74,51)",
+      "rgb(179,0,0)"]);
+  hue.domain([0,1000]);
+
+  if (bounds == null) { bounds = map.getBounds(); }
+
+  d3.json('locations.json', function(error, json) {
+
+    data = json["stations"];
+    for (idex in data) {
+      var tempStn = data[idex];
+        var radius = Math.random()*1000;
+        var circle = L.circle([tempStn.latitude, tempStn.longitude], radius, {
+          color: radius > 100 ? hue(radius) : 'green',
+          fillColor: radius > 100 ? hue(radius) : 'green',
+          fillOpacity: 0.3
+        }).addTo(map);
+        //circleList.push(circle);
+
+    }
+
+
+  });
+
+};
+delayHeatMap()
 function plotGridWithData(data, rowHeaders) {
 
 	d3.select("div#tables").selectAll("table").remove();
@@ -67,7 +100,6 @@ function plotGridWithData(data, rowHeaders) {
 
 	return tbl;
 }
-
 var markerList=[];
 
 function clearMap() {
@@ -78,6 +110,10 @@ for (routeID in routeDict) {
 }
 for (markerID in markerList) {
   var m = markerList[markerID];
+  map.removeLayer(m);
+}
+for (circleID in circleList) {
+  var m = circleList[circleID];
   map.removeLayer(m);
 }
 
