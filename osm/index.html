@@ -17,8 +17,10 @@
 
 		<script type="text/javascript" src="../d3.v3-5-6.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="local/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="local/bootstrap.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="jquery.webui-popover.css">
     <script src="jquery.webui-popover.js"></script>
     <style>
@@ -187,7 +189,6 @@ map.getView().fit(ext, map.getSize());
 //map.zoomToExtent(new OpenLayers.Bounds(minLng,minLat,maxLng,maxLat).transform("EPSG:4326", "EPSG:900913"))
       //var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
       //map.setBounds(UK);
- */
   var map = L.map('map').setView([(minLat+maxLat)/2,(minLng+maxLng)/2], 2);
   L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
 attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>',
@@ -195,6 +196,15 @@ attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</
           }).addTo(map);
 
   map.fitBounds([[minLng,minLat], [maxLng,maxLat]]);
+ */
+var map = null;
+var L;
+if (L == undefined) {
+  L = {}
+  L.latLng = function(lat,lng) {
+    return {lat:lat, lng:lng};
+  }
+}
 </script>
 
 <script src="viz.js"></script>

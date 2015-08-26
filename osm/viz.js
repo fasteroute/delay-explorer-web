@@ -1,4 +1,3 @@
-
 var data;
 var stations;
 var days = ["","M", "T", "W", "T", "F", "S", "S"];
@@ -16,7 +15,8 @@ color.domain([0,20]);
 var cell_size;
 
 var circleList=[];
-
+var UKStations = {}
+var UKStationNames = {}
 function delayHeatMap(bounds) {
   var hue = d3.scale.quantize().range([
       "rgb(254,240,217)",
@@ -26,13 +26,16 @@ function delayHeatMap(bounds) {
       "rgb(179,0,0)"]);
   hue.domain([0,1000]);
 
-  if (bounds == null) { bounds = map.getBounds(); }
+  if (bounds == null && map != null) { bounds = map.getBounds(); }
 
   d3.json('locations.json', function(error, json) {
 
     data = json["stations"];
     for (idex in data) {
       var tempStn = data[idex];
+      UKStations[tempStn.crs] = tempStn;
+      UKStationNames[tempStn.name] = tempStn.crs;
+  if (map == null) { return;};
         var radius = Math.random()*1000;
         var circle = L.circle([tempStn.latitude, tempStn.longitude], radius, {
           color: radius > 100 ? hue(radius) : 'green',
@@ -47,7 +50,9 @@ function delayHeatMap(bounds) {
   });
 
 };
-delayHeatMap()
+if (map != null) {
+  delayHeatMap();
+}
 function plotGridWithData(data, rowHeaders) {
 
 	d3.select("div#tables").selectAll("table").remove();
@@ -104,20 +109,21 @@ var markerList=[];
 
 function clearMap() {
 
-for (routeID in routeDict) {
-  var l = routeDict[routeID];
-  map.removeLayer(l);
-}
-for (markerID in markerList) {
-  var m = markerList[markerID];
-  map.removeLayer(m);
-}
-for (circleID in circleList) {
-  var m = circleList[circleID];
-  map.removeLayer(m);
-}
+  if (map != undefined) {
+    for (routeID in routeDict) {
+      var l = routeDict[routeID];
+      map.removeLayer(l);
+    }
+    for (markerID in markerList) {
+      var m = markerList[markerID];
+      map.removeLayer(m);
+    }
+    for (circleID in circleList) {
+      var m = circleList[circleID];
+      map.removeLayer(m);
+    }
 
-
+  }
 }
 var stationDict = {};
 /**
@@ -129,7 +135,6 @@ var stationDict = {};
  *
  */
 function createMapOverview(routes, stations) {
-
   // First we have to make sure all existing markers and polylines are cleared from the map
   clearMap();
 
@@ -172,12 +177,18 @@ function createMapOverview(routes, stations) {
       }
 		});
 
+    if (map == undefined) {
+      return
+    }
 		var pline = L.polyline(stnList, options)
     pline.addTo(map)
 		routeDict[idx] = pline;
 
 
 	});
+    if (map == undefined) {
+      return
+    }
 
   map.fitBounds(
     L.latLngBounds(
@@ -351,27 +362,29 @@ function getTrainOverview() {
 
 		// Add event listener to table row for clicks
 		// When clicks occur we want to insert our new rows seamlessly
+    if (map != undefined) {
+      d3.selectAll('tr')
+        .on("mouseover", function() {
+          d3.select(this)
+            .style("background-color","#ccc")
+          var route_id = this.getAttribute("route");
+          var curr_route = routeDict[parseInt(route_id)];
+          curr_route.setStyle({color:"#28abe3"});
+          curr_route.redraw();
+          //map.addPolyline(curr_route, true);
 
-		d3.selectAll('tr')
-			.on("mouseover", function() {
-				d3.select(this)
-					.style("background-color","#ccc")
-				var route_id = this.getAttribute("route");
-				var curr_route = routeDict[parseInt(route_id)];
-				curr_route.setStyle({color:"#28abe3"});
-        curr_route.redraw();
-				//map.addPolyline(curr_route, true);
-
-			})
-			.on("mouseout", function() {
-				d3.select(this)
-					.style("background-color","transparent")
-				var route_id = this.getAttribute("route");
-				var curr_route = routeDict[parseInt(route_id)];
-				curr_route.setStyle({color:"rgb(31, 64, 194)"});
-        curr_route.redraw();
-				//map.addPolyline(curr_route, true);
-			})
+        })
+        .on("mouseout", function() {
+          d3.select(this)
+            .style("background-color","transparent")
+          var route_id = this.getAttribute("route");
+          var curr_route = routeDict[parseInt(route_id)];
+          curr_route.setStyle({color:"rgb(31, 64, 194)"});
+          curr_route.redraw();
+          //map.addPolyline(curr_route, true);
+        })
+    }
+      d3.selectAll('tr')
 			.on("click", function() {
 
 
@@ -406,28 +419,30 @@ function getTrainOverview() {
             var newRow = d3.select('div#dummy').append('tr')
               .attr("crs", function() { return stns[index];})
               .attr("route", function() {return route_id;})
-              .on("mouseover", function() {
-                var route_id = this.getAttribute("route");
-                var curr_route = routeDict[parseInt(route_id)];
-                curr_route.setStyle({color:"#28abe3"});
-                curr_route.redraw();
-                //curr_route.setColor("#28abe3");
-                //map.addPolyline(curr_route, true);
+              if (map != undefined) {
+                newRow
+                  .on("mouseover", function() {
+                    var route_id = this.getAttribute("route");
+                    var curr_route = routeDict[parseInt(route_id)];
+                    curr_route.setStyle({color:"#28abe3"});
+                    curr_route.redraw();
+                    //curr_route.setColor("#28abe3");
+                    //map.addPolyline(curr_route, true);
 
-              })
-              .on("mouseout", function() {
-                var route_id = this.getAttribute("route");
-                var curr_route = routeDict[parseInt(route_id)];
-                curr_route.setStyle({color:"rgb(31, 64, 194)"});
-                curr_route.redraw();
-                //curr_route.setColor("rgb(31, 64, 194)");
-                //map.addPolyline(curr_route, true);
-              })
-              .on("click", function() {
-                $('.active-train').click();
+                  })
+                  .on("mouseout", function() {
+                    var route_id = this.getAttribute("route");
+                    var curr_route = routeDict[parseInt(route_id)];
+                    curr_route.setStyle({color:"rgb(31, 64, 194)"});
+                    curr_route.redraw();
+                    //curr_route.setColor("rgb(31, 64, 194)");
+                    //map.addPolyline(curr_route, true);
+                  })
+                  .on("click", function() {
+                    $('.active-train').click();
 
-              })
-
+                  })
+              }
             // Add row header for station name
             newRow
               .append("th")

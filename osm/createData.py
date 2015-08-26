@@ -27,9 +27,9 @@ for train in range(num_trains):
     trains.append(curr_train)
 
 tables = [stations, trains]
-train_data = { 
+train_data = {
         "routes": [
-            ["lbg","ecr"], 
+            ["lbg","ecr"],
             ["lbg","nwd","ecr"],
             ["lbg","nxg","bcy","hpa","foh","syd","nwd","ecr"]
         ],
