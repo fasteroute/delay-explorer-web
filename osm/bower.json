@@ -1,0 +1,29 @@
+{
+  "name": "National Rail Delay Visualiser",
+  "version": "0.0.0",
+  "authors": [
+    "Joe Letts <joe@fasteroute.com>"
+  ],
+  "description": "An open source application for visualising dirsuption in UK rail.",
+  "main": "viz.js",
+  "keywords": [
+    "delay",
+    "rail"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "assets"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "d3": "~3.5.6",
+    "jquery": "~2.1.4",
+    "leaflet": "~0.7.3",
+    "webui-popover": "~1.1.6"
+  }
+}

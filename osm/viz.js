@@ -35,6 +35,7 @@ function delayHeatMap(bounds) {
       tempLatLon = new L.latLng(tempStn.latitude, tempStn.longitude);
       tempLatLon.crs = tempStn.crs
       tempLatLon.name = tempStn.name
+      tempLatLon.routes = new Set();
       UKStations[tempStn.crs] = tempLatLon;
       if (map == null) { continue;};
       var radius = Math.random()*1000;
@@ -120,6 +121,9 @@ function clearMap() {
     routeDict = {};
     for (markerID in markerList) {
       var m = markerList[markerID];
+      // Clear routes from underlying latLng object
+      m._latlng.routes = new Set();
+      // Removes marker from the map
       map.removeLayer(m);
     }
     markerList = [];
@@ -166,6 +170,10 @@ function createMapOverview(segments, stations) {
     stnList.push(UKStations[link["origin"]])
     stnList.push(UKStations[link["destination"]])
 		stnList.forEach(function(stn,indx) {
+
+      // Add all the routes this segment uses to the station/latLng ojbect.
+      link["routes"].forEach(function(route) { stn.routes.add(route)})
+
       if (maximumLon == null && maximumLat == null && minimumLat == null && minimumLon == null) {
         maximumLat =stn.lat;
         maximumLon =stn.lng;
@@ -209,7 +217,7 @@ function createMapOverview(segments, stations) {
       ]
     )
   );
-      var pinIcon = L.icon({
+  var pinIcon = L.icon({
     iconUrl: 'pin.png',
     iconSize: [42,42],
     iconAnchor: [ 21,42]
@@ -217,10 +225,11 @@ function createMapOverview(segments, stations) {
 
 	// Draw markers last so they are above routes
 	currentStations.forEach(function(crs) {
-
-    var marker = L.marker(UKStations[crs], {icon: pinIcon});
-    //marker.addTo(map);
-    //markerList.push(marker);
+    var ltln = UKStations[crs]
+    var marker = L.marker(ltln, {icon: pinIcon})
+      .bindLabel(ltln.name, { noHide: true, direction: 'auto'});
+    marker.addTo(map);
+    markerList.push(marker);
 
 	});
 
