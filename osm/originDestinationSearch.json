@@ -31,7 +31,7 @@
     "segments": [
         {
             "origin": "lbg", 
-            "delay": 10, 
+            "delay": 8, 
             "destination": "nxg", 
             "routes": [
                 1, 
@@ -40,7 +40,7 @@
         }, 
         {
             "origin": "nxg", 
-            "delay": 2.0, 
+            "delay": 7.0, 
             "destination": "nwd", 
             "routes": [
                 1
@@ -48,7 +48,7 @@
         }, 
         {
             "origin": "anz", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "nwd", 
             "routes": [
                 2
@@ -56,7 +56,7 @@
         }, 
         {
             "origin": "pnw", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "anz", 
             "routes": [
                 2
@@ -64,7 +64,7 @@
         }, 
         {
             "origin": "bcy", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "hpa", 
             "routes": [
                 2
@@ -72,7 +72,7 @@
         }, 
         {
             "origin": "lbg", 
-            "delay": 13, 
+            "delay": 9, 
             "destination": "nwd", 
             "routes": [
                 0
@@ -80,7 +80,7 @@
         }, 
         {
             "origin": "nxg", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "bcy", 
             "routes": [
                 2
@@ -88,7 +88,7 @@
         }, 
         {
             "origin": "nwd", 
-            "delay": 13, 
+            "delay": 9, 
             "destination": "ecr", 
             "routes": [
                 0, 
@@ -106,7 +106,7 @@
         }, 
         {
             "origin": "hpa", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "foh", 
             "routes": [
                 2
@@ -114,7 +114,7 @@
         }, 
         {
             "origin": "foh", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "syd", 
             "routes": [
                 2
@@ -122,7 +122,7 @@
         }, 
         {
             "origin": "syd", 
-            "delay": 10.0, 
+            "delay": 8.0, 
             "destination": "pnw", 
             "routes": [
                 2
@@ -145,46 +145,10 @@
         [
             0, 
             0, 
-            3, 
-            12, 
-            21, 
-            24, 
-            30
-        ], 
-        [
-            0, 
-            3, 
-            6, 
-            18, 
-            18, 
-            21, 
-            27
-        ], 
-        [
-            0, 
-            0, 
             0, 
             0, 
             0, 
             3, 
-            12
-        ], 
-        [
-            0, 
-            0, 
-            0, 
-            12, 
-            15, 
-            21, 
-            24
-        ], 
-        [
-            0, 
-            0, 
-            3, 
-            3, 
-            6, 
-            27, 
             30
         ], 
         [
@@ -192,55 +156,91 @@
             0, 
             0, 
             0, 
+            6, 
+            30, 
+            30
+        ], 
+        [
             0, 
+            0, 
+            3, 
+            6, 
             9, 
+            12, 
             21
         ], 
         [
             0, 
             0, 
             0, 
-            3, 
             6, 
+            15, 
+            18, 
+            18
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
             12, 
-            27
+            21, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
+            9, 
+            12, 
+            18
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
+            3, 
+            21, 
+            30
         ]
     ], 
     "trains": [
         {
             "route": 0, 
-            "name": "08:33 Tonbridge", 
-            "schedule": "c15usysw375jyk2bs464chou4h464t"
+            "name": "12:09 Tonbridge", 
+            "schedule": "l5r4kd3q4d242164o2ua2d3uobb2cn"
         }, 
         {
             "route": 0, 
-            "name": "08:34 Tattenham Corner", 
-            "schedule": "n6fm50y12t6c6q24o2hgn322774bp1"
+            "name": "12:14 Tattenham Corner", 
+            "schedule": "xb09p3n90705815t2767qhum6b1419"
         }, 
         {
             "route": 1, 
-            "name": "08:47 Horsham", 
-            "schedule": "7rhl7qh03ab3k12575xi571vu123hw"
+            "name": "12:23 Horsham", 
+            "schedule": "1uu24u348xcork5udu3xg3821od17s"
         }, 
         {
             "route": 2, 
-            "name": "08:50 Caterham", 
-            "schedule": "6ks2ibtg6c8v0pl2yfku7c2r7d3x6k"
+            "name": "12:27 Caterham", 
+            "schedule": "0qd506n79w5s8g42d656uwkcgpmc4g"
         }, 
         {
             "route": 3, 
-            "name": "08:54 Uckfield", 
-            "schedule": "o2ie4m49cqu37j652425ej8gpp7gzf"
+            "name": "12:34 Uckfield", 
+            "schedule": "qo4ut976mn682kjtv8l3r6mk62dv3n"
         }, 
         {
             "route": 3, 
-            "name": "09:02 Brighton", 
-            "schedule": "085tw17wvx3mpd53mwhg4t4g79vx77"
+            "name": "12:39 Brighton", 
+            "schedule": "3t7k41m311g7d53e20gjv73309n12h"
         }, 
         {
             "route": 0, 
-            "name": "09:06 Reigate", 
-            "schedule": "142tko99z7f459kpxi6xc3804i4tlx"
+            "name": "12:41 Reigate", 
+            "schedule": "r333o4a55g9767tiwo8anpg3k548se"
         }
     ]
 }

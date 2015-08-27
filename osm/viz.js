@@ -32,7 +32,10 @@ function delayHeatMap(bounds) {
     data = json["stations"];
     for (idex in data) {
       var tempStn = data[idex];
-      UKStations[tempStn.crs] = tempStn;
+      tempLatLon = new L.latLng(tempStn.latitude, tempStn.longitude);
+      tempLatLon.crs = tempStn.crs
+      tempLatLon.name = tempStn.name
+      UKStations[tempStn.crs] = tempLatLon;
       if (map == null) { continue;};
       var radius = Math.random()*1000;
       var circle = L.circle([tempStn.latitude, tempStn.longitude], radius, {
@@ -105,11 +108,14 @@ var markerList=[];
 
 function clearMap() {
 
-  stationDict = {};
+  currentStations = [];
   if (map != undefined) {
+
     for (routeID in routeDict) {
-      var l = routeDict[routeID];
-      map.removeLayer(l);
+      var plines = routeDict[routeID];
+      plines.forEach(function(line) {
+      map.removeLayer(line);
+      });
     }
     routeDict = {};
     for (markerID in markerList) {
@@ -125,16 +131,16 @@ function clearMap() {
 
   }
 }
-var stationDict = {};
+var currentStations=[];
 /**
  * createMapOverview() plots the set of the supplied train routes onto the map
  * also placing pins at the location of each station on each route.
  *
- * @param {[[String]]} routes
+ * @param {[[String]]} segments
  * @param {[Object]} stations {lat,lon,crs,name}
  *
  */
-function createMapOverview(routes, stations) {
+function createMapOverview(segments, stations) {
   // First we have to make sure all existing markers and polylines are cleared from the map
   clearMap();
 
@@ -143,42 +149,37 @@ function createMapOverview(routes, stations) {
     if (currStn == null) { 
       console.log(elem); 
     } else {
-      var latlon = new L.latLng(currStn["latitude"], currStn["longitude"]);
-      latlon.crs = currStn.crs;
-      latlon.name = currStn.name;
-      stationDict[latlon.crs] = latlon;
+      currentStations.push(currStn.crs);
     }
 	});
 
 	var stnList = []
-  var stnSet = new Set()
 	var colr = "#1f40c2";
 	var options = {color: colr, weight:4};
   var maximumLon=null;
   var maximumLat=null;
   var minimumLon=null;
   var minimumLat=null;
-	routes.forEach(function(elem,idx) {
+	segments.forEach(function(link,idx) {
 
 		stnList = [];
-		elem.forEach(function(stn,indx) {
-			var point = stationDict[stn];
-      stnList.push(point);
-      stnSet.add(point);
-      if (indx == 0) {
-        maximumLat = point.lat;
-        maximumLon = point.lng;
-        minimumLat = point.lat;
-        minimumLon = point.lng;
+    stnList.push(UKStations[link["origin"]])
+    stnList.push(UKStations[link["destination"]])
+		stnList.forEach(function(stn,indx) {
+      if (maximumLon == null && maximumLat == null && minimumLat == null && minimumLon == null) {
+        maximumLat =stn.lat;
+        maximumLon =stn.lng;
+        minimumLat =stn.lat;
+        minimumLon =stn.lng;
       } else {
-        if (point.lat > maximumLat) {
-          maximumLat = point.lat;};
-        if (point.lng > maximumLon) {
-          maximumLon = point.lng;};
-        if (point.lat < minimumLat) {
-          minimumLat = point.lat;};
-        if (point.lng < minimumLon) {
-          minimumLon = point.lng;};
+        if (stn.lat > maximumLat) {
+          maximumLat =stn.lat;};
+        if (stn.longitude > maximumLon) {
+          maximumLon =stn.lng;};
+        if (stn.lng < minimumLat) {
+          minimumLat =stn.lat;};
+        if (stn.longitude < minimumLon) {
+          minimumLon =stn.lng;};
       }
 		});
 
@@ -187,8 +188,13 @@ function createMapOverview(routes, stations) {
     }
 		var pline = L.polyline(stnList, options)
     pline.addTo(map)
-		routeDict[idx] = pline;
-
+    link["routes"].forEach(function(route) {
+		  if (routeDict[route] == null) {
+        routeDict[route] = [pline];
+      } else {
+        routeDict[route].push(pline);
+      }
+    });
 
 	});
     if (map == undefined) {
@@ -210,13 +216,13 @@ function createMapOverview(routes, stations) {
   });
 
 	// Draw markers last so they are above routes
-	for (var stn in stationDict) {
+	currentStations.forEach(function(crs) {
 
-    var marker = L.marker(stationDict[stn], {icon: pinIcon});
-    marker.addTo(map);
-    markerList.push(marker);
+    var marker = L.marker(UKStations[crs], {icon: pinIcon});
+    //marker.addTo(map);
+    //markerList.push(marker);
 
-	}
+	});
 
 }
 /**
@@ -319,7 +325,7 @@ function getTrainOverview(callingPoints) {
     var segments = json["segments"]
 		var newTbl = plotGridWithData(json["data"], trains);
 
-		createMapOverview(routes, stations);
+		createMapOverview(segments, stations);
 
 		// For trains add train and destination info
 		var children = newTbl.node().childNodes;
@@ -376,20 +382,13 @@ function getTrainOverview(callingPoints) {
           d3.select(this)
             .style("background-color","#ccc")
           var route_id = this.getAttribute("route");
-          var curr_route = routeDict[parseInt(route_id)];
-          curr_route.setStyle({color:"#28abe3"});
-          curr_route.redraw();
-          //map.addPolyline(curr_route, true);
-
+          showRoute(route_id);
         })
         .on("mouseout", function() {
           d3.select(this)
             .style("background-color","transparent")
           var route_id = this.getAttribute("route");
-          var curr_route = routeDict[parseInt(route_id)];
-          curr_route.setStyle({color:"rgb(31, 64, 194)"});
-          curr_route.redraw();
-          //map.addPolyline(curr_route, true);
+          hideRoute(route_id);
         })
     }
       d3.selectAll('tr')
@@ -431,20 +430,11 @@ function getTrainOverview(callingPoints) {
                 newRow
                   .on("mouseover", function() {
                     var route_id = this.getAttribute("route");
-                    var curr_route = routeDict[parseInt(route_id)];
-                    curr_route.setStyle({color:"#28abe3"});
-                    curr_route.redraw();
-                    //curr_route.setColor("#28abe3");
-                    //map.addPolyline(curr_route, true);
-
+                    showRoute(route_id);
                   })
                   .on("mouseout", function() {
                     var route_id = this.getAttribute("route");
-                    var curr_route = routeDict[parseInt(route_id)];
-                    curr_route.setStyle({color:"rgb(31, 64, 194)"});
-                    curr_route.redraw();
-                    //curr_route.setColor("rgb(31, 64, 194)");
-                    //map.addPolyline(curr_route, true);
+                    hideRoute(route_id);
                   })
                   .on("click", function() {
                     $('.active-train').click();
@@ -456,7 +446,7 @@ function getTrainOverview(callingPoints) {
               .append("th")
               .classed("rowHeader",true)
               .text(function() {
-                return stationDict[stns[index]].name
+                return UKStations[currentStations[index]].name
               })
 
               // Adds cells to existing row
@@ -514,4 +504,20 @@ function getTrainOverview(callingPoints) {
 	});
 */
 	});
+}
+
+function showRoute(routeID) {
+  valid_segments = routeDict[parseInt(routeID)];
+  valid_segments.forEach(function(pline) {
+    pline.setStyle({color:"#28abe3"});
+    pline.redraw();
+  });
+}
+
+function hideRoute(routeID) {
+  valid_segments = routeDict[parseInt(routeID)];
+  valid_segments.forEach(function(pline) {
+    pline.setStyle({color:"rgb(31, 64, 194)"});
+    pline.redraw();
+  });
 }
