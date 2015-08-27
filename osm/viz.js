@@ -227,7 +227,14 @@ function createMapOverview(segments, stations) {
 	currentStations.forEach(function(crs) {
     var ltln = UKStations[crs]
     var marker = L.marker(ltln, {icon: pinIcon})
-      .bindLabel(ltln.name, { noHide: true, direction: 'auto'});
+      .bindLabel(ltln.name, {
+        noHide: true,
+        direction: 'auto'
+      }).on('click', function() {
+
+        name = this._latlng.name;
+        getTrainOverview([name]);
+      });
     marker.addTo(map);
     markerList.push(marker);
 
@@ -323,8 +330,13 @@ function getTrainDayDetail(callback) {
  */
 function getTrainOverview(callingPoints) {
   var sourceURL;
-  if (callingPoints.length == 1) { sourceURL = "originSearch.json";}
-  else { sourceURL = "originDestinationSearch.json";}
+  if (callingPoints.length == 1) {
+    sourceURL = "originSearch.json";
+    d3.select("#vizTitle").text("Trains departing from " + callingPoints[0]);
+  } else {
+    sourceURL = "originDestinationSearch.json";
+    d3.select("#vizTitle").text("Trains from " + callingPoints[0] + " to " + callingPoints[1]);
+  }
 
 	d3.json(sourceURL, function(error, json) {
 
