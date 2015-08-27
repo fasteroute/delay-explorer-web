@@ -234,7 +234,15 @@ function createMapOverview(segments, stations) {
 
         name = this._latlng.name;
         getTrainOverview([name]);
-      });
+      }).on('mouseover', function() {
+        this._latlng.routes.forEach( function(route) {
+          showRoute(route)
+        })
+      }).on('mouseout', function() {
+        this._latlng.routes.forEach( function(route) {
+          hideRoute(route)
+        })
+      })
     marker.addTo(map);
     markerList.push(marker);
 
