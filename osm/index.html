@@ -26,11 +26,13 @@
     <style>
       body { padding-bottom: 70px; }
       #map {
-        height:700px;
+        height:600px;
         position:fixed;
         left:0px;
-        top:50px;
+        top:0px;
         width:50%;
+        margin-top:50px;
+        margin-bottom:50px;
       }
       .hidden {
         display:none;
@@ -147,11 +149,22 @@
           $("a").click(function() {
             switch (this.id) {
               case "findTrains":
-                $("#tables").removeClass("hidden");
-                getTrainOverview();
-                $('html,body').animate({
-                  scrollTop: $("#tables").offset().top - 50
-                }, 1000);
+                if (trainTo.value == "") {
+                  trainFrom.value = "London Bridge";
+                  $("#tables").removeClass("hidden");
+                  getTrainOverview([trainFrom.value])
+                  $('html,body').animate({
+                    scrollTop: $("#tables").offset().top - 50
+                    }, 1000);
+                } else {
+                  trainFrom.value = "London Bridge";
+                  trainTo.value = "East Croydon";
+                  $("#tables").removeClass("hidden");
+                  getTrainOverview([trainFrom.value, trainTo.value]);
+                  $('html,body').animate({
+                    scrollTop: $("#tables").offset().top - 50
+                    }, 1000);
+                }
                 break;
             default:
               break;
@@ -169,36 +182,37 @@ maxLng = 58.86;
 maxLat = 2.57;
 minLng = 49.95;
 minLat = -12.76;
-/*
-var map = new ol.Map({
-  layers: [
-    new ol.layer.Tile({
-      source: new ol.source.Stamen({
-        layer: 'toner'
-      })
-    })
-  ],
-  target: 'map',
-  view: new ol.View({
-    center: ol.proj.fromLonLat([(minLat+maxLat)/2,(minLng+maxLng)/2]),
-    zoom: 1
-  })
-  });
-var ext = ol.proj.transformExtent([minLat,minLng, maxLat,maxLng], 'EPSG:4326', 'EPSG:3857');
-map.getView().fit(ext, map.getSize());
-//map.zoomToExtent(new OpenLayers.Bounds(minLng,minLat,maxLng,maxLat).transform("EPSG:4326", "EPSG:900913"))
-      //var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
-      //map.setBounds(UK);
-  var map = L.map('map').setView([(minLat+maxLat)/2,(minLng+maxLng)/2], 2);
-  L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
-attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>',
-          maxZoom: 18
-          }).addTo(map);
-
-  map.fitBounds([[minLng,minLat], [maxLng,maxLat]]);
- */
 var map = null;
 var L;
+if (L != null) {
+  /*var map = new ol.Map({
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.Stamen({
+          layer: 'toner'
+        })
+      })
+    ],
+    target: 'map',
+    view: new ol.View({
+      center: ol.proj.fromLonLat([(minLat+maxLat)/2,(minLng+maxLng)/2]),
+      zoom: 1
+    })
+    });
+  var ext = ol.proj.transformExtent([minLat,minLng, maxLat,maxLng], 'EPSG:4326', 'EPSG:3857');
+  map.getView().fit(ext, map.getSize());
+  //map.zoomToExtent(new OpenLayers.Bounds(minLng,minLat,maxLng,maxLat).transform("EPSG:4326", "EPSG:900913"))
+        //var UK = new mxn.BoundingBox(49.95,-12.76,58.86,2.57);
+        //map.setBounds(UK);
+        */
+    var map = L.map('map').setView([(minLat+maxLat)/2,(minLng+maxLng)/2], 2);
+    L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>',
+            maxZoom: 18
+            }).addTo(map);
+
+    map.fitBounds([[minLng,minLat], [maxLng,maxLat]]);
+}
 if (L == undefined) {
   L = {}
   L.latLng = function(lat,lng) {

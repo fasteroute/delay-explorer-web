@@ -1,0 +1,1897 @@
+{
+    "routes": [
+        [
+            "lbg", 
+            "cst"
+        ], 
+        [
+            "lbg", 
+            "sbm", 
+            "qrp", 
+            "pmr", 
+            "edw", 
+            "ndl", 
+            "tuh", 
+            "ste", 
+            "src", 
+            "nrb", 
+            "tth", 
+            "srs", 
+            "wcy"
+        ], 
+        [
+            "lbg", 
+            "nwx", 
+            "saj", 
+            "lew", 
+            "hgr", 
+            "lee", 
+            "mtg", 
+            "neh", 
+            "sid", 
+            "ayp", 
+            "bxy", 
+            "cry"
+        ], 
+        [
+            "lbg", 
+            "nwd", 
+            "ecr", 
+            "pur", 
+            "cds", 
+            "rdh", 
+            "nuf", 
+            "gdn", 
+            "ebr", 
+            "phr", 
+            "lih", 
+            "ton"
+        ], 
+        [
+            "lbg", 
+            "nwd", 
+            "ecr", 
+            "pur", 
+            "rhm", 
+            "cdn", 
+            "wme", 
+            "chp", 
+            "knd", 
+            "tad", 
+            "tat"
+        ], 
+        [
+            "lbg", 
+            "dep", 
+            "gnw", 
+            "mzh", 
+            "wcb", 
+            "ctn", 
+            "wwd", 
+            "wwa", 
+            "plu", 
+            "abw", 
+            "bvd", 
+            "erh", 
+            "sgr"
+        ], 
+        [
+            "lbg", 
+            "nxg", 
+            "bcy", 
+            "hpa", 
+            "foh", 
+            "syd", 
+            "cyp", 
+            "gip", 
+            "wnw", 
+            "srh", 
+            "bal", 
+            "wsw", 
+            "clj", 
+            "bak", 
+            "vic"
+        ], 
+        [
+            "lbg", 
+            "nwx", 
+            "saj", 
+            "lew", 
+            "hgr", 
+            "grp", 
+            "esd", 
+            "cit", 
+            "pet", 
+            "orp"
+        ], 
+        [
+            "lbg", 
+            "sbm", 
+            "qrp", 
+            "pmr", 
+            "edw", 
+            "ndl", 
+            "tuh", 
+            "wnw", 
+            "gip", 
+            "cyp", 
+            "bik", 
+            "bkj"
+        ], 
+        [
+            "lbg", 
+            "nwx", 
+            "saj", 
+            "lew", 
+            "bkh", 
+            "kdb", 
+            "elw", 
+            "fcn", 
+            "wli", 
+            "bxh", 
+            "bnh", 
+            "sgr"
+        ], 
+        [
+            "lbg", 
+            "dep", 
+            "gnw", 
+            "mzh", 
+            "wcb", 
+            "ctn", 
+            "wwd", 
+            "wwa", 
+            "plu", 
+            "abw", 
+            "bvd", 
+            "erh", 
+            "sgr", 
+            "dfd"
+        ], 
+        [
+            "lbg", 
+            "nxg", 
+            "nwd", 
+            "ecr", 
+            "pur", 
+            "cds", 
+            "mhm", 
+            "rdh", 
+            "eld", 
+            "hor", 
+            "gtw", 
+            "tbd", 
+            "crw", 
+            "ifi", 
+            "fgt", 
+            "lvn", 
+            "hrh"
+        ], 
+        [
+            "lbg", 
+            "nwx", 
+            "saj", 
+            "lew", 
+            "lad", 
+            "cfb", 
+            "lsy", 
+            "nbc", 
+            "clk", 
+            "ele", 
+            "edn", 
+            "wwi", 
+            "hys"
+        ], 
+        [
+            "lbg", 
+            "nxg", 
+            "bcy", 
+            "hpa", 
+            "foh", 
+            "syd", 
+            "pnw", 
+            "anz", 
+            "nwd", 
+            "ecr", 
+            "scy", 
+            "puo", 
+            "pur", 
+            "kly", 
+            "why", 
+            "whs", 
+            "cat"
+        ], 
+        [
+            "lbg", 
+            "nwx", 
+            "orp", 
+            "sev", 
+            "hlb", 
+            "ton", 
+            "hib", 
+            "tbw"
+        ], 
+        [
+            "lbg", 
+            "ecr", 
+            "oxt", 
+            "hur", 
+            "ebt", 
+            "hev", 
+            "cwn", 
+            "ahs", 
+            "eri", 
+            "coh", 
+            "bxd", 
+            "uck"
+        ], 
+        [
+            "lbg", 
+            "dep", 
+            "gnw", 
+            "mzh", 
+            "wcb", 
+            "ctn", 
+            "wwd", 
+            "wwa", 
+            "plu", 
+            "abw", 
+            "bvd", 
+            "erh", 
+            "sgr", 
+            "bnh"
+        ], 
+        [
+            "lbg", 
+            "ecr", 
+            "gtw", 
+            "tbd", 
+            "bab", 
+            "hhe", 
+            "wvf", 
+            "bug", 
+            "hsk", 
+            "prp", 
+            "btn"
+        ], 
+        [
+            "lbg", 
+            "nwd", 
+            "ecr", 
+            "pur", 
+            "cds", 
+            "mhm", 
+            "rdh", 
+            "rei"
+        ]
+    ], 
+    "segments": [
+        {
+            "origin": "pur", 
+            "delay": 10.0, 
+            "destination": "kly", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "ecr", 
+            "delay": 9.0, 
+            "destination": "oxt", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "gip", 
+            "delay": 10.0, 
+            "destination": "wnw", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "elw", 
+            "delay": 10.0, 
+            "destination": "fcn", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "lih", 
+            "delay": 12.0, 
+            "destination": "ton", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "mhm", 
+            "delay": 6, 
+            "destination": "rdh", 
+            "routes": [
+                18, 
+                11
+            ]
+        }, 
+        {
+            "origin": "cit", 
+            "delay": 13.0, 
+            "destination": "pet", 
+            "routes": [
+                7
+            ]
+        }, 
+        {
+            "origin": "bkh", 
+            "delay": 10.0, 
+            "destination": "kdb", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "hor", 
+            "delay": 2.0, 
+            "destination": "gtw", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "ctn", 
+            "delay": 12, 
+            "destination": "wwd", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "sev", 
+            "delay": 2.0, 
+            "destination": "hlb", 
+            "routes": [
+                14
+            ]
+        }, 
+        {
+            "origin": "knd", 
+            "delay": 13.0, 
+            "destination": "tad", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "wwd", 
+            "delay": 12, 
+            "destination": "wwa", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "lsy", 
+            "delay": 14.0, 
+            "destination": "nbc", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "wme", 
+            "delay": 13.0, 
+            "destination": "chp", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "bcy", 
+            "delay": 10.0, 
+            "destination": "hpa", 
+            "routes": [
+                13, 
+                6
+            ]
+        }, 
+        {
+            "origin": "pnw", 
+            "delay": 10.0, 
+            "destination": "anz", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "orp", 
+            "delay": 2.0, 
+            "destination": "sev", 
+            "routes": [
+                14
+            ]
+        }, 
+        {
+            "origin": "cyp", 
+            "delay": 10.0, 
+            "destination": "gip", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "nwx", 
+            "delay": 14, 
+            "destination": "saj", 
+            "routes": [
+                9, 
+                2, 
+                12, 
+                7
+            ]
+        }, 
+        {
+            "origin": "rdh", 
+            "delay": 12.0, 
+            "destination": "nuf", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "scy", 
+            "delay": 10.0, 
+            "destination": "puo", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "bug", 
+            "delay": 4.0, 
+            "destination": "hsk", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "wnw", 
+            "delay": 3.0, 
+            "destination": "gip", 
+            "routes": [
+                8
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 7.0, 
+            "destination": "sbm", 
+            "routes": [
+                8, 
+                1
+            ]
+        }, 
+        {
+            "origin": "ecr", 
+            "delay": 13, 
+            "destination": "pur", 
+            "routes": [
+                3, 
+                18, 
+                11, 
+                4
+            ]
+        }, 
+        {
+            "origin": "ifi", 
+            "delay": 2.0, 
+            "destination": "fgt", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "tuh", 
+            "delay": 3.0, 
+            "destination": "wnw", 
+            "routes": [
+                8
+            ]
+        }, 
+        {
+            "origin": "hgr", 
+            "delay": 4.0, 
+            "destination": "lee", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "sid", 
+            "delay": 4.0, 
+            "destination": "ayp", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "prp", 
+            "delay": 4.0, 
+            "destination": "btn", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "nwd", 
+            "delay": 13, 
+            "destination": "ecr", 
+            "routes": [
+                11, 
+                18, 
+                3, 
+                4, 
+                13
+            ]
+        }, 
+        {
+            "origin": "wsw", 
+            "delay": 10.0, 
+            "destination": "clj", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "ste", 
+            "delay": 7.0, 
+            "destination": "src", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "why", 
+            "delay": 10.0, 
+            "destination": "whs", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "edw", 
+            "delay": 7.0, 
+            "destination": "ndl", 
+            "routes": [
+                8, 
+                1
+            ]
+        }, 
+        {
+            "origin": "crw", 
+            "delay": 2.0, 
+            "destination": "ifi", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "nwx", 
+            "delay": 2.0, 
+            "destination": "orp", 
+            "routes": [
+                14
+            ]
+        }, 
+        {
+            "origin": "pur", 
+            "delay": 12.0, 
+            "destination": "cds", 
+            "routes": [
+                3, 
+                18, 
+                11
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 1.0, 
+            "destination": "cst", 
+            "routes": [
+                0
+            ]
+        }, 
+        {
+            "origin": "rdh", 
+            "delay": 6.0, 
+            "destination": "rei", 
+            "routes": [
+                18
+            ]
+        }, 
+        {
+            "origin": "wwi", 
+            "delay": 14.0, 
+            "destination": "hys", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "hlb", 
+            "delay": 2.0, 
+            "destination": "ton", 
+            "routes": [
+                14
+            ]
+        }, 
+        {
+            "origin": "tth", 
+            "delay": 7.0, 
+            "destination": "srs", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "ecr", 
+            "delay": 4.0, 
+            "destination": "gtw", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "eri", 
+            "delay": 9.0, 
+            "destination": "coh", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "pur", 
+            "delay": 13.0, 
+            "destination": "rhm", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "wli", 
+            "delay": 10.0, 
+            "destination": "bxh", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "ahs", 
+            "delay": 9.0, 
+            "destination": "eri", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "qrp", 
+            "delay": 7.0, 
+            "destination": "pmr", 
+            "routes": [
+                8, 
+                1
+            ]
+        }, 
+        {
+            "origin": "wcb", 
+            "delay": 12, 
+            "destination": "ctn", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "lad", 
+            "delay": 14.0, 
+            "destination": "cfb", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "coh", 
+            "delay": 9.0, 
+            "destination": "bxd", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "mtg", 
+            "delay": 4.0, 
+            "destination": "neh", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "bxd", 
+            "delay": 9.0, 
+            "destination": "uck", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "kly", 
+            "delay": 10.0, 
+            "destination": "why", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "edn", 
+            "delay": 14.0, 
+            "destination": "wwi", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "anz", 
+            "delay": 10.0, 
+            "destination": "nwd", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "pmr", 
+            "delay": 7.0, 
+            "destination": "edw", 
+            "routes": [
+                8, 
+                1
+            ]
+        }, 
+        {
+            "origin": "nxg", 
+            "delay": 2.0, 
+            "destination": "nwd", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "hgr", 
+            "delay": 13.0, 
+            "destination": "grp", 
+            "routes": [
+                7
+            ]
+        }, 
+        {
+            "origin": "ebt", 
+            "delay": 9.0, 
+            "destination": "hev", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "lew", 
+            "delay": 10.0, 
+            "destination": "bkh", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "whs", 
+            "delay": 10.0, 
+            "destination": "cat", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "srh", 
+            "delay": 10.0, 
+            "destination": "bal", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "mzh", 
+            "delay": 12, 
+            "destination": "wcb", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "tbd", 
+            "delay": 4.0, 
+            "destination": "bab", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "cfb", 
+            "delay": 14.0, 
+            "destination": "lsy", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "bxh", 
+            "delay": 10.0, 
+            "destination": "bnh", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "wnw", 
+            "delay": 10.0, 
+            "destination": "srh", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "esd", 
+            "delay": 13.0, 
+            "destination": "cit", 
+            "routes": [
+                7
+            ]
+        }, 
+        {
+            "origin": "phr", 
+            "delay": 12.0, 
+            "destination": "lih", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "chp", 
+            "delay": 13.0, 
+            "destination": "knd", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "clk", 
+            "delay": 14.0, 
+            "destination": "ele", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "lee", 
+            "delay": 4.0, 
+            "destination": "mtg", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "fgt", 
+            "delay": 2.0, 
+            "destination": "lvn", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "neh", 
+            "delay": 4.0, 
+            "destination": "sid", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "bxy", 
+            "delay": 4.0, 
+            "destination": "cry", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "plu", 
+            "delay": 12, 
+            "destination": "abw", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "wwa", 
+            "delay": 12, 
+            "destination": "plu", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "ton", 
+            "delay": 2.0, 
+            "destination": "hib", 
+            "routes": [
+                14
+            ]
+        }, 
+        {
+            "origin": "tad", 
+            "delay": 13.0, 
+            "destination": "tat", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "srs", 
+            "delay": 7.0, 
+            "destination": "wcy", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "dep", 
+            "delay": 12, 
+            "destination": "gnw", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "bab", 
+            "delay": 4.0, 
+            "destination": "hhe", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "syd", 
+            "delay": 10.0, 
+            "destination": "pnw", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "gnw", 
+            "delay": 12, 
+            "destination": "mzh", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "cds", 
+            "delay": 12.0, 
+            "destination": "rdh", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "gtw", 
+            "delay": 4, 
+            "destination": "tbd", 
+            "routes": [
+                17, 
+                11
+            ]
+        }, 
+        {
+            "origin": "lew", 
+            "delay": 13, 
+            "destination": "hgr", 
+            "routes": [
+                2, 
+                7
+            ]
+        }, 
+        {
+            "origin": "hhe", 
+            "delay": 4.0, 
+            "destination": "wvf", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 14, 
+            "destination": "nwx", 
+            "routes": [
+                9, 
+                2, 
+                12, 
+                14, 
+                7
+            ]
+        }, 
+        {
+            "origin": "src", 
+            "delay": 7.0, 
+            "destination": "nrb", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "oxt", 
+            "delay": 9.0, 
+            "destination": "hur", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "cds", 
+            "delay": 6, 
+            "destination": "mhm", 
+            "routes": [
+                18, 
+                11
+            ]
+        }, 
+        {
+            "origin": "grp", 
+            "delay": 13.0, 
+            "destination": "esd", 
+            "routes": [
+                7
+            ]
+        }, 
+        {
+            "origin": "gdn", 
+            "delay": 12.0, 
+            "destination": "ebr", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 9.0, 
+            "destination": "ecr", 
+            "routes": [
+                17, 
+                15
+            ]
+        }, 
+        {
+            "origin": "ecr", 
+            "delay": 10.0, 
+            "destination": "scy", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 10.0, 
+            "destination": "nxg", 
+            "routes": [
+                11, 
+                13, 
+                6
+            ]
+        }, 
+        {
+            "origin": "cdn", 
+            "delay": 13.0, 
+            "destination": "wme", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "foh", 
+            "delay": 10.0, 
+            "destination": "syd", 
+            "routes": [
+                13, 
+                6
+            ]
+        }, 
+        {
+            "origin": "bik", 
+            "delay": 3.0, 
+            "destination": "bkj", 
+            "routes": [
+                8
+            ]
+        }, 
+        {
+            "origin": "abw", 
+            "delay": 12, 
+            "destination": "bvd", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 13, 
+            "destination": "nwd", 
+            "routes": [
+                18, 
+                3, 
+                4
+            ]
+        }, 
+        {
+            "origin": "bnh", 
+            "delay": 10.0, 
+            "destination": "sgr", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "rdh", 
+            "delay": 2.0, 
+            "destination": "eld", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "cyp", 
+            "delay": 3.0, 
+            "destination": "bik", 
+            "routes": [
+                8
+            ]
+        }, 
+        {
+            "origin": "clj", 
+            "delay": 10.0, 
+            "destination": "bak", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "ele", 
+            "delay": 14.0, 
+            "destination": "edn", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "eld", 
+            "delay": 2.0, 
+            "destination": "hor", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "bal", 
+            "delay": 10.0, 
+            "destination": "wsw", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "erh", 
+            "delay": 12, 
+            "destination": "sgr", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "sgr", 
+            "delay": 9.0, 
+            "destination": "dfd", 
+            "routes": [
+                10
+            ]
+        }, 
+        {
+            "origin": "ebr", 
+            "delay": 12.0, 
+            "destination": "phr", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 12, 
+            "destination": "dep", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "kdb", 
+            "delay": 10.0, 
+            "destination": "elw", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "puo", 
+            "delay": 10.0, 
+            "destination": "pur", 
+            "routes": [
+                13
+            ]
+        }, 
+        {
+            "origin": "tuh", 
+            "delay": 7.0, 
+            "destination": "ste", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "pet", 
+            "delay": 13.0, 
+            "destination": "orp", 
+            "routes": [
+                7
+            ]
+        }, 
+        {
+            "origin": "syd", 
+            "delay": 10.0, 
+            "destination": "cyp", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "saj", 
+            "delay": 14, 
+            "destination": "lew", 
+            "routes": [
+                9, 
+                2, 
+                12, 
+                7
+            ]
+        }, 
+        {
+            "origin": "bvd", 
+            "delay": 12, 
+            "destination": "erh", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ]
+        }, 
+        {
+            "origin": "lew", 
+            "delay": 14.0, 
+            "destination": "lad", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "nuf", 
+            "delay": 12.0, 
+            "destination": "gdn", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "bak", 
+            "delay": 10.0, 
+            "destination": "vic", 
+            "routes": [
+                6
+            ]
+        }, 
+        {
+            "origin": "tbd", 
+            "delay": 2.0, 
+            "destination": "crw", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "gip", 
+            "delay": 3.0, 
+            "destination": "cyp", 
+            "routes": [
+                8
+            ]
+        }, 
+        {
+            "origin": "fcn", 
+            "delay": 10.0, 
+            "destination": "wli", 
+            "routes": [
+                9
+            ]
+        }, 
+        {
+            "origin": "hur", 
+            "delay": 9.0, 
+            "destination": "ebt", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "hpa", 
+            "delay": 10.0, 
+            "destination": "foh", 
+            "routes": [
+                13, 
+                6
+            ]
+        }, 
+        {
+            "origin": "hib", 
+            "delay": 2.0, 
+            "destination": "tbw", 
+            "routes": [
+                14
+            ]
+        }, 
+        {
+            "origin": "nbc", 
+            "delay": 14.0, 
+            "destination": "clk", 
+            "routes": [
+                12
+            ]
+        }, 
+        {
+            "origin": "sbm", 
+            "delay": 7.0, 
+            "destination": "qrp", 
+            "routes": [
+                8, 
+                1
+            ]
+        }, 
+        {
+            "origin": "hev", 
+            "delay": 9.0, 
+            "destination": "cwn", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "nrb", 
+            "delay": 7.0, 
+            "destination": "tth", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "rhm", 
+            "delay": 13.0, 
+            "destination": "cdn", 
+            "routes": [
+                4
+            ]
+        }, 
+        {
+            "origin": "hsk", 
+            "delay": 4.0, 
+            "destination": "prp", 
+            "routes": [
+                17
+            ]
+        }, 
+        {
+            "origin": "ndl", 
+            "delay": 7.0, 
+            "destination": "tuh", 
+            "routes": [
+                8, 
+                1
+            ]
+        }, 
+        {
+            "origin": "ayp", 
+            "delay": 4.0, 
+            "destination": "bxy", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "sgr", 
+            "delay": 12.0, 
+            "destination": "bnh", 
+            "routes": [
+                16
+            ]
+        }, 
+        {
+            "origin": "nxg", 
+            "delay": 10.0, 
+            "destination": "bcy", 
+            "routes": [
+                13, 
+                6
+            ]
+        }, 
+        {
+            "origin": "lvn", 
+            "delay": 2.0, 
+            "destination": "hrh", 
+            "routes": [
+                11
+            ]
+        }, 
+        {
+            "origin": "cwn", 
+            "delay": 9.0, 
+            "destination": "ahs", 
+            "routes": [
+                15
+            ]
+        }, 
+        {
+            "origin": "wvf", 
+            "delay": 4.0, 
+            "destination": "bug", 
+            "routes": [
+                17
+            ]
+        }
+    ], 
+    "stations": [
+        "hgr", 
+        "cdn", 
+        "nwx", 
+        "nwd", 
+        "tth", 
+        "scy", 
+        "edw", 
+        "bvd", 
+        "gdn", 
+        "lsy", 
+        "clj", 
+        "clk", 
+        "eld", 
+        "ele", 
+        "bnh", 
+        "hrh", 
+        "gtw", 
+        "elw", 
+        "wme", 
+        "bik", 
+        "edn", 
+        "cwn", 
+        "tbw", 
+        "hib", 
+        "tbd", 
+        "bxy", 
+        "mhm", 
+        "crw", 
+        "oxt", 
+        "cry", 
+        "bxd", 
+        "bxh", 
+        "hys", 
+        "bab", 
+        "wsw", 
+        "bal", 
+        "bak", 
+        "sev", 
+        "pmr", 
+        "cds", 
+        "cfb", 
+        "kdb", 
+        "ebt", 
+        "wwd", 
+        "wwa", 
+        "ebr", 
+        "nuf", 
+        "btn", 
+        "wwi", 
+        "hlb", 
+        "neh", 
+        "pet", 
+        "esd", 
+        "abw", 
+        "foh", 
+        "plu", 
+        "puo", 
+        "lee", 
+        "fgt", 
+        "hsk", 
+        "orp", 
+        "tuh", 
+        "ecr", 
+        "lew", 
+        "pur", 
+        "sbm", 
+        "src", 
+        "ndl", 
+        "srh", 
+        "ifi", 
+        "wli", 
+        "coh", 
+        "ctn", 
+        "rdh", 
+        "vic", 
+        "sgr", 
+        "qrp", 
+        "ahs", 
+        "uck", 
+        "hev", 
+        "gip", 
+        "chp", 
+        "ton", 
+        "kly", 
+        "dfd", 
+        "ayp", 
+        "cyp", 
+        "nrb", 
+        "pnw", 
+        "wnw", 
+        "hur", 
+        "wvf", 
+        "bug", 
+        "ste", 
+        "gnw", 
+        "dep", 
+        "cat", 
+        "cit", 
+        "lvn", 
+        "erh", 
+        "mtg", 
+        "tat", 
+        "saj", 
+        "hhe", 
+        "tad", 
+        "nbc", 
+        "prp", 
+        "lbg", 
+        "eri", 
+        "anz", 
+        "grp", 
+        "srs", 
+        "wcy", 
+        "lih", 
+        "wcb", 
+        "hor", 
+        "sid", 
+        "cst", 
+        "hpa", 
+        "syd", 
+        "lad", 
+        "bkh", 
+        "bkj", 
+        "rhm", 
+        "rei", 
+        "whs", 
+        "phr", 
+        "mzh", 
+        "why", 
+        "fcn", 
+        "knd", 
+        "nxg", 
+        "bcy"
+    ], 
+    "data": [
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            3, 
+            3, 
+            6
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            3, 
+            21, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            6, 
+            27
+        ], 
+        [
+            0, 
+            0, 
+            3, 
+            12, 
+            21, 
+            24, 
+            30
+        ], 
+        [
+            0, 
+            3, 
+            6, 
+            18, 
+            18, 
+            21, 
+            27
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
+            3, 
+            15, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
+            15, 
+            24, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            6, 
+            12, 
+            21, 
+            27, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            3, 
+            3, 
+            21
+        ], 
+        [
+            0, 
+            0, 
+            3, 
+            12, 
+            15, 
+            18, 
+            24
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            9, 
+            24, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            3, 
+            12
+        ], 
+        [
+            0, 
+            0, 
+            9, 
+            18, 
+            24, 
+            24, 
+            27
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            12, 
+            15, 
+            21, 
+            24
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            6, 
+            9
+        ], 
+        [
+            0, 
+            0, 
+            3, 
+            3, 
+            6, 
+            27, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            6, 
+            6, 
+            12, 
+            30, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            9, 
+            21
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
+            6, 
+            12, 
+            27
+        ]
+    ], 
+    "trains": [
+        {
+            "route": 0, 
+            "name": "08:28 London Cannon Street", 
+            "schedule": "o12ff78378s317skgjhjx3q452485o"
+        }, 
+        {
+            "route": 1, 
+            "name": "08:30 West Croydon", 
+            "schedule": "678190c4ok5v3b016sr45nso8pc23n"
+        }, 
+        {
+            "route": 2, 
+            "name": "08:32 Crayford", 
+            "schedule": "k4p5me12v43qm92814e4s9b39k8r74"
+        }, 
+        {
+            "route": 0, 
+            "name": "08:33 Tonbridge", 
+            "schedule": "c15usysw375jyk2bs464chou4h464t"
+        }, 
+        {
+            "route": 0, 
+            "name": "08:34 Tattenham Corner", 
+            "schedule": "n6fm50y12t6c6q24o2hgn322774bp1"
+        }, 
+        {
+            "route": 5, 
+            "name": "08:35 Slade Green", 
+            "schedule": "3rudlkt4rfi4o9g330pn0vlauem0p2"
+        }, 
+        {
+            "route": 6, 
+            "name": "08:35 London Victoria", 
+            "schedule": "jll1vx3734oq3e2c1893863tk28536"
+        }, 
+        {
+            "route": 7, 
+            "name": "08:37 Orpington", 
+            "schedule": "vtd4ibgdd4f47znb5048f4gd405l16"
+        }, 
+        {
+            "route": 8, 
+            "name": "08:39 Beckenham Junction", 
+            "schedule": "00fw0874d67u0k04439i8lpgotg4q6"
+        }, 
+        {
+            "route": 9, 
+            "name": "08:42 Slade Green", 
+            "schedule": "p528yh3tiee80qhc577383tarfbz52"
+        }, 
+        {
+            "route": 10, 
+            "name": "08:45 Dartford", 
+            "schedule": "e476f44tqwlo716363edg13we5685v"
+        }, 
+        {
+            "route": 1, 
+            "name": "08:47 Horsham", 
+            "schedule": "7rhl7qh03ab3k12575xi571vu123hw"
+        }, 
+        {
+            "route": 12, 
+            "name": "08:49 Hayes (Kent)", 
+            "schedule": "d861m5sqffph5zl6f5t515ueft3uq8"
+        }, 
+        {
+            "route": 2, 
+            "name": "08:50 Caterham", 
+            "schedule": "6ks2ibtg6c8v0pl2yfku7c2r7d3x6k"
+        }, 
+        {
+            "route": 14, 
+            "name": "08:53 Tunbridge Wells", 
+            "schedule": "8y85q2pd5gs1w563p2513l06mvg626"
+        }, 
+        {
+            "route": 3, 
+            "name": "08:54 Uckfield", 
+            "schedule": "o2ie4m49cqu37j652425ej8gpp7gzf"
+        }, 
+        {
+            "route": 16, 
+            "name": "08:57 Barnehurst", 
+            "schedule": "kxm0fvg1n29yug909wi6n165wl88yp"
+        }, 
+        {
+            "route": 3, 
+            "name": "09:02 Brighton", 
+            "schedule": "085tw17wvx3mpd53mwhg4t4g79vx77"
+        }, 
+        {
+            "route": 0, 
+            "name": "09:06 Reigate", 
+            "schedule": "142tko99z7f459kpxi6xc3804i4tlx"
+        }
+    ]
+}

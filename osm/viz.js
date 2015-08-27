@@ -1,5 +1,5 @@
 var data;
-var stations;
+//var stations;
 var days = ["","M", "T", "W", "T", "F", "S", "S"];
 var tbl;
 var trains;
@@ -16,7 +16,6 @@ var cell_size;
 
 var circleList=[];
 var UKStations = {}
-var UKStationNames = {}
 function delayHeatMap(bounds) {
   var hue = d3.scale.quantize().range([
       "rgb(254,240,217)",
@@ -34,15 +33,14 @@ function delayHeatMap(bounds) {
     for (idex in data) {
       var tempStn = data[idex];
       UKStations[tempStn.crs] = tempStn;
-      UKStationNames[tempStn.name] = tempStn.crs;
-  if (map == null) { return;};
-        var radius = Math.random()*1000;
-        var circle = L.circle([tempStn.latitude, tempStn.longitude], radius, {
-          color: radius > 100 ? hue(radius) : 'green',
-          fillColor: radius > 100 ? hue(radius) : 'green',
-          fillOpacity: 0.3
-        }).addTo(map);
-        //circleList.push(circle);
+      if (map == null) { continue;};
+      var radius = Math.random()*1000;
+      var circle = L.circle([tempStn.latitude, tempStn.longitude], radius, {
+        color: radius > 100 ? hue(radius) : 'green',
+        fillColor: radius > 100 ? hue(radius) : 'green',
+        fillOpacity: 0.3
+      }).addTo(map);
+      //circleList.push(circle);
 
     }
 
@@ -50,9 +48,7 @@ function delayHeatMap(bounds) {
   });
 
 };
-if (map != null) {
   delayHeatMap();
-}
 function plotGridWithData(data, rowHeaders) {
 
 	d3.select("div#tables").selectAll("table").remove();
@@ -109,19 +105,23 @@ var markerList=[];
 
 function clearMap() {
 
+  stationDict = {};
   if (map != undefined) {
     for (routeID in routeDict) {
       var l = routeDict[routeID];
       map.removeLayer(l);
     }
+    routeDict = {};
     for (markerID in markerList) {
       var m = markerList[markerID];
       map.removeLayer(m);
     }
+    markerList = [];
     for (circleID in circleList) {
       var m = circleList[circleID];
       map.removeLayer(m);
     }
+    circleList = [];
 
   }
 }
@@ -139,10 +139,15 @@ function createMapOverview(routes, stations) {
   clearMap();
 
 	stations.forEach(function(elem,idx) {
-		var latlon = new L.latLng(elem["lat"], elem["lon"]);
-		latlon.crs = elem["crs"];
-		latlon.name = elem["name"];
-		stationDict[latlon.crs] = latlon;
+    var currStn = UKStations[elem]
+    if (currStn == null) { 
+      console.log(elem); 
+    } else {
+      var latlon = new L.latLng(currStn["latitude"], currStn["longitude"]);
+      latlon.crs = currStn.crs;
+      latlon.name = currStn.name;
+      stationDict[latlon.crs] = latlon;
+    }
 	});
 
 	var stnList = []
@@ -301,14 +306,17 @@ function getTrainDayDetail(callback) {
  * train on each day of the week, over the user-defined time period.
  *
  */
-function getTrainOverview() {
+function getTrainOverview(callingPoints) {
+  var sourceURL;
+  if (callingPoints.length == 1) { sourceURL = "originSearch.json";}
+  else { sourceURL = "originDestinationSearch.json";}
 
-	d3.json('trains.json', function(error, json) {
+	d3.json(sourceURL, function(error, json) {
 
 		var trains = json["trains"];
 		var routes = json["routes"];
 		var stations = json["stations"];
-
+    var segments = json["segments"]
 		var newTbl = plotGridWithData(json["data"], trains);
 
 		createMapOverview(routes, stations);

@@ -1,0 +1,246 @@
+{
+    "routes": [
+        [
+            "lbg", 
+            "nwd", 
+            "ecr"
+        ], 
+        [
+            "lbg", 
+            "nxg", 
+            "nwd", 
+            "ecr"
+        ], 
+        [
+            "lbg", 
+            "nxg", 
+            "bcy", 
+            "hpa", 
+            "foh", 
+            "syd", 
+            "pnw", 
+            "anz", 
+            "nwd", 
+            "ecr"
+        ], 
+        [
+            "lbg", 
+            "ecr"
+        ]
+    ], 
+    "segments": [
+        {
+            "origin": "lbg", 
+            "delay": 10, 
+            "destination": "nxg", 
+            "routes": [
+                1, 
+                2
+            ]
+        }, 
+        {
+            "origin": "nxg", 
+            "delay": 2.0, 
+            "destination": "nwd", 
+            "routes": [
+                1
+            ]
+        }, 
+        {
+            "origin": "anz", 
+            "delay": 10.0, 
+            "destination": "nwd", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "pnw", 
+            "delay": 10.0, 
+            "destination": "anz", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "bcy", 
+            "delay": 10.0, 
+            "destination": "hpa", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 13, 
+            "destination": "nwd", 
+            "routes": [
+                0
+            ]
+        }, 
+        {
+            "origin": "nxg", 
+            "delay": 10.0, 
+            "destination": "bcy", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "nwd", 
+            "delay": 13, 
+            "destination": "ecr", 
+            "routes": [
+                0, 
+                1, 
+                2
+            ]
+        }, 
+        {
+            "origin": "lbg", 
+            "delay": 9.0, 
+            "destination": "ecr", 
+            "routes": [
+                3
+            ]
+        }, 
+        {
+            "origin": "hpa", 
+            "delay": 10.0, 
+            "destination": "foh", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "foh", 
+            "delay": 10.0, 
+            "destination": "syd", 
+            "routes": [
+                2
+            ]
+        }, 
+        {
+            "origin": "syd", 
+            "delay": 10.0, 
+            "destination": "pnw", 
+            "routes": [
+                2
+            ]
+        }
+    ], 
+    "stations": [
+        "syd", 
+        "pnw", 
+        "nwd", 
+        "nxg", 
+        "ecr", 
+        "lbg", 
+        "hpa", 
+        "foh", 
+        "anz", 
+        "bcy"
+    ], 
+    "data": [
+        [
+            0, 
+            0, 
+            3, 
+            12, 
+            21, 
+            24, 
+            30
+        ], 
+        [
+            0, 
+            3, 
+            6, 
+            18, 
+            18, 
+            21, 
+            27
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            3, 
+            12
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            12, 
+            15, 
+            21, 
+            24
+        ], 
+        [
+            0, 
+            0, 
+            3, 
+            3, 
+            6, 
+            27, 
+            30
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            9, 
+            21
+        ], 
+        [
+            0, 
+            0, 
+            0, 
+            3, 
+            6, 
+            12, 
+            27
+        ]
+    ], 
+    "trains": [
+        {
+            "route": 0, 
+            "name": "08:33 Tonbridge", 
+            "schedule": "c15usysw375jyk2bs464chou4h464t"
+        }, 
+        {
+            "route": 0, 
+            "name": "08:34 Tattenham Corner", 
+            "schedule": "n6fm50y12t6c6q24o2hgn322774bp1"
+        }, 
+        {
+            "route": 1, 
+            "name": "08:47 Horsham", 
+            "schedule": "7rhl7qh03ab3k12575xi571vu123hw"
+        }, 
+        {
+            "route": 2, 
+            "name": "08:50 Caterham", 
+            "schedule": "6ks2ibtg6c8v0pl2yfku7c2r7d3x6k"
+        }, 
+        {
+            "route": 3, 
+            "name": "08:54 Uckfield", 
+            "schedule": "o2ie4m49cqu37j652425ej8gpp7gzf"
+        }, 
+        {
+            "route": 3, 
+            "name": "09:02 Brighton", 
+            "schedule": "085tw17wvx3mpd53mwhg4t4g79vx77"
+        }, 
+        {
+            "route": 0, 
+            "name": "09:06 Reigate", 
+            "schedule": "142tko99z7f459kpxi6xc3804i4tlx"
+        }
+    ]
+}
