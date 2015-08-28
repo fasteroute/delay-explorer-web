@@ -98,7 +98,7 @@
         }, 
         {
             "origin": "lbg", 
-            "delay": 9.0, 
+            "delay": 0, 
             "destination": "ecr", 
             "routes": [
                 3

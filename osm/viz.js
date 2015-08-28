@@ -11,6 +11,11 @@ var color = d3.scale.quantize().range([
 		"rgb(227,74,51)",
 		"rgb(179,0,0)"]);
 color.domain([0,20]);
+var colorCoarse = d3.scale.quantize().range([
+		"green",
+		"rgb(253,204,138)",
+		"rgb(179,0,0)"]);
+colorCoarse.domain([0,20]);
 
 var cell_size;
 
@@ -44,7 +49,7 @@ function delayHeatMap(bounds) {
         fillColor: radius > 100 ? hue(radius) : 'green',
         fillOpacity: 0.3
       }).addTo(map);
-      //circleList.push(circle);
+      circleList.push(circle);
 
     }
 
@@ -194,7 +199,12 @@ function createMapOverview(segments, stations) {
     if (map == undefined) {
       return
     }
-		var pline = L.polyline(stnList, options)
+		var pline = L.polyline(stnList, options);
+    if (link.delay == 0) {
+      pline.delay = 'green';
+    } else {
+      pline.delay = colorCoarse(link.delay);
+    }
     pline.addTo(map)
     link["routes"].forEach(function(route) {
 		  if (routeDict[route] == null) {
@@ -538,7 +548,7 @@ function getTrainOverview(callingPoints) {
 function showRoute(routeID) {
   valid_segments = routeDict[parseInt(routeID)];
   valid_segments.forEach(function(pline) {
-    pline.setStyle({color:"#28abe3"});
+    pline.setStyle({color:pline.delay});
     pline.redraw();
   });
 }
