@@ -45,22 +45,28 @@ var TrainInputs = React.createClass({
                    placeholder="East Croydon"
                    labelClassName="col-sm-1"
                    wrapperClassName="col-sm-11"/>
-            <Input type="select"
-                   ref="typeInput"
-                   label="Type"
-                   valueLink={this.linkState('type')}
-                   labelClassName="col-sm-1"
-                   wrapperClassName="col-sm-3">
-              <option value="weekdays">Week Days</option>
-              <option value="weekends">Week Ends</option>
-            </Input>
-            <Input type="text"
-                   ref="timeInput"
-                   label="Time"
-                   valueLink={this.linkState('time')}
-                   placeholder="10:00"
-                   labelClassName="col-sm-1 col-sm-offset-4"
-                   wrapperClassName="col-sm-3"/>
+            <div className="row">
+              <div className="col-xs-6">
+                <Input type="select"
+                       ref="typeInput"
+                       label="Type"
+                       valueLink={this.linkState('type')}
+                       labelClassName="col-sm-2"
+                       wrapperClassName="col-sm-10">
+                  <option value="weekdays">Week Days</option>
+                  <option value="weekends">Week Ends</option>
+                </Input>
+              </div>
+              <div className="col-xs-6">
+                <Input type="text"
+                       ref="timeInput"
+                       label="Time"
+                       valueLink={this.linkState('time')}
+                       placeholder="10:00"
+                       labelClassName="col-sm-2"
+                       wrapperClassName="col-sm-10"/>
+              </div>
+            </div>
             <div className="pull-right">
               <ButtonInput type="submit" bsSize="large" onClick={this.handleSubmit}>Find Trains</ButtonInput>
             </div>
