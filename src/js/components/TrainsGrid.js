@@ -5,6 +5,7 @@ var React = require('react');
 var FluxMixin = require('fluxxor').FluxMixin(React);
 var StoreWatchMixin = require('fluxxor').StoreWatchMixin;
 
+var TrainsGridRow = require('./TrainsGridRow');
 var CallingPointsGrid = require('./CallingPointsGrid');
 
 var Alert = require('react-bootstrap').Alert;
@@ -45,22 +46,11 @@ var TrainsGrid = React.createClass({
       <Panel header={panelTitle}>
         {this.state.loading ? <Alert bsStyle="primary">Loading Data...</Alert> : null}
         {this.state.error ? <Alert bsStyle="danger">{this.state.error}</Alert> : null}
-        <h3>Routes</h3>
-        {this.state.routes.map(function(route) {
-          return <p>route</p>;
-        })}
-        <h3>Segments</h3>
-        {this.state.segments.map(function(segment) {
-          return <p>segment</p>;
-        })}
-        <h3>Stations</h3>
-        {this.state.stations.map(function(station) {
-          return <p>station</p>;
-        })}
-        <h3>Trains</h3>
-        {this.state.trains.map(function(train) {
-          return <p>train</p>;
-        })}
+        <table>
+          {this.state.trains.map(function(train) {
+            return <TrainsGridRow train={train}/>;
+          })}
+        </table>
         {shouldIncludeCallingPointsGrid ? <CallingPointsGrid/> : false}
       </Panel>
     );
