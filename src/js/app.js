@@ -13,13 +13,17 @@ var CallingPointsGrid = require('./components/CallingPointsGrid');
 
 var RoutesStore = require('./stores/RoutesStore');
 var SegmentsStore = require('./stores/SegmentsStore');
+var StationsStore = require('./stores/StationsStore');
+var TrainsStore = require('./stores/TrainsStore');
 
 var TrainExplorerActions = require('./actions/TrainExplorerActions');
 
 // Build an object that contains all the stores for this app.
 var stores = {
   RoutesStore: new RoutesStore(),
-  SegmentsStore: new SegmentsStore()
+  SegmentsStore: new SegmentsStore(),
+  StationsStore: new StationsStore(),
+  TrainsStore: new TrainsStore()
 };
 
 // Build an object which contains all the objects for this app.
