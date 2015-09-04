@@ -12,7 +12,7 @@ var TrainsGridRow = React.createClass({
       <tr>
         <th className="rowHeader">{this.props.train.name}</th>
         {this.props.train.lateness.map(function(lateness) {
-          return <TrainsGridCell lateness={lateness}/>;
+          return <TrainsGridCell key={lateness.day} lateness={lateness}/>;
         })}
       </tr>
     );

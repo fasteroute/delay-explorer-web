@@ -48,7 +48,7 @@ var TrainsGrid = React.createClass({
         {this.state.error ? <Alert bsStyle="danger">{this.state.error}</Alert> : null}
         <table>
           {this.state.trains.map(function(train) {
-            return <TrainsGridRow train={train}/>;
+            return <TrainsGridRow key={train.id} train={train}/>;
           })}
         </table>
         {shouldIncludeCallingPointsGrid ? <CallingPointsGrid/> : false}
