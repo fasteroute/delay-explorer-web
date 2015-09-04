@@ -1,0 +1,3959 @@
+{
+    "routes": [
+        {
+            "id": 0, 
+            "stations": [
+                "lbg", 
+                "cst"
+            ]
+        }, 
+        {
+            "id": 1, 
+            "stations": [
+                "lbg", 
+                "sbm", 
+                "qrp", 
+                "pmr", 
+                "edw", 
+                "ndl", 
+                "tuh", 
+                "ste", 
+                "src", 
+                "nrb", 
+                "tth", 
+                "srs", 
+                "wcy"
+            ]
+        }, 
+        {
+            "id": 2, 
+            "stations": [
+                "lbg", 
+                "nwx", 
+                "saj", 
+                "lew", 
+                "hgr", 
+                "lee", 
+                "mtg", 
+                "neh", 
+                "sid", 
+                "ayp", 
+                "bxy", 
+                "cry"
+            ]
+        }, 
+        {
+            "id": 3, 
+            "stations": [
+                "lbg", 
+                "nwd", 
+                "ecr", 
+                "pur", 
+                "cds", 
+                "rdh", 
+                "nuf", 
+                "gdn", 
+                "ebr", 
+                "phr", 
+                "lih", 
+                "ton"
+            ]
+        }, 
+        {
+            "id": 4, 
+            "stations": [
+                "lbg", 
+                "nwd", 
+                "ecr", 
+                "pur", 
+                "rhm", 
+                "cdn", 
+                "wme", 
+                "chp", 
+                "knd", 
+                "tad", 
+                "tat"
+            ]
+        }, 
+        {
+            "id": 5, 
+            "stations": [
+                "lbg", 
+                "dep", 
+                "gnw", 
+                "mzh", 
+                "wcb", 
+                "ctn", 
+                "wwd", 
+                "wwa", 
+                "plu", 
+                "abw", 
+                "bvd", 
+                "erh", 
+                "sgr"
+            ]
+        }, 
+        {
+            "id": 6, 
+            "stations": [
+                "lbg", 
+                "nxg", 
+                "bcy", 
+                "hpa", 
+                "foh", 
+                "syd", 
+                "cyp", 
+                "gip", 
+                "wnw", 
+                "srh", 
+                "bal", 
+                "wsw", 
+                "clj", 
+                "bak", 
+                "vic"
+            ]
+        }, 
+        {
+            "id": 7, 
+            "stations": [
+                "lbg", 
+                "nwx", 
+                "saj", 
+                "lew", 
+                "hgr", 
+                "grp", 
+                "esd", 
+                "cit", 
+                "pet", 
+                "orp"
+            ]
+        }, 
+        {
+            "id": 8, 
+            "stations": [
+                "lbg", 
+                "sbm", 
+                "qrp", 
+                "pmr", 
+                "edw", 
+                "ndl", 
+                "tuh", 
+                "wnw", 
+                "gip", 
+                "cyp", 
+                "bik", 
+                "bkj"
+            ]
+        }, 
+        {
+            "id": 9, 
+            "stations": [
+                "lbg", 
+                "nwx", 
+                "saj", 
+                "lew", 
+                "bkh", 
+                "kdb", 
+                "elw", 
+                "fcn", 
+                "wli", 
+                "bxh", 
+                "bnh", 
+                "sgr"
+            ]
+        }, 
+        {
+            "id": 10, 
+            "stations": [
+                "lbg", 
+                "dep", 
+                "gnw", 
+                "mzh", 
+                "wcb", 
+                "ctn", 
+                "wwd", 
+                "wwa", 
+                "plu", 
+                "abw", 
+                "bvd", 
+                "erh", 
+                "sgr", 
+                "dfd"
+            ]
+        }, 
+        {
+            "id": 11, 
+            "stations": [
+                "lbg", 
+                "nxg", 
+                "nwd", 
+                "ecr", 
+                "pur", 
+                "cds", 
+                "mhm", 
+                "rdh", 
+                "eld", 
+                "hor", 
+                "gtw", 
+                "tbd", 
+                "crw", 
+                "ifi", 
+                "fgt", 
+                "lvn", 
+                "hrh"
+            ]
+        }, 
+        {
+            "id": 12, 
+            "stations": [
+                "lbg", 
+                "nwx", 
+                "saj", 
+                "lew", 
+                "lad", 
+                "cfb", 
+                "lsy", 
+                "nbc", 
+                "clk", 
+                "ele", 
+                "edn", 
+                "wwi", 
+                "hys"
+            ]
+        }, 
+        {
+            "id": 13, 
+            "stations": [
+                "lbg", 
+                "nxg", 
+                "bcy", 
+                "hpa", 
+                "foh", 
+                "syd", 
+                "pnw", 
+                "anz", 
+                "nwd", 
+                "ecr", 
+                "scy", 
+                "puo", 
+                "pur", 
+                "kly", 
+                "why", 
+                "whs", 
+                "cat"
+            ]
+        }, 
+        {
+            "id": 14, 
+            "stations": [
+                "lbg", 
+                "nwx", 
+                "orp", 
+                "sev", 
+                "hlb", 
+                "ton", 
+                "hib", 
+                "tbw"
+            ]
+        }, 
+        {
+            "id": 15, 
+            "stations": [
+                "lbg", 
+                "ecr", 
+                "oxt", 
+                "hur", 
+                "ebt", 
+                "hev", 
+                "cwn", 
+                "ahs", 
+                "eri", 
+                "coh", 
+                "bxd", 
+                "uck"
+            ]
+        }, 
+        {
+            "id": 16, 
+            "stations": [
+                "lbg", 
+                "dep", 
+                "gnw", 
+                "mzh", 
+                "wcb", 
+                "ctn", 
+                "wwd", 
+                "wwa", 
+                "plu", 
+                "abw", 
+                "bvd", 
+                "erh", 
+                "sgr", 
+                "bnh"
+            ]
+        }, 
+        {
+            "id": 17, 
+            "stations": [
+                "lbg", 
+                "ecr", 
+                "gtw", 
+                "tbd", 
+                "bab", 
+                "hhe", 
+                "wvf", 
+                "bug", 
+                "hsk", 
+                "prp", 
+                "btn"
+            ]
+        }, 
+        {
+            "id": 18, 
+            "stations": [
+                "lbg", 
+                "nwd", 
+                "ecr", 
+                "pur", 
+                "cds", 
+                "mhm", 
+                "rdh", 
+                "rei"
+            ]
+        }
+    ], 
+    "segments": [
+        {
+            "origin": "rdh", 
+            "routes": [
+                3
+            ], 
+            "destination": "nuf", 
+            "id": "ea494dbd6613a6b74e66f464ad75fb6e", 
+            "lateness": 9.0
+        }, 
+        {
+            "origin": "nxg", 
+            "routes": [
+                11
+            ], 
+            "destination": "nwd", 
+            "id": "be0e9d5d2a4672cff0b722171ed62e03", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "wme", 
+            "routes": [
+                4
+            ], 
+            "destination": "chp", 
+            "id": "74fd0e60dbf82d70c406b481ae9d34d0", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "bxh", 
+            "routes": [
+                9
+            ], 
+            "destination": "bnh", 
+            "id": "1aa00f4d836267fc7766852c7f842d0f", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "plu", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "abw", 
+            "id": "789e6e6aa2111fd887413cc905ff06c0", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "crw", 
+            "routes": [
+                11
+            ], 
+            "destination": "ifi", 
+            "id": "ceb1ce251d8fba9c69715ab4d589ed5c", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "gdn", 
+            "routes": [
+                3
+            ], 
+            "destination": "ebr", 
+            "id": "58e87c17ed858cdd5317d644ef7e63df", 
+            "lateness": 9.0
+        }, 
+        {
+            "origin": "chp", 
+            "routes": [
+                4
+            ], 
+            "destination": "knd", 
+            "id": "d4ef8d57b0623e2413612cc51350cba6", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "tbd", 
+            "routes": [
+                11
+            ], 
+            "destination": "crw", 
+            "id": "9f7af72ab51ef05d162c0b6498d12dbb", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "lew", 
+            "routes": [
+                9
+            ], 
+            "destination": "bkh", 
+            "id": "e451f7866d256d891547ad0340557b7a", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "hgr", 
+            "routes": [
+                2
+            ], 
+            "destination": "lee", 
+            "id": "4a99ed817ea9642c614ee23fdbc55343", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "nrb", 
+            "routes": [
+                1
+            ], 
+            "destination": "tth", 
+            "id": "2b445ffc7503f276233a5ad5d24765e8", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "elw", 
+            "routes": [
+                9
+            ], 
+            "destination": "fcn", 
+            "id": "707f8e3b9df68d24e24cb14fb8660209", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "lvn", 
+            "routes": [
+                11
+            ], 
+            "destination": "hrh", 
+            "id": "60ab5b8a3fc2eb2ee6232bd1fec02369", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "esd", 
+            "routes": [
+                7
+            ], 
+            "destination": "cit", 
+            "id": "4e6cb6cee5b835cdd5ed3a98468c25d3", 
+            "lateness": 0.0
+        }, 
+        {
+            "origin": "edn", 
+            "routes": [
+                12
+            ], 
+            "destination": "wwi", 
+            "id": "00a2797d23eb5e376b83643847bb90ee", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                9, 
+                2, 
+                12, 
+                14, 
+                7
+            ], 
+            "destination": "nwx", 
+            "id": "5ff013d13c9e94170708ab318352edff", 
+            "lateness": 17
+        }, 
+        {
+            "origin": "bxy", 
+            "routes": [
+                2
+            ], 
+            "destination": "cry", 
+            "id": "82471f90238858cdf6181728c19b2327", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                8, 
+                1
+            ], 
+            "destination": "sbm", 
+            "id": "b38b3ca85e52951122de3ca55dcf1cf8", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "ecr", 
+            "routes": [
+                13
+            ], 
+            "destination": "scy", 
+            "id": "dfc6e612fcf09e9ecc9c6570a8b5f68f", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "eld", 
+            "routes": [
+                11
+            ], 
+            "destination": "hor", 
+            "id": "111ba8ac7911c45c5af5ed29b268daea", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "why", 
+            "routes": [
+                13
+            ], 
+            "destination": "whs", 
+            "id": "0bb85f1b4e1755b5d8a603def280adc2", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "wwd", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "wwa", 
+            "id": "d300b09c496b4152ced3fa3ce768028e", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "gnw", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "mzh", 
+            "id": "edbbd3c0b56ec7716221fe73c242d801", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "ecr", 
+            "routes": [
+                17
+            ], 
+            "destination": "gtw", 
+            "id": "ebe0dc46cf54c726ef225114d72ead45", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "sgr", 
+            "routes": [
+                10
+            ], 
+            "destination": "dfd", 
+            "id": "ec04d0bda6bd016b9363a5d61c2e4e68", 
+            "lateness": 19.0
+        }, 
+        {
+            "origin": "kdb", 
+            "routes": [
+                9
+            ], 
+            "destination": "elw", 
+            "id": "7ee8805744df59489bee4ce3081462ae", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "dep", 
+            "id": "12df54179f4f690bdae722064af98ecc", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "bab", 
+            "routes": [
+                17
+            ], 
+            "destination": "hhe", 
+            "id": "ba1f0710e7fbe40e31c69f913b510bde", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "ctn", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "wwd", 
+            "id": "2f019ba6088963bd61088df9655441a2", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "sbm", 
+            "routes": [
+                8, 
+                1
+            ], 
+            "destination": "qrp", 
+            "id": "8f1d82c606882fb61cb1c10c169ecb8f", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "grp", 
+            "routes": [
+                7
+            ], 
+            "destination": "esd", 
+            "id": "8888d6fc685f16bcd6e548b1353e84ec", 
+            "lateness": 0.0
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                0
+            ], 
+            "destination": "cst", 
+            "id": "dada999719b47767de207cca7e9ea800", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "hhe", 
+            "routes": [
+                17
+            ], 
+            "destination": "wvf", 
+            "id": "0580433b986f0bb866b9d7edb305e861", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "wvf", 
+            "routes": [
+                17
+            ], 
+            "destination": "bug", 
+            "id": "285da92bc2011b1d3b1ff8e979fa62c9", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "abw", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "bvd", 
+            "id": "b547cea23037a7f2100a5a6329bf829e", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "pur", 
+            "routes": [
+                3, 
+                18, 
+                11
+            ], 
+            "destination": "cds", 
+            "id": "449987b21615f9294de61dfac0009979", 
+            "lateness": 12
+        }, 
+        {
+            "origin": "mhm", 
+            "routes": [
+                18, 
+                11
+            ], 
+            "destination": "rdh", 
+            "id": "b3a094d2c74f5bcec9d986a27c26297d", 
+            "lateness": 12
+        }, 
+        {
+            "origin": "lih", 
+            "routes": [
+                3
+            ], 
+            "destination": "ton", 
+            "id": "477a34456644829af2c94d9655cb6538", 
+            "lateness": 9.0
+        }, 
+        {
+            "origin": "wnw", 
+            "routes": [
+                8
+            ], 
+            "destination": "gip", 
+            "id": "6395e44e67db1294f9bbca4618e3ef04", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "cyp", 
+            "routes": [
+                8
+            ], 
+            "destination": "bik", 
+            "id": "472bff6957e302e8dac4eb6f760c0390", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "knd", 
+            "routes": [
+                4
+            ], 
+            "destination": "tad", 
+            "id": "7bcf8d2f7002397b688155631156922b", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "pur", 
+            "routes": [
+                13
+            ], 
+            "destination": "kly", 
+            "id": "d7c57456213fa4ada97c38e9722410ab", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "coh", 
+            "routes": [
+                15
+            ], 
+            "destination": "bxd", 
+            "id": "be22d6e380110eff14469e676203e1c4", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "hor", 
+            "routes": [
+                11
+            ], 
+            "destination": "gtw", 
+            "id": "63d38610d58c704f11127d6e7eece2b5", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "ndl", 
+            "routes": [
+                8, 
+                1
+            ], 
+            "destination": "tuh", 
+            "id": "49183bfe2f6d0227c5dc436e4af3f946", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "anz", 
+            "routes": [
+                13
+            ], 
+            "destination": "nwd", 
+            "id": "a5a27884bf7d942af4fc99ceb808463b", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "tbd", 
+            "routes": [
+                17
+            ], 
+            "destination": "bab", 
+            "id": "c5679ffc8d33f11212c72c6c101ae548", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "cdn", 
+            "routes": [
+                4
+            ], 
+            "destination": "wme", 
+            "id": "6f0eb96e511424a29641ab183b306db1", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "eri", 
+            "routes": [
+                15
+            ], 
+            "destination": "coh", 
+            "id": "d4715f2752e591c479fd9053baac27c7", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "tth", 
+            "routes": [
+                1
+            ], 
+            "destination": "srs", 
+            "id": "8edfd7816672791a2f88bea0bc8b4706", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "ecr", 
+            "routes": [
+                15
+            ], 
+            "destination": "oxt", 
+            "id": "27c91257cd3f4f5dedd3d1aa38f448e0", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "syd", 
+            "routes": [
+                6
+            ], 
+            "destination": "cyp", 
+            "id": "3d83209d560315abb538b170cf6c531b", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "bxd", 
+            "routes": [
+                15
+            ], 
+            "destination": "uck", 
+            "id": "f964b10e65618ca1f0afd8fd68c4c77a", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "pnw", 
+            "routes": [
+                13
+            ], 
+            "destination": "anz", 
+            "id": "2442dadc6ada63041857f86339760888", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "lee", 
+            "routes": [
+                2
+            ], 
+            "destination": "mtg", 
+            "id": "641edf29a0e626a3df1446ff8a0ccf45", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "clk", 
+            "routes": [
+                12
+            ], 
+            "destination": "ele", 
+            "id": "63fb8da4638b6a39e1c5944d0a7f0708", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "bik", 
+            "routes": [
+                8
+            ], 
+            "destination": "bkj", 
+            "id": "d3c58809dd09d2130d99f8ef108921a3", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "cwn", 
+            "routes": [
+                15
+            ], 
+            "destination": "ahs", 
+            "id": "18b8de9fc906dc4098563229730935da", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "ahs", 
+            "routes": [
+                15
+            ], 
+            "destination": "eri", 
+            "id": "8ebb71e5476b6087d6ee2cc6305fe5e3", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "oxt", 
+            "routes": [
+                15
+            ], 
+            "destination": "hur", 
+            "id": "8aac58865848e61531b29dc57ae59ee2", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "pmr", 
+            "routes": [
+                8, 
+                1
+            ], 
+            "destination": "edw", 
+            "id": "76003fc94d18a40fb29f1fd3fa44b752", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "bnh", 
+            "routes": [
+                9
+            ], 
+            "destination": "sgr", 
+            "id": "0e471627ef03144c76e74820a055882f", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "lew", 
+            "routes": [
+                12
+            ], 
+            "destination": "lad", 
+            "id": "d45e62344fa95f321a1a5332598221b2", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "erh", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "sgr", 
+            "id": "d10db3db7f07f0486dce3538aefa5bbe", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                18, 
+                3, 
+                4
+            ], 
+            "destination": "nwd", 
+            "id": "1d598a6c33b5cf7c40172146cdb4070f", 
+            "lateness": 24
+        }, 
+        {
+            "origin": "bak", 
+            "routes": [
+                6
+            ], 
+            "destination": "vic", 
+            "id": "67b86e68aee74076ed293a5ee112c36e", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "lsy", 
+            "routes": [
+                12
+            ], 
+            "destination": "nbc", 
+            "id": "41da03b7c03c3e78cc0d48fead0e7c8a", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "foh", 
+            "routes": [
+                13, 
+                6
+            ], 
+            "destination": "syd", 
+            "id": "faff4dad3a9c404be1c5f8df31c454d3", 
+            "lateness": 16
+        }, 
+        {
+            "origin": "wsw", 
+            "routes": [
+                6
+            ], 
+            "destination": "clj", 
+            "id": "60ca975ca5e5a0cb1a1605c0b9c7c04a", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "rhm", 
+            "routes": [
+                4
+            ], 
+            "destination": "cdn", 
+            "id": "6d68a44a6c9d2c0e6c5b06c0ff062a49", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "saj", 
+            "routes": [
+                9, 
+                2, 
+                12, 
+                7
+            ], 
+            "destination": "lew", 
+            "id": "05cae08c14a5068f38e849e148f81b37", 
+            "lateness": 17
+        }, 
+        {
+            "origin": "fgt", 
+            "routes": [
+                11
+            ], 
+            "destination": "lvn", 
+            "id": "3127d0d74969ca269071bf99a04e9fcc", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "bcy", 
+            "routes": [
+                13, 
+                6
+            ], 
+            "destination": "hpa", 
+            "id": "0d0f9712256c24493cdded5d457dd096", 
+            "lateness": 16
+        }, 
+        {
+            "origin": "whs", 
+            "routes": [
+                13
+            ], 
+            "destination": "cat", 
+            "id": "e25e5e432ca6640fb8f14fbeb21d1adf", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "tad", 
+            "routes": [
+                4
+            ], 
+            "destination": "tat", 
+            "id": "0893f8086bc5f0679275073992d5e230", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "bvd", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "erh", 
+            "id": "f75fc0d247d826859bcafbf700b11af7", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "wwa", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "plu", 
+            "id": "38786a9aeb149696e54529d1a0e7d709", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "cyp", 
+            "routes": [
+                6
+            ], 
+            "destination": "gip", 
+            "id": "8fc6ce49de86cbabc4249ac9022f608d", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "src", 
+            "routes": [
+                1
+            ], 
+            "destination": "nrb", 
+            "id": "1c3bc537533e0eabfb7a5615645c59dc", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "pur", 
+            "routes": [
+                4
+            ], 
+            "destination": "rhm", 
+            "id": "94e192b3e0d7a72e0fd6b0186aa86bd4", 
+            "lateness": 24.0
+        }, 
+        {
+            "origin": "wwi", 
+            "routes": [
+                12
+            ], 
+            "destination": "hys", 
+            "id": "a10895c39e5007fff42d0df8037f8e22", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "hib", 
+            "routes": [
+                14
+            ], 
+            "destination": "tbw", 
+            "id": "7acb98d99fd6a87f60d50d9961a7457d", 
+            "lateness": 3.0
+        }, 
+        {
+            "origin": "cit", 
+            "routes": [
+                7
+            ], 
+            "destination": "pet", 
+            "id": "5909c655e3aa86ed460a30e4bcf7afd6", 
+            "lateness": 0.0
+        }, 
+        {
+            "origin": "sev", 
+            "routes": [
+                14
+            ], 
+            "destination": "hlb", 
+            "id": "815f8eea429ac5dd6bbcc0e8d84f2a60", 
+            "lateness": 3.0
+        }, 
+        {
+            "origin": "lew", 
+            "routes": [
+                2, 
+                7
+            ], 
+            "destination": "hgr", 
+            "id": "5be3cbbbb33f36d9139ba3526636e1b6", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "phr", 
+            "routes": [
+                3
+            ], 
+            "destination": "lih", 
+            "id": "078dca5246415392d8f61b0182fb874d", 
+            "lateness": 9.0
+        }, 
+        {
+            "origin": "wnw", 
+            "routes": [
+                6
+            ], 
+            "destination": "srh", 
+            "id": "330005da6a147decd1d41c73c3ced88c", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "cds", 
+            "routes": [
+                18, 
+                11
+            ], 
+            "destination": "mhm", 
+            "id": "c025475c7bf9720181f5e1d680717eba", 
+            "lateness": 12
+        }, 
+        {
+            "origin": "hgr", 
+            "routes": [
+                7
+            ], 
+            "destination": "grp", 
+            "id": "41281196cfc64bf849fe01a3bf0dbbf2", 
+            "lateness": 0.0
+        }, 
+        {
+            "origin": "wli", 
+            "routes": [
+                9
+            ], 
+            "destination": "bxh", 
+            "id": "9d3a7b9a01f0c5fafc860a47a51bc575", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "pet", 
+            "routes": [
+                7
+            ], 
+            "destination": "orp", 
+            "id": "35ed4f2a9e41916b0b75e874f642450f", 
+            "lateness": 0.0
+        }, 
+        {
+            "origin": "rdh", 
+            "routes": [
+                18
+            ], 
+            "destination": "rei", 
+            "id": "80020778c56d83df514c28a72d0b89b0", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "ecr", 
+            "routes": [
+                3, 
+                18, 
+                11, 
+                4
+            ], 
+            "destination": "pur", 
+            "id": "f98b210cc592e0c7b00554968c0a6b0f", 
+            "lateness": 24
+        }, 
+        {
+            "origin": "tuh", 
+            "routes": [
+                8
+            ], 
+            "destination": "wnw", 
+            "id": "1259df48205112aa2e8c57b83d6dc62e", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "ele", 
+            "routes": [
+                12
+            ], 
+            "destination": "edn", 
+            "id": "f86d9effff4722cf28f511257ed2ece4", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "sid", 
+            "routes": [
+                2
+            ], 
+            "destination": "ayp", 
+            "id": "31abb2f214e4e4014755a5266c3d8ed3", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "mzh", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "wcb", 
+            "id": "9786c9ed9c41be58936d40b47b52647d", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "ayp", 
+            "routes": [
+                2
+            ], 
+            "destination": "bxy", 
+            "id": "b01055167efe5391d8779c26850e34e5", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "bal", 
+            "routes": [
+                6
+            ], 
+            "destination": "wsw", 
+            "id": "ad434b47d194eb3f1e3ab16c022d4af2", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "hlb", 
+            "routes": [
+                14
+            ], 
+            "destination": "ton", 
+            "id": "9d5b2b26d9bf59a571961a4b6d0856c1", 
+            "lateness": 3.0
+        }, 
+        {
+            "origin": "nxg", 
+            "routes": [
+                13, 
+                6
+            ], 
+            "destination": "bcy", 
+            "id": "629d76edb26175b0c927ac6708bbc71a", 
+            "lateness": 16
+        }, 
+        {
+            "origin": "cfb", 
+            "routes": [
+                12
+            ], 
+            "destination": "lsy", 
+            "id": "62b406b4dc6ac3ae9e35d810dcf9bd91", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "srh", 
+            "routes": [
+                6
+            ], 
+            "destination": "bal", 
+            "id": "ee4f503df76cfd970ca13275968b624d", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "wcb", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "ctn", 
+            "id": "e1beb0ecf553ed6a124bf2e6e0a48885", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "mtg", 
+            "routes": [
+                2
+            ], 
+            "destination": "neh", 
+            "id": "6aa93371cf1c42c0f22f9121ef63e2b1", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "syd", 
+            "routes": [
+                13
+            ], 
+            "destination": "pnw", 
+            "id": "653630be31711aa1da4dba32af4aa7b5", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "ton", 
+            "routes": [
+                14
+            ], 
+            "destination": "hib", 
+            "id": "8c1f7f69a7cd82ac75a67e86577de418", 
+            "lateness": 3.0
+        }, 
+        {
+            "origin": "bkh", 
+            "routes": [
+                9
+            ], 
+            "destination": "kdb", 
+            "id": "d2a829609be366013be205ffc7e4ba39", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "cds", 
+            "routes": [
+                3
+            ], 
+            "destination": "rdh", 
+            "id": "81a2cbce9b2b93b53807a787ee4cc275", 
+            "lateness": 9.0
+        }, 
+        {
+            "origin": "kly", 
+            "routes": [
+                13
+            ], 
+            "destination": "why", 
+            "id": "b585053868f80638e2f64fbc27690de1", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "nwx", 
+            "routes": [
+                14
+            ], 
+            "destination": "orp", 
+            "id": "6fe45df008cadc653cfba9ad179c2ae3", 
+            "lateness": 3.0
+        }, 
+        {
+            "origin": "clj", 
+            "routes": [
+                6
+            ], 
+            "destination": "bak", 
+            "id": "6a87900f80e14735eaf4397cd2322f2a", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "edw", 
+            "routes": [
+                8, 
+                1
+            ], 
+            "destination": "ndl", 
+            "id": "60c507d10118428d78a4f57f77ccdd45", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "sgr", 
+            "routes": [
+                16
+            ], 
+            "destination": "bnh", 
+            "id": "addfda8335db7abea280f45c8e4de577", 
+            "lateness": 1.0
+        }, 
+        {
+            "origin": "qrp", 
+            "routes": [
+                8, 
+                1
+            ], 
+            "destination": "pmr", 
+            "id": "c641776d6c96d722b4b9817b272d1af2", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "hpa", 
+            "routes": [
+                13, 
+                6
+            ], 
+            "destination": "foh", 
+            "id": "da9b0a1bcb38b70a39ba301748510ff8", 
+            "lateness": 16
+        }, 
+        {
+            "origin": "puo", 
+            "routes": [
+                13
+            ], 
+            "destination": "pur", 
+            "id": "1c93eaa3e7d28e4221461affc0893ce5", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "dep", 
+            "routes": [
+                16, 
+                10, 
+                5
+            ], 
+            "destination": "gnw", 
+            "id": "4377fd0dadc8d6aaf04837bea5a1c438", 
+            "lateness": 19
+        }, 
+        {
+            "origin": "rdh", 
+            "routes": [
+                11
+            ], 
+            "destination": "eld", 
+            "id": "02083a70cb6eede83130768e1275d912", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "srs", 
+            "routes": [
+                1
+            ], 
+            "destination": "wcy", 
+            "id": "90d5c4b35af6e2c2951ad567355f3f34", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "ebr", 
+            "routes": [
+                3
+            ], 
+            "destination": "phr", 
+            "id": "3cc594e6af9614e178db4356f60ed461", 
+            "lateness": 9.0
+        }, 
+        {
+            "origin": "bug", 
+            "routes": [
+                17
+            ], 
+            "destination": "hsk", 
+            "id": "eb6a93125ebd5f0ddec71b44b647fab6", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "neh", 
+            "routes": [
+                2
+            ], 
+            "destination": "sid", 
+            "id": "13df37d730cf1e0e7e2a69db4a021365", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "gip", 
+            "routes": [
+                6
+            ], 
+            "destination": "wnw", 
+            "id": "c4cc0363dca0dd79adf9c6e74005c142", 
+            "lateness": 11.0
+        }, 
+        {
+            "origin": "fcn", 
+            "routes": [
+                9
+            ], 
+            "destination": "wli", 
+            "id": "785fa7c415f98d834870eb1117725a85", 
+            "lateness": 4.0
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                11, 
+                13, 
+                6
+            ], 
+            "destination": "nxg", 
+            "id": "c83a5d22fcedafe29cc2fabe5607a857", 
+            "lateness": 16
+        }, 
+        {
+            "origin": "lad", 
+            "routes": [
+                12
+            ], 
+            "destination": "cfb", 
+            "id": "63a1ddb8235281e04e9512a16a85f1eb", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "gtw", 
+            "routes": [
+                17, 
+                11
+            ], 
+            "destination": "tbd", 
+            "id": "c0b6eb5efdb8b87ee217139fb8dfca3f", 
+            "lateness": 7
+        }, 
+        {
+            "origin": "prp", 
+            "routes": [
+                17
+            ], 
+            "destination": "btn", 
+            "id": "9232bc55657efcb13636a82378088704", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "tuh", 
+            "routes": [
+                1
+            ], 
+            "destination": "ste", 
+            "id": "a94ba0a742d1e870dbf876b26581e19c", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "hev", 
+            "routes": [
+                15
+            ], 
+            "destination": "cwn", 
+            "id": "ccee388a166af2f26298d7f81882a3d0", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "gip", 
+            "routes": [
+                8
+            ], 
+            "destination": "cyp", 
+            "id": "8955dba5113b48eec0c4d9874b686d44", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "lbg", 
+            "routes": [
+                17, 
+                15
+            ], 
+            "destination": "ecr", 
+            "id": "a3abbc259585ae8971b1e22ddbe4868f", 
+            "lateness": 7
+        }, 
+        {
+            "origin": "scy", 
+            "routes": [
+                13
+            ], 
+            "destination": "puo", 
+            "id": "a430bb9dbacec63893842cd53e65f2ab", 
+            "lateness": 16.0
+        }, 
+        {
+            "origin": "hsk", 
+            "routes": [
+                17
+            ], 
+            "destination": "prp", 
+            "id": "2140730285c0d7814a763524a7d7b980", 
+            "lateness": 7.0
+        }, 
+        {
+            "origin": "orp", 
+            "routes": [
+                14
+            ], 
+            "destination": "sev", 
+            "id": "cc9f4b2f72cfa291df6b87728d346584", 
+            "lateness": 3.0
+        }, 
+        {
+            "origin": "ebt", 
+            "routes": [
+                15
+            ], 
+            "destination": "hev", 
+            "id": "87c6a0485e0f1988d49144867c75c7f8", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "ifi", 
+            "routes": [
+                11
+            ], 
+            "destination": "fgt", 
+            "id": "4835b86614810a15fcad1416adb3c411", 
+            "lateness": 5.0
+        }, 
+        {
+            "origin": "ste", 
+            "routes": [
+                1
+            ], 
+            "destination": "src", 
+            "id": "98206e0b0af832e932e531a20b2e9992", 
+            "lateness": 12.0
+        }, 
+        {
+            "origin": "nbc", 
+            "routes": [
+                12
+            ], 
+            "destination": "clk", 
+            "id": "8684627493382054ba163b3ac3c19ac9", 
+            "lateness": 17.0
+        }, 
+        {
+            "origin": "nwd", 
+            "routes": [
+                11, 
+                18, 
+                3, 
+                4, 
+                13
+            ], 
+            "destination": "ecr", 
+            "id": "cbbf6628d684974c0ce3564e8b9c5e3b", 
+            "lateness": 24
+        }, 
+        {
+            "origin": "hur", 
+            "routes": [
+                15
+            ], 
+            "destination": "ebt", 
+            "id": "60b527f80c1b9cb3070764c42a0ef420", 
+            "lateness": 6.0
+        }, 
+        {
+            "origin": "nwx", 
+            "routes": [
+                9, 
+                2, 
+                12, 
+                7
+            ], 
+            "destination": "saj", 
+            "id": "8348f0df6511934e5703757f9c753905", 
+            "lateness": 17
+        }, 
+        {
+            "origin": "nuf", 
+            "routes": [
+                3
+            ], 
+            "destination": "gdn", 
+            "id": "47beb700134c4f7d9e7ad80cee6eae89", 
+            "lateness": 9.0
+        }
+    ], 
+    "stations": [
+        {
+            "lat": 51.452, 
+            "category": "b", 
+            "lon": -0.0009, 
+            "name": "Hither Green", 
+            "id": "hgr"
+        }, 
+        {
+            "lat": 51.322, 
+            "category": "a", 
+            "lon": -0.1345, 
+            "name": "Coulsdon Town", 
+            "id": "cdn"
+        }, 
+        {
+            "lat": 51.4763, 
+            "category": "a", 
+            "lon": -0.0324, 
+            "name": "New Cross", 
+            "id": "nwx"
+        }, 
+        {
+            "lat": 51.397, 
+            "category": "a", 
+            "lon": -0.0752, 
+            "name": "Norwood Junction", 
+            "id": "nwd"
+        }, 
+        {
+            "lat": 51.3988, 
+            "category": "b", 
+            "lon": -0.1003, 
+            "name": "Thornton Heath", 
+            "id": "tth"
+        }, 
+        {
+            "lat": 51.363, 
+            "category": "b", 
+            "lon": -0.0935, 
+            "name": "South Croydon", 
+            "id": "scy"
+        }, 
+        {
+            "lat": 51.4615, 
+            "category": "b", 
+            "lon": -0.0806, 
+            "name": "East Dulwich", 
+            "id": "edw"
+        }, 
+        {
+            "lat": 51.4921, 
+            "category": "b", 
+            "lon": 0.1523, 
+            "name": "Belvedere", 
+            "id": "bvd"
+        }, 
+        {
+            "lat": 51.2182, 
+            "category": "a", 
+            "lon": -0.0501, 
+            "name": "Godstone", 
+            "id": "gdn"
+        }, 
+        {
+            "lat": 51.4248, 
+            "category": "b", 
+            "lon": -0.0333, 
+            "name": "Lower Sydenham", 
+            "id": "lsy"
+        }, 
+        {
+            "lat": 51.4642, 
+            "category": "b", 
+            "lon": -0.1703, 
+            "name": "Clapham Junction", 
+            "id": "clj"
+        }, 
+        {
+            "lat": 51.4086, 
+            "category": "a", 
+            "lon": -0.0407, 
+            "name": "Clock House", 
+            "id": "clk"
+        }, 
+        {
+            "lat": 51.2273, 
+            "category": "a", 
+            "lon": -0.1708, 
+            "name": "Earlswood (Surrey)", 
+            "id": "eld"
+        }, 
+        {
+            "lat": 51.3985, 
+            "category": "b", 
+            "lon": -0.0496, 
+            "name": "Elmers End", 
+            "id": "ele"
+        }, 
+        {
+            "lat": 51.465, 
+            "category": "a", 
+            "lon": 0.1596, 
+            "name": "Barnehurst", 
+            "id": "bnh"
+        }, 
+        {
+            "lat": 51.0661, 
+            "category": "a", 
+            "lon": -0.3193, 
+            "name": "Horsham", 
+            "id": "hrh"
+        }, 
+        {
+            "lat": 51.1565, 
+            "category": "a", 
+            "lon": -0.161, 
+            "name": "Gatwick Airport", 
+            "id": "gtw"
+        }, 
+        {
+            "lat": 51.4556, 
+            "category": "a", 
+            "lon": 0.0525, 
+            "name": "Eltham", 
+            "id": "elw"
+        }, 
+        {
+            "lat": 51.319, 
+            "category": "a", 
+            "lon": -0.1543, 
+            "name": "Woodmansterne", 
+            "id": "wme"
+        }, 
+        {
+            "lat": 51.4039, 
+            "category": "a", 
+            "lon": -0.0557, 
+            "name": "Birkbeck", 
+            "id": "bik"
+        }, 
+        {
+            "lat": 51.3901, 
+            "category": "b", 
+            "lon": -0.0264, 
+            "name": "Eden Park", 
+            "id": "edn"
+        }, 
+        {
+            "lat": 51.1556, 
+            "category": "a", 
+            "lon": 0.11, 
+            "name": "Cowden", 
+            "id": "cwn"
+        }, 
+        {
+            "lat": 51.1302, 
+            "category": "a", 
+            "lon": 0.2628, 
+            "name": "Tunbridge Wells", 
+            "id": "tbw"
+        }, 
+        {
+            "lat": 51.1494, 
+            "category": "a", 
+            "lon": 0.2773, 
+            "name": "High Brooms", 
+            "id": "hib"
+        }, 
+        {
+            "lat": 51.1169, 
+            "category": "a", 
+            "lon": -0.1612, 
+            "name": "Three Bridges", 
+            "id": "tbd"
+        }, 
+        {
+            "lat": 51.4402, 
+            "category": "b", 
+            "lon": 0.1479, 
+            "name": "Bexley", 
+            "id": "bxy"
+        }, 
+        {
+            "lat": 51.2642, 
+            "category": "a", 
+            "lon": -0.1502, 
+            "name": "Merstham", 
+            "id": "mhm"
+        }, 
+        {
+            "lat": 51.1122, 
+            "category": "b", 
+            "lon": -0.1867, 
+            "name": "Crawley", 
+            "id": "crw"
+        }, 
+        {
+            "lat": 51.2579, 
+            "category": "b", 
+            "lon": -0.0048, 
+            "name": "Oxted", 
+            "id": "oxt"
+        }, 
+        {
+            "lat": 51.4483, 
+            "category": "a", 
+            "lon": 0.1789, 
+            "name": "Crayford", 
+            "id": "cry"
+        }, 
+        {
+            "lat": 50.99, 
+            "category": "b", 
+            "lon": 0.1314, 
+            "name": "Buxted", 
+            "id": "bxd"
+        }, 
+        {
+            "lat": 51.4635, 
+            "category": "b", 
+            "lon": 0.1337, 
+            "name": "Bexleyheath", 
+            "id": "bxh"
+        }, 
+        {
+            "lat": 51.3763, 
+            "category": "b", 
+            "lon": 0.0106, 
+            "name": "Hayes (Kent)", 
+            "id": "hys"
+        }, 
+        {
+            "lat": 51.0555, 
+            "category": "b", 
+            "lon": -0.1369, 
+            "name": "Balcombe", 
+            "id": "bab"
+        }, 
+        {
+            "lat": 51.4462, 
+            "category": "b", 
+            "lon": -0.1634, 
+            "name": "Wandsworth Common", 
+            "id": "wsw"
+        }, 
+        {
+            "lat": 51.4432, 
+            "category": "b", 
+            "lon": -0.1524, 
+            "name": "Balham", 
+            "id": "bal"
+        }, 
+        {
+            "lat": 51.477, 
+            "category": "b", 
+            "lon": -0.1475, 
+            "name": "Battersea Park", 
+            "id": "bak"
+        }, 
+        {
+            "lat": 51.2769, 
+            "category": "b", 
+            "lon": 0.1817, 
+            "name": "Sevenoaks", 
+            "id": "sev"
+        }, 
+        {
+            "lat": 51.47, 
+            "category": "a", 
+            "lon": -0.0694, 
+            "name": "Peckham Rye", 
+            "id": "pmr"
+        }, 
+        {
+            "lat": 51.3158, 
+            "category": "b", 
+            "lon": -0.1379, 
+            "name": "Coulsdon South", 
+            "id": "cds"
+        }, 
+        {
+            "lat": 51.4447, 
+            "category": "a", 
+            "lon": -0.0248, 
+            "name": "Catford Bridge", 
+            "id": "cfb"
+        }, 
+        {
+            "lat": 51.4621, 
+            "category": "b", 
+            "lon": 0.0275, 
+            "name": "Kidbrooke", 
+            "id": "kdb"
+        }, 
+        {
+            "lat": 51.2001, 
+            "category": "a", 
+            "lon": 0.0672, 
+            "name": "Edenbridge Town", 
+            "id": "ebt"
+        }, 
+        {
+            "lat": 51.4911, 
+            "category": "b", 
+            "lon": 0.0546, 
+            "name": "Woolwich Dockyard", 
+            "id": "wwd"
+        }, 
+        {
+            "lat": 51.4899, 
+            "category": "b", 
+            "lon": 0.0692, 
+            "name": "Woolwich Arsenal", 
+            "id": "wwa"
+        }, 
+        {
+            "lat": 51.2084, 
+            "category": "b", 
+            "lon": 0.0606, 
+            "name": "Edenbridge", 
+            "id": "ebr"
+        }, 
+        {
+            "lat": 51.2268, 
+            "category": "a", 
+            "lon": -0.1325, 
+            "name": "Nutfield", 
+            "id": "nuf"
+        }, 
+        {
+            "lat": 50.829, 
+            "category": "a", 
+            "lon": -0.1413, 
+            "name": "Brighton", 
+            "id": "btn"
+        }, 
+        {
+            "lat": 51.3813, 
+            "category": "b", 
+            "lon": -0.0144, 
+            "name": "West Wickham", 
+            "id": "wwi"
+        }, 
+        {
+            "lat": 51.2145, 
+            "category": "a", 
+            "lon": 0.2276, 
+            "name": "Hildenborough", 
+            "id": "hlb"
+        }, 
+        {
+            "lat": 51.4381, 
+            "category": "a", 
+            "lon": 0.0705, 
+            "name": "New Eltham", 
+            "id": "neh"
+        }, 
+        {
+            "lat": 51.3886, 
+            "category": "b", 
+            "lon": 0.0745, 
+            "name": "Petts Wood", 
+            "id": "pet"
+        }, 
+        {
+            "lat": 51.4171, 
+            "category": "b", 
+            "lon": 0.0443, 
+            "name": "Elmstead Woods", 
+            "id": "esd"
+        }, 
+        {
+            "lat": 51.4911, 
+            "category": "a", 
+            "lon": 0.1214, 
+            "name": "Abbey Wood (London)", 
+            "id": "abw"
+        }, 
+        {
+            "lat": 51.4393, 
+            "category": "a", 
+            "lon": -0.0532, 
+            "name": "Forest Hill", 
+            "id": "foh"
+        }, 
+        {
+            "lat": 51.4898, 
+            "category": "a", 
+            "lon": 0.0843, 
+            "name": "Plumstead", 
+            "id": "plu"
+        }, 
+        {
+            "lat": 51.347, 
+            "category": "a", 
+            "lon": -0.0989, 
+            "name": "Purley Oaks", 
+            "id": "puo"
+        }, 
+        {
+            "lat": 51.4498, 
+            "category": "a", 
+            "lon": 0.0135, 
+            "name": "Lee", 
+            "id": "lee"
+        }, 
+        {
+            "lat": 51.0959, 
+            "category": "a", 
+            "lon": -0.263, 
+            "name": "Faygate", 
+            "id": "fgt"
+        }, 
+        {
+            "lat": 50.9246, 
+            "category": "b", 
+            "lon": -0.146, 
+            "name": "Hassocks", 
+            "id": "hsk"
+        }, 
+        {
+            "lat": 51.3733, 
+            "category": "a", 
+            "lon": 0.0891, 
+            "name": "Orpington", 
+            "id": "orp"
+        }, 
+        {
+            "lat": 51.4399, 
+            "category": "a", 
+            "lon": -0.1051, 
+            "name": "Tulse Hill", 
+            "id": "tuh"
+        }, 
+        {
+            "lat": 51.3755, 
+            "category": "a", 
+            "lon": -0.0928, 
+            "name": "East Croydon", 
+            "id": "ecr"
+        }, 
+        {
+            "lat": 51.4657, 
+            "category": "b", 
+            "lon": -0.014, 
+            "name": "Lewisham", 
+            "id": "lew"
+        }, 
+        {
+            "lat": 51.3376, 
+            "category": "a", 
+            "lon": -0.114, 
+            "name": "Purley", 
+            "id": "pur"
+        }, 
+        {
+            "lat": 51.4881, 
+            "category": "a", 
+            "lon": -0.0547, 
+            "name": "South Bermondsey", 
+            "id": "sbm"
+        }, 
+        {
+            "lat": 51.4187, 
+            "category": "a", 
+            "lon": -0.136, 
+            "name": "Streatham Common", 
+            "id": "src"
+        }, 
+        {
+            "lat": 51.4545, 
+            "category": "a", 
+            "lon": -0.0879, 
+            "name": "North Dulwich", 
+            "id": "ndl"
+        }, 
+        {
+            "lat": 51.4382, 
+            "category": "a", 
+            "lon": -0.1272, 
+            "name": "Streatham Hill", 
+            "id": "srh"
+        }, 
+        {
+            "lat": 51.1156, 
+            "category": "b", 
+            "lon": -0.2148, 
+            "name": "Ifield", 
+            "id": "ifi"
+        }, 
+        {
+            "lat": 51.4648, 
+            "category": "b", 
+            "lon": 0.1017, 
+            "name": "Welling", 
+            "id": "wli"
+        }, 
+        {
+            "lat": 51.0464, 
+            "category": "a", 
+            "lon": 0.188, 
+            "name": "Crowborough", 
+            "id": "coh"
+        }, 
+        {
+            "lat": 51.4868, 
+            "category": "b", 
+            "lon": 0.0313, 
+            "name": "Charlton", 
+            "id": "ctn"
+        }, 
+        {
+            "lat": 51.2402, 
+            "category": "b", 
+            "lon": -0.1659, 
+            "name": "Redhill", 
+            "id": "rdh"
+        }, 
+        {
+            "lat": 51.4953, 
+            "category": "b", 
+            "lon": -0.1445, 
+            "name": "London Victoria", 
+            "id": "vic"
+        }, 
+        {
+            "lat": 51.4678, 
+            "category": "b", 
+            "lon": 0.1905, 
+            "name": "Slade Green", 
+            "id": "sgr"
+        }, 
+        {
+            "lat": 51.4736, 
+            "category": "b", 
+            "lon": -0.0573, 
+            "name": "Queens Road Peckham", 
+            "id": "qrp"
+        }, 
+        {
+            "lat": 51.1287, 
+            "category": "a", 
+            "lon": 0.1527, 
+            "name": "Ashurst (Kent)", 
+            "id": "ahs"
+        }, 
+        {
+            "lat": 50.9687, 
+            "category": "b", 
+            "lon": 0.0964, 
+            "name": "Uckfield", 
+            "id": "uck"
+        }, 
+        {
+            "lat": 51.1814, 
+            "category": "a", 
+            "lon": 0.0951, 
+            "name": "Hever", 
+            "id": "hev"
+        }, 
+        {
+            "lat": 51.4245, 
+            "category": "a", 
+            "lon": -0.0838, 
+            "name": "Gipsy Hill", 
+            "id": "gip"
+        }, 
+        {
+            "lat": 51.3093, 
+            "category": "a", 
+            "lon": -0.1695, 
+            "name": "Chipstead", 
+            "id": "chp"
+        }, 
+        {
+            "lat": 51.1914, 
+            "category": "a", 
+            "lon": 0.271, 
+            "name": "Tonbridge", 
+            "id": "ton"
+        }, 
+        {
+            "lat": 51.3248, 
+            "category": "b", 
+            "lon": -0.1009, 
+            "name": "Kenley", 
+            "id": "kly"
+        }, 
+        {
+            "lat": 51.4474, 
+            "category": "b", 
+            "lon": 0.2192, 
+            "name": "Dartford", 
+            "id": "dfd"
+        }, 
+        {
+            "lat": 51.4355, 
+            "category": "b", 
+            "lon": 0.1257, 
+            "name": "Albany Park", 
+            "id": "ayp"
+        }, 
+        {
+            "lat": 51.4181, 
+            "category": "a", 
+            "lon": -0.0726, 
+            "name": "Crystal Palace", 
+            "id": "cyp"
+        }, 
+        {
+            "lat": 51.4114, 
+            "category": "a", 
+            "lon": -0.1219, 
+            "name": "Norbury", 
+            "id": "nrb"
+        }, 
+        {
+            "lat": 51.4176, 
+            "category": "b", 
+            "lon": -0.0608, 
+            "name": "Penge West", 
+            "id": "pnw"
+        }, 
+        {
+            "lat": 51.4317, 
+            "category": "a", 
+            "lon": -0.1038, 
+            "name": "West Norwood", 
+            "id": "wnw"
+        }, 
+        {
+            "lat": 51.2444, 
+            "category": "a", 
+            "lon": 0.0039, 
+            "name": "Hurst Green", 
+            "id": "hur"
+        }, 
+        {
+            "lat": 50.9643, 
+            "category": "b", 
+            "lon": -0.1208, 
+            "name": "Wivelsfield", 
+            "id": "wvf"
+        }, 
+        {
+            "lat": 50.9537, 
+            "category": "b", 
+            "lon": -0.1274, 
+            "name": "Burgess Hill", 
+            "id": "bug"
+        }, 
+        {
+            "lat": 51.4258, 
+            "category": "b", 
+            "lon": -0.1316, 
+            "name": "Streatham", 
+            "id": "ste"
+        }, 
+        {
+            "lat": 51.4781, 
+            "category": "b", 
+            "lon": -0.0133, 
+            "name": "Greenwich", 
+            "id": "gnw"
+        }, 
+        {
+            "lat": 51.4788, 
+            "category": "a", 
+            "lon": -0.0263, 
+            "name": "Deptford", 
+            "id": "dep"
+        }, 
+        {
+            "lat": 51.2821, 
+            "category": "a", 
+            "lon": -0.0783, 
+            "name": "Caterham", 
+            "id": "cat"
+        }, 
+        {
+            "lat": 51.4056, 
+            "category": "b", 
+            "lon": 0.0574, 
+            "name": "Chislehurst", 
+            "id": "cit"
+        }, 
+        {
+            "lat": 51.0797, 
+            "category": "a", 
+            "lon": -0.308, 
+            "name": "Littlehaven", 
+            "id": "lvn"
+        }, 
+        {
+            "lat": 51.4817, 
+            "category": "a", 
+            "lon": 0.1751, 
+            "name": "Erith", 
+            "id": "erh"
+        }, 
+        {
+            "lat": 51.4402, 
+            "category": "a", 
+            "lon": 0.0501, 
+            "name": "Mottingham", 
+            "id": "mtg"
+        }, 
+        {
+            "lat": 51.3092, 
+            "category": "b", 
+            "lon": -0.2426, 
+            "name": "Tattenham Corner", 
+            "id": "tat"
+        }, 
+        {
+            "lat": 51.4694, 
+            "category": "a", 
+            "lon": -0.0227, 
+            "name": "St Johns (London)", 
+            "id": "saj"
+        }, 
+        {
+            "lat": 51.0057, 
+            "category": "b", 
+            "lon": -0.1051, 
+            "name": "Haywards Heath", 
+            "id": "hhe"
+        }, 
+        {
+            "lat": 51.2916, 
+            "category": "b", 
+            "lon": -0.236, 
+            "name": "Tadworth", 
+            "id": "tad"
+        }, 
+        {
+            "lat": 51.4168, 
+            "category": "a", 
+            "lon": -0.0353, 
+            "name": "New Beckenham", 
+            "id": "nbc"
+        }, 
+        {
+            "lat": 50.8459, 
+            "category": "a", 
+            "lon": -0.1552, 
+            "name": "Preston Park", 
+            "id": "prp"
+        }, 
+        {
+            "lat": 51.5051, 
+            "category": "b", 
+            "lon": -0.0861, 
+            "name": "London Bridge", 
+            "id": "lbg"
+        }, 
+        {
+            "lat": 51.089, 
+            "category": "b", 
+            "lon": 0.2014, 
+            "name": "Eridge", 
+            "id": "eri"
+        }, 
+        {
+            "lat": 51.4122, 
+            "category": "b", 
+            "lon": -0.0659, 
+            "name": "Anerley", 
+            "id": "anz"
+        }, 
+        {
+            "lat": 51.4309, 
+            "category": "b", 
+            "lon": 0.0217, 
+            "name": "Grove Park", 
+            "id": "grp"
+        }, 
+        {
+            "lat": 51.3919, 
+            "category": "b", 
+            "lon": -0.0883, 
+            "name": "Selhurst", 
+            "id": "srs"
+        }, 
+        {
+            "lat": 51.3784, 
+            "category": "a", 
+            "lon": -0.1026, 
+            "name": "West Croydon", 
+            "id": "wcy"
+        }, 
+        {
+            "lat": 51.1939, 
+            "category": "b", 
+            "lon": 0.2105, 
+            "name": "Leigh (Kent)", 
+            "id": "lih"
+        }, 
+        {
+            "lat": 51.4842, 
+            "category": "a", 
+            "lon": 0.0184, 
+            "name": "Westcombe Park", 
+            "id": "wcb"
+        }, 
+        {
+            "lat": 51.1688, 
+            "category": "b", 
+            "lon": -0.1611, 
+            "name": "Horley", 
+            "id": "hor"
+        }, 
+        {
+            "lat": 51.4339, 
+            "category": "b", 
+            "lon": 0.1038, 
+            "name": "Sidcup", 
+            "id": "sid"
+        }, 
+        {
+            "lat": 51.5114, 
+            "category": "b", 
+            "lon": -0.0903, 
+            "name": "London Cannon Street", 
+            "id": "cst"
+        }, 
+        {
+            "lat": 51.45, 
+            "category": "a", 
+            "lon": -0.0455, 
+            "name": "Honor Oak Park", 
+            "id": "hpa"
+        }, 
+        {
+            "lat": 51.4272, 
+            "category": "b", 
+            "lon": -0.0542, 
+            "name": "Sydenham", 
+            "id": "syd"
+        }, 
+        {
+            "lat": 51.4562, 
+            "category": "b", 
+            "lon": -0.019, 
+            "name": "Ladywell", 
+            "id": "lad"
+        }, 
+        {
+            "lat": 51.4658, 
+            "category": "b", 
+            "lon": 0.0089, 
+            "name": "Blackheath", 
+            "id": "bkh"
+        }, 
+        {
+            "lat": 51.4112, 
+            "category": "b", 
+            "lon": -0.026, 
+            "name": "Beckenham Junction", 
+            "id": "bkj"
+        }, 
+        {
+            "lat": 51.3311, 
+            "category": "a", 
+            "lon": -0.1234, 
+            "name": "Reedham (Surrey)", 
+            "id": "rhm"
+        }, 
+        {
+            "lat": 51.242, 
+            "category": "b", 
+            "lon": -0.2038, 
+            "name": "Reigate", 
+            "id": "rei"
+        }, 
+        {
+            "lat": 51.3034, 
+            "category": "a", 
+            "lon": -0.0769, 
+            "name": "Whyteleafe South", 
+            "id": "whs"
+        }, 
+        {
+            "lat": 51.1973, 
+            "category": "a", 
+            "lon": 0.1735, 
+            "name": "Penshurst", 
+            "id": "phr"
+        }, 
+        {
+            "lat": 51.4826, 
+            "category": "b", 
+            "lon": 0.0029, 
+            "name": "Maze Hill", 
+            "id": "mzh"
+        }, 
+        {
+            "lat": 51.31, 
+            "category": "b", 
+            "lon": -0.0811, 
+            "name": "Whyteleafe", 
+            "id": "why"
+        }, 
+        {
+            "lat": 51.4592, 
+            "category": "a", 
+            "lon": 0.0793, 
+            "name": "Falconwood", 
+            "id": "fcn"
+        }, 
+        {
+            "lat": 51.2947, 
+            "category": "b", 
+            "lon": -0.2112, 
+            "name": "Kingswood", 
+            "id": "knd"
+        }, 
+        {
+            "lat": 51.4751, 
+            "category": "a", 
+            "lon": -0.0404, 
+            "name": "New Cross Gate", 
+            "id": "nxg"
+        }, 
+        {
+            "lat": 51.4646, 
+            "category": "b", 
+            "lon": -0.0375, 
+            "name": "Brockley", 
+            "id": "bcy"
+        }
+    ], 
+    "trains": [
+        {
+            "lateness": [
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 12.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Mon", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 12.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 5.6, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Wed", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 0.0, 
+                    "average_lateness": 13.6, 
+                    "30_min": 42.86, 
+                    "cancelled": 71.43, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 57.14, 
+                    "average_lateness": 9.78, 
+                    "30_min": 0.0, 
+                    "cancelled": 14.29, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 8.57, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 0, 
+            "name": "16:22 London Cannon Street", 
+            "id": "3adx831x1p8c14mt10n578ke8yd388"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.0, 
+                    "30_min": 28.57, 
+                    "cancelled": 42.86, 
+                    "day": "Mon", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 3.2, 
+                    "30_min": 0.0, 
+                    "cancelled": 71.43, 
+                    "day": "Tue", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 14.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Wed", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 0.0, 
+                    "average_lateness": 18.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 85.71, 
+                    "day": "Thu", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 28.57, 
+                    "average_lateness": 15.43, 
+                    "30_min": 28.57, 
+                    "cancelled": 42.86, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 2.29, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Sat", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 12.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 1, 
+            "name": "16:24 West Croydon", 
+            "id": "on4bk54qd32j5k4myyhklu6q27c88d"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 28.57, 
+                    "15_min": 28.57, 
+                    "average_lateness": 13.14, 
+                    "30_min": 42.86, 
+                    "cancelled": 42.86, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 9.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 20.0, 
+                    "30_min": 28.57, 
+                    "cancelled": 28.57, 
+                    "day": "Wed", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 100.0, 
+                    "15_min": 0.0, 
+                    "average_lateness": 1.14, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 6.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 8.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 114.29, 
+                    "15_min": 14.29, 
+                    "average_lateness": 4.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 0.0, 
+                    "day": "Sun", 
+                    "above_30_min": 0.0
+                }
+            ], 
+            "route": 2, 
+            "name": "16:25 Crayford", 
+            "id": "677ti15o23qth9s28p0b5aty644736"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 7.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 85.71, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 0.67, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Tue", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 4.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Wed", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 100.0, 
+                    "15_min": 0.0, 
+                    "average_lateness": 3.5, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Fri", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 0.67, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 9.14, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 3, 
+            "name": "16:29 Tonbridge", 
+            "id": "t2e5h7hge5k2jg45esy3w2n365lqdb"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 71.43, 
+                    "15_min": 14.29, 
+                    "average_lateness": 7.0, 
+                    "30_min": 28.57, 
+                    "cancelled": 28.57, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 100.0, 
+                    "15_min": 0.0, 
+                    "average_lateness": 0.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Tue", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 6.22, 
+                    "30_min": 28.57, 
+                    "cancelled": 14.29, 
+                    "day": "Wed", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.8, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 16.44, 
+                    "30_min": 14.29, 
+                    "cancelled": 14.29, 
+                    "day": "Fri", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 1.71, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Sat", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 14.29, 
+                    "15_min": 14.29, 
+                    "average_lateness": 24.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Sun", 
+                    "above_30_min": 42.86
+                }
+            ], 
+            "route": 4, 
+            "name": "16:33 Tattenham Corner", 
+            "id": "w28b4u7ey726lro324k235i1527ne3"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 57.14, 
+                    "15_min": 28.57, 
+                    "average_lateness": 12.44, 
+                    "30_min": 14.29, 
+                    "cancelled": 14.29, 
+                    "day": "Mon", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 114.29, 
+                    "15_min": 0.0, 
+                    "average_lateness": 2.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 8.8, 
+                    "30_min": 0.0, 
+                    "cancelled": 71.43, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 11.43, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 28.57, 
+                    "average_lateness": 10.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 11.33, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 28.57, 
+                    "average_lateness": 6.67, 
+                    "30_min": 0.0, 
+                    "cancelled": 14.29, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 5, 
+            "name": "16:37 Slade Green", 
+            "id": "m545j6520495qd506q4o4d47i4897q"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 71.43, 
+                    "15_min": 14.29, 
+                    "average_lateness": 11.2, 
+                    "30_min": 42.86, 
+                    "cancelled": 0.0, 
+                    "day": "Mon", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 17.5, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 8.5, 
+                    "30_min": 42.86, 
+                    "cancelled": 28.57, 
+                    "day": "Wed", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 9.71, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 5.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Fri", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 13.33, 
+                    "30_min": 28.57, 
+                    "cancelled": 14.29, 
+                    "day": "Sat", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 28.57, 
+                    "average_lateness": 11.5, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 6, 
+            "name": "16:37 London Victoria", 
+            "id": "51w6ds3lm2f8wr836580j33369tybs"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 114.29, 
+                    "15_min": 0.0, 
+                    "average_lateness": 4.89, 
+                    "30_min": 0.0, 
+                    "cancelled": 14.29, 
+                    "day": "Mon", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 14.8, 
+                    "30_min": 28.57, 
+                    "cancelled": 0.0, 
+                    "day": "Tue", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.44, 
+                    "30_min": 0.0, 
+                    "cancelled": 14.29, 
+                    "day": "Wed", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 5.71, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 8.67, 
+                    "30_min": 28.57, 
+                    "cancelled": 57.14, 
+                    "day": "Fri", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 42.86, 
+                    "average_lateness": 7.11, 
+                    "30_min": 0.0, 
+                    "cancelled": 14.29, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 0.67, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sun", 
+                    "above_30_min": 0.0
+                }
+            ], 
+            "route": 7, 
+            "name": "16:41 Orpington", 
+            "id": "653t38k66kql1fsm9cjb2ef5hvohmi"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 18.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Mon", 
+                    "above_30_min": 57.14
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 9.33, 
+                    "30_min": 28.57, 
+                    "cancelled": 14.29, 
+                    "day": "Tue", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 14.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Wed", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 114.29, 
+                    "15_min": 0.0, 
+                    "average_lateness": 0.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 13.6, 
+                    "30_min": 14.29, 
+                    "cancelled": 0.0, 
+                    "day": "Fri", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 14.29, 
+                    "15_min": 0.0, 
+                    "average_lateness": 23.2, 
+                    "30_min": 28.57, 
+                    "cancelled": 71.43, 
+                    "day": "Sat", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 7.33, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 8, 
+            "name": "16:45 Beckenham Junction", 
+            "id": "523o2cez86117rp15u662967248s3s"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 5.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Mon", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 6.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 14.29, 
+                    "15_min": 28.57, 
+                    "average_lateness": 19.5, 
+                    "30_min": 42.86, 
+                    "cancelled": 28.57, 
+                    "day": "Thu", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 7.56, 
+                    "30_min": 14.29, 
+                    "cancelled": 14.29, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 16.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Sat", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 4.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 85.71, 
+                    "day": "Sun", 
+                    "above_30_min": 0.0
+                }
+            ], 
+            "route": 9, 
+            "name": "16:47 Slade Green", 
+            "id": "dizl8kkr45d18mh743rvl2205846i7"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 15.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Mon", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 15.11, 
+                    "30_min": 42.86, 
+                    "cancelled": 14.29, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 8.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Wed", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 14.29, 
+                    "average_lateness": 9.78, 
+                    "30_min": 28.57, 
+                    "cancelled": 14.29, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 3.2, 
+                    "30_min": 0.0, 
+                    "cancelled": 71.43, 
+                    "day": "Fri", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.44, 
+                    "30_min": 0.0, 
+                    "cancelled": 14.29, 
+                    "day": "Sat", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 14.29, 
+                    "average_lateness": 19.33, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sun", 
+                    "above_30_min": 42.86
+                }
+            ], 
+            "route": 10, 
+            "name": "16:49 Dartford", 
+            "id": "7w69q51d8h875qu3lje2nm1q7i1tzs"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 28.57, 
+                    "15_min": 14.29, 
+                    "average_lateness": 11.2, 
+                    "30_min": 28.57, 
+                    "cancelled": 71.43, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 28.57, 
+                    "average_lateness": 12.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 17.78, 
+                    "30_min": 28.57, 
+                    "cancelled": 14.29, 
+                    "day": "Wed", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 10.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 0.0, 
+                    "average_lateness": 20.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 85.71, 
+                    "day": "Fri", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 12.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 5.33, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Sun", 
+                    "above_30_min": 0.0
+                }
+            ], 
+            "route": 11, 
+            "name": "16:50 Horsham", 
+            "id": "1m3n31wlvp5o3306b1d6x7ej7t7u6f"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 28.57, 
+                    "15_min": 28.57, 
+                    "average_lateness": 21.5, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Mon", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 28.57, 
+                    "average_lateness": 4.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Tue", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 28.57, 
+                    "average_lateness": 8.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 28.57, 
+                    "average_lateness": 7.2, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 14.29, 
+                    "average_lateness": 9.5, 
+                    "30_min": 14.29, 
+                    "cancelled": 28.57, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 28.57, 
+                    "average_lateness": 12.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 0.0, 
+                    "average_lateness": 17.6, 
+                    "30_min": 28.57, 
+                    "cancelled": 71.43, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 12, 
+            "name": "16:54 Hayes (Kent)", 
+            "id": "8i9np729848s2gri8b14dpv9436h06"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 5.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 85.71, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 14.29, 
+                    "average_lateness": 11.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 13.5, 
+                    "30_min": 42.86, 
+                    "cancelled": 28.57, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 2.29, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 8.67, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 8.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 16.0, 
+                    "30_min": 28.57, 
+                    "cancelled": 14.29, 
+                    "day": "Sun", 
+                    "above_30_min": 42.86
+                }
+            ], 
+            "route": 13, 
+            "name": "16:57 Caterham", 
+            "id": "6lwwt27rx6tgv1v6024528c6el5w33"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 17.78, 
+                    "30_min": 14.29, 
+                    "cancelled": 14.29, 
+                    "day": "Mon", 
+                    "above_30_min": 57.14
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 13.71, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 14.29, 
+                    "average_lateness": 12.8, 
+                    "30_min": 14.29, 
+                    "cancelled": 71.43, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 4.57, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 8.57, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 19.33, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 3.43, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Sun", 
+                    "above_30_min": 0.0
+                }
+            ], 
+            "route": 14, 
+            "name": "17:01 Tunbridge Wells", 
+            "id": "5fsptni7q71j5987b43m4cw8231m8x"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 9.5, 
+                    "30_min": 57.14, 
+                    "cancelled": 28.57, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 0.0, 
+                    "average_lateness": 16.5, 
+                    "30_min": 28.57, 
+                    "cancelled": 28.57, 
+                    "day": "Tue", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 14.29, 
+                    "30_min": 28.57, 
+                    "cancelled": 42.86, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 13.33, 
+                    "30_min": 28.57, 
+                    "cancelled": 57.14, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 28.57, 
+                    "average_lateness": 17.33, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Fri", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 6.67, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 14.29, 
+                    "average_lateness": 6.29, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 15, 
+            "name": "17:02 Uckfield", 
+            "id": "dh1v79d8u7zv64365n61bklf879531"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 3.2, 
+                    "30_min": 0.0, 
+                    "cancelled": 71.43, 
+                    "day": "Mon", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 17.71, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Tue", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 13.71, 
+                    "30_min": 28.57, 
+                    "cancelled": 42.86, 
+                    "day": "Wed", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 14.29, 
+                    "average_lateness": 14.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Thu", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 100.0, 
+                    "15_min": 0.0, 
+                    "average_lateness": 4.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Fri", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 28.57, 
+                    "average_lateness": 14.29, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Sat", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 1.14, 
+                    "30_min": 0.0, 
+                    "cancelled": 42.86, 
+                    "day": "Sun", 
+                    "above_30_min": 0.0
+                }
+            ], 
+            "route": 16, 
+            "name": "17:06 Barnehurst", 
+            "id": "271f42x480ffjddqnnw0q543rof5z3"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 14.29, 
+                    "15_min": 14.29, 
+                    "average_lateness": 19.33, 
+                    "30_min": 42.86, 
+                    "cancelled": 57.14, 
+                    "day": "Mon", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 20.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 0.0, 
+                    "day": "Tue", 
+                    "above_30_min": 71.43
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 2.4, 
+                    "30_min": 0.0, 
+                    "cancelled": 71.43, 
+                    "day": "Wed", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 11.43, 
+                    "30_min": 14.29, 
+                    "cancelled": 42.86, 
+                    "day": "Thu", 
+                    "above_30_min": 14.29
+                }, 
+                {
+                    "on_time": 28.57, 
+                    "15_min": 0.0, 
+                    "average_lateness": 21.33, 
+                    "30_min": 28.57, 
+                    "cancelled": 57.14, 
+                    "day": "Fri", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 14.29, 
+                    "15_min": 14.29, 
+                    "average_lateness": 14.0, 
+                    "30_min": 57.14, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 14.29, 
+                    "average_lateness": 7.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 17, 
+            "name": "17:08 Brighton", 
+            "id": "5134htmmz1wmpyxoerl953p6w0nq6w"
+        }, 
+        {
+            "lateness": [
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 18.0, 
+                    "30_min": 14.29, 
+                    "cancelled": 57.14, 
+                    "day": "Mon", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 0.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Tue", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 71.43, 
+                    "15_min": 0.0, 
+                    "average_lateness": 14.5, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Wed", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 114.29, 
+                    "15_min": 0.0, 
+                    "average_lateness": 1.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 28.57, 
+                    "day": "Thu", 
+                    "above_30_min": 0.0
+                }, 
+                {
+                    "on_time": 85.71, 
+                    "15_min": 0.0, 
+                    "average_lateness": 13.2, 
+                    "30_min": 28.57, 
+                    "cancelled": 0.0, 
+                    "day": "Fri", 
+                    "above_30_min": 28.57
+                }, 
+                {
+                    "on_time": 42.86, 
+                    "15_min": 0.0, 
+                    "average_lateness": 20.0, 
+                    "30_min": 0.0, 
+                    "cancelled": 57.14, 
+                    "day": "Sat", 
+                    "above_30_min": 42.86
+                }, 
+                {
+                    "on_time": 57.14, 
+                    "15_min": 14.29, 
+                    "average_lateness": 12.0, 
+                    "30_min": 28.57, 
+                    "cancelled": 28.57, 
+                    "day": "Sun", 
+                    "above_30_min": 14.29
+                }
+            ], 
+            "route": 18, 
+            "name": "17:09 Reigate", 
+            "id": "u4171m9gj2710tj9ue156mu1v9i8cr"
+        }
+    ]
+}
