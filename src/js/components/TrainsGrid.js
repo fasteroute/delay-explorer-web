@@ -47,6 +47,14 @@ var TrainsGrid = React.createClass({
         {this.state.loading ? <Alert bsStyle="primary">Loading Data...</Alert> : null}
         {this.state.error ? <Alert bsStyle="danger">{this.state.error}</Alert> : null}
         <table>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span></span></div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}>M</div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>T</span></div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>W</span></div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>T</span></div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>F</span></div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>S</span></div></th>
+          <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>S</span></div></th>
           {this.state.trains.map(function(train) {
             return <TrainsGridRow key={train.id} train={train}/>;
           })}
