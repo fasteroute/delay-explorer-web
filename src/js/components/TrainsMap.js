@@ -12,7 +12,7 @@ var TrainsMap = React.createClass({
     return {
       lat: 51.505,
       lng: -0.09,
-      zoom: 13
+      zoom: 12
     };
   },
 
@@ -20,14 +20,9 @@ var TrainsMap = React.createClass({
     var position = [this.state.lat, this.state.lng];
     return <LeafletMap center={position} zoom={this.state.zoom}>
       <TileLayer
-        url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url='http://tile.stamen.com/toner/{z}/{x}/{y}.png'
+        attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>'
       />
-      <Marker position={position}>
-        <Popup>
-          <span>A pretty CSS3 popup. <br/> Easily customizable.</span>
-        </Popup>
-      </Marker>
     </LeafletMap>;
  }
 
