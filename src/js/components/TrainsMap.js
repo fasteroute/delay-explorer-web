@@ -1,7 +1,9 @@
 "use strict";
 
-// React
+// Stuff
 var React = require('react');
+
+var _ = require('lodash');
 
 // Mixins
 var FluxMixin = require('fluxxor').FluxMixin(React);
@@ -10,12 +12,16 @@ var StoreWatchMixin = require('fluxxor').StoreWatchMixin;
 // 3rd Party Components.
 var LeafletMap = require('react-leaflet').Map;
 var Marker = require('react-leaflet').Marker;
+var Polyline = require('react-leaflet').Polyline;
 var Popup = require('react-leaflet').Popup;
 var TileLayer = require('react-leaflet').TileLayer;
 
+// Components
+var MapSegment = require('./MapSegment.js');
+
 var TrainsMap = React.createClass({
 
-  mixins: [FluxMixin, StoreWatchMixin('StationsStore')],
+  mixins: [FluxMixin, StoreWatchMixin('SegmentsStore', 'StationsStore')],
 
   getInitialState: function() {
     return {
@@ -26,14 +32,28 @@ var TrainsMap = React.createClass({
   },
 
   getStateFromFlux: function() {
+    var segmentsStore = this.getFlux().store('SegmentsStore');
     var stationsStore = this.getFlux().store('StationsStore');
     return {
-      stations: stationsStore.stations 
+      segments: segmentsStore.segments,
+      stations: stationsStore.stations
     };
+  },
+
+  getLatLngForStationId: function(stationId) {
+    var s = _.find(this.state.stations, function(station) {
+      return station.id === stationId;
+    });
+    if (s === undefined) {
+      return undefined;
+    }
+    console.log('Something useful');
+    return [s.lat, s.lon];
   },
 
   render: function() {
     var position = [this.state.lat, this.state.lng];
+    var actuallyThis = this;
     return <LeafletMap center={position} zoom={this.state.zoom}>
       <TileLayer
         url='http://tile.stamen.com/toner/{z}/{x}/{y}.png'
@@ -46,6 +66,11 @@ var TrainsMap = React.createClass({
               <h4>{station.name}</h4>
             </Popup>
           </Marker>
+        );
+      })}
+      {this.state.segments.map(function(segment) {
+        return (
+          <MapSegment origin={actuallyThis.getLatLngForStationId(segment.origin)} destination={actuallyThis.getLatLngForStationId(segment.destination)}/>
         );
       })}
     </LeafletMap>;
