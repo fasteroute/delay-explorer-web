@@ -6,17 +6,22 @@ $body-bg: #ccc;
 
 @import "bootstrap";
 
-
 // Bootstrap Starter Template Styles
 body {
   padding-top: 50px;
 }
 
-#map-column {
+#main-container {
+    margin-bottom: 50px;
 }
 
-#stuff-column {
-  padding-top: 20px;
+#left-column {
+    height: 0px;
+}
+
+#right-column {
+    z-index: 100;
+    padding-top: 20px;
 }
 
 
@@ -36,4 +41,12 @@ body {
 
 .x.axis path {
   display: none;
+}
+
+.leaflet-container {
+    position: fixed;
+    z-index: 10;
+    top: 50px;
+    bottom: 50px;
+    width: 100%;
 }

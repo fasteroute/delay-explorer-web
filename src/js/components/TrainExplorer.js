@@ -7,6 +7,7 @@ var FluxMixin = require('fluxxor').FluxMixin(React);
 
 var TrainInputs = require('./TrainInputs');
 var TrainsGrid = require('./TrainsGrid');
+var TrainsMap = require('./TrainsMap');
 
 var TrainExplorer = React.createClass({
   mixins: [FluxMixin, StateMixin],
@@ -49,14 +50,16 @@ var TrainExplorer = React.createClass({
     }
 
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-6" id="map-column">
-            <h2>Map {this.props.params.from}</h2>
-          </div>
-          <div className="col-md-6" id="stuff-column">
-            <TrainInputs from={from} to={to} type={type} time={time} />
-            {shouldIncludeTrainsGrid ? <TrainsGrid from={from} to={to} type={type} time={time} trainId={trainId}/> : false}
+      <div>
+        <TrainsMap/>
+        <div className="container-fluid" id="main-container">
+          <div className="row" id="over-map-row">
+            <div className="col-md-6" id="left-column">
+            </div>
+            <div className="col-md-6" id="right-column">
+              <TrainInputs from={from} to={to} type={type} time={time} />
+              {shouldIncludeTrainsGrid ? <TrainsGrid from={from} to={to} type={type} time={time} trainId={trainId}/> : false}
+            </div>
           </div>
         </div>
       </div>
