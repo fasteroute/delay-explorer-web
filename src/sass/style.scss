@@ -9,12 +9,31 @@ $body-bg: #ccc;
 
 // Bootstrap Starter Template Styles
 body {
-      padding-top: 50px;
+  padding-top: 50px;
 }
 
 #map-column {
 }
 
 #stuff-column {
-    padding-top: 20px;
+  padding-top: 20px;
+}
+
+
+/*
+ * Formatting for d3 histogram
+ */
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill:none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
 }
