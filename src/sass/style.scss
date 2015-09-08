@@ -24,6 +24,28 @@ body {
     padding-top: 20px;
 }
 
+@media(max-width: $screen-sm-max) {
+    .leaflet-container {
+        display: none;
+    }
+    #left-column {
+        display: none;
+    }
+}
+
+@media(max-width: $screen-xs-max) {
+    #footer {
+        width: 100%;
+        text-align: center;
+    }
+}
+.leaflet-container {
+    position: fixed;
+    z-index: 10;
+    top: 50px;
+    bottom: 50px;
+    width: 100%;
+}
 
 /*
  * Formatting for d3 histogram
@@ -43,10 +65,4 @@ body {
   display: none;
 }
 
-.leaflet-container {
-    position: fixed;
-    z-index: 10;
-    top: 50px;
-    bottom: 50px;
-    width: 100%;
-}
+
