@@ -13,6 +13,7 @@
     "d3": "^3.5.6",
     "flux": "^2.0.3",
     "fluxxor": "^1.7.1",
+    "font-awesome": "^4.4.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.0",

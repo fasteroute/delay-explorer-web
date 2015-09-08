@@ -24,7 +24,12 @@ var config = {
         cssPaths: [
             './node_modules/leaflet/dist/leaflet.css',
             './node_modules/leaflet-label/dist/leaflet.label.css',
-            './node_modules/webui-popover/dist/jquery.webui-popover.css'
+            './node_modules/webui-popover/dist/jquery.webui-popover.css',
+            './node_modules/font-awesome/css/font-awesome.css'
+        ],
+        fontsPaths: [
+          './node_modules/bootstrap-sass/assets/fonts/**/*',
+          './node_modules/font-awesome/fonts/**/*'
         ],
         dist: './dist',
         mainJs: './src/js/app.js'
@@ -97,6 +102,11 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('fonts', function() {
+  gulp.src(config.paths.fontsPaths)
+    .pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.task('lint', function() {
     return gulp.src(config.paths.js)
         .pipe(lint({config: 'eslint.config.json'}))
@@ -109,4 +119,4 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.sassDir, ['sass']);
 });
 
-gulp.task('default', ['html', 'js', 'sass', 'autoprefixer', 'css', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'sass', 'autoprefixer', 'css', 'fonts', 'lint', 'open', 'watch']);

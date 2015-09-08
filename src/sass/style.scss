@@ -34,10 +34,22 @@ body {
 }
 
 @media(max-width: $screen-xs-max) {
-    #footer {
-        width: 100%;
+    #navbar-footer {
         text-align: center;
     }
+}
+
+@media(min-width: $screen-sm-min) {
+    #navbar-footer {
+        margin-bottom: 0px;
+    }
+    .footer-icon-a {
+        padding-top: 9px!important;
+        padding-bottom: 8px!important;
+    }
+}
+.footer-icon {
+    font-size: 32px;
 }
 .leaflet-container {
     position: fixed;
