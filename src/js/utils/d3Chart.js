@@ -4,9 +4,9 @@
 
 var d3 = require('d3');
 
-var d3Chart = {}
+var d3Chart = {};
 
-d3Chart.create  = function(el, props, state) {
+d3Chart.create = function(el, props, state) {
   this.props = props;
 
   var svg = d3.select(el).append("svg")
@@ -24,16 +24,16 @@ d3Chart.create  = function(el, props, state) {
 
 d3Chart.update = function(el, state) {
 
-  this._drawHistogram(el, state)
+  this._drawHistogram(el, state);
 
-}
+};
 
 d3Chart._drawHistogram = function(el, state) {
 
   var svg = d3.select(el).selectAll('.d3-canvas');
   var yScale = d3.scale.ordinal()
     .domain(state.domain)
-    .rangeBands([0,this.props.height-20], .1);
+    .rangeBands([0, this.props.height - 20], .1);
   var scales = {y: yScale};
   var bar = svg
     .selectAll("g")
@@ -41,16 +41,16 @@ d3Chart._drawHistogram = function(el, state) {
     .enter()
     .append("g")
     .attr("transform", function(d) {
-        return "translate(0,"+scales.y(d.period)+")";
+        return "translate(0," + scales.y(d.period) + ")";
     });
 
   var txt = bar.append("text")
   .text(function(d) { return d.period; })
-  .attr("transform", "translate(0,"+scales.y.rangeBand()/2+")")
-  .attr("fill","black");
+  .attr("transform", "translate(0," + (scales.y.rangeBand() / 2) + ")")
+  .attr("fill", "black");
 
   // Find maximum width of yAxis text so we can add a reasonable offset
-  var maxTxtLength=0;
+  var maxTxtLength = 0;
   txt[0].forEach(function(node, inx) {
     if (node == null) {
       console.log('node was null');
@@ -62,9 +62,9 @@ d3Chart._drawHistogram = function(el, state) {
     }
   });
 
-  scales["x"] = d3.scale.linear()
-    .domain([0,100])
-    .range([maxTxtLength+5,this.props.width-12]);
+  scales.x = d3.scale.linear()
+    .domain([0, 100])
+    .range([maxTxtLength + 5, this.props.width - 12]);
   var rects = bar.append("rect")
     .attr("width", function(d) {
       return scales.x(d.percent) - (maxTxtLength + 5);
@@ -73,22 +73,22 @@ d3Chart._drawHistogram = function(el, state) {
       return scales.y.rangeBand();
     });
     maxTxtLength += 5;
-  rects.attr("transform", "translate("+(maxTxtLength)+",0)");
+  rects.attr("transform", "translate(" + maxTxtLength + ",0)");
 
   var xAxis = d3.svg.axis()
     .scale(scales.x)
     .ticks(5)
-    .orient("bottom")
+    .orient("bottom");
 
   svg.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + (this.props.height-20) + ")")
+    .attr("transform", "translate(0," + (this.props.height - 20) + ")")
     .call(xAxis);
 
-}
+};
 
 d3Chart.destroy = function(el) {
   //d3.select(el).selectAll("g").remove();
-}
+};
 
 module.exports = d3Chart;

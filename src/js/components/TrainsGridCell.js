@@ -23,17 +23,15 @@ var TrainsGridCell = React.createClass({
     }
     var timePeriod = "4 weeks";
     return (
-      <OverlayTrigger trigger={['hover','focus']} placement='top' overlay={<Popover title={"Trains over the last " + timePeriod}><Chart data={this.props.lateness.histogram} /></Popover>}>
+      <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={"Trains over the last " + timePeriod}><Chart data={this.props.lateness.histogram} /></Popover>}>
         <td style={{ padding: "5px" }}>
-          <div style={{ borderRadius: "25%", width: "50px", height: "50px", backgroundColor: lateColor}} onMouseEnter={this.onMouseEnter}>
+          <div style={{ borderRadius: "25%", width: "50px", height: "50px", backgroundColor: lateColor}}>
          </div>
         </td>
       </OverlayTrigger>
     );
 
-  },
-  componentDidMount: function() {
-  },
+  }
 });
 
 module.exports = TrainsGridCell;
