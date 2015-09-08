@@ -69,7 +69,7 @@ var TrainsMap = React.createClass({
       })}
       {this.state.segments.map(function(segment) {
         return (
-          <MapSegment origin={actuallyThis.getLatLngForStationId(segment.origin)} destination={actuallyThis.getLatLngForStationId(segment.destination)}/>
+          <MapSegment key={segment.id} origin={actuallyThis.getLatLngForStationId(segment.origin)} destination={actuallyThis.getLatLngForStationId(segment.destination)} selected={segment.selected} colour={segment.colour}/>
         );
       })}
     </LeafletMap>;

@@ -43,6 +43,10 @@ var TrainExplorerActions = {
         this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_FAIL, {error: err});
       }.bind(this)
     });
+  },
+  updateRoute: function(routeID) {
+    console.log("Segment store dispatches update " + routeID);
+    this.dispatch(TrainExplorerConstants.UPDATE_ROUTE, routeID);
   }
 };
 

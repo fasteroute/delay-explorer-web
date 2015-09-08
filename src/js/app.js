@@ -31,7 +31,8 @@ var stores = {
 // Build an object which contains all the objects for this app.
 var actions = {
   loadTrainExplorer: TrainExplorerActions.loadTrainExplorer,
-  loadCallingPoints: TrainExplorerActions.loadCallingPoints
+  loadCallingPoints: TrainExplorerActions.loadCallingPoints,
+  updateRoute: TrainExplorerActions.updateRoute
 };
 
 // Set up fluxxor

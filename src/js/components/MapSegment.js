@@ -33,10 +33,15 @@ var MapSegment = React.createClass({
     }
   },
 
+  shouldComponentUpdate: function(nextProps, nextState) {
+    return (this.props.selected !== nextProps.selected);
+  },
+
   render: function() {
     return (
       <div>
-        {this.state.valid ? <Polyline map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]}/> : null}
+        {this.state.valid ? <Polyline map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} color={this.props.selected ? this.props.colour : "blue"}
+          /> : null}
       </div>
     );
   }
