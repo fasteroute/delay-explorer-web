@@ -2,7 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 //$font-family-base: 'Raleway', sans-serif;
 
+$brand-primary: #aaaaaa;
+
 $body-bg: #ccc;
+
 
 @import "bootstrap";
 
@@ -27,6 +30,10 @@ body {
 
 .TrainsPanel .panel-body, .InputsPanel .panel-body {
   padding: 5px;
+}
+
+.navbar {
+    background-color: #cccccc;
 }
 
 // Panel > FormGroup

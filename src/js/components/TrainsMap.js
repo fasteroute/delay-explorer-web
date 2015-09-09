@@ -11,6 +11,7 @@ var StoreWatchMixin = require('fluxxor').StoreWatchMixin;
 
 // 3rd Party Components.
 var LeafletMap = require('react-leaflet').Map;
+var L = require('leaflet');
 var Marker = require('react-leaflet').Marker;
 var Polyline = require('react-leaflet').Polyline;
 var Popup = require('react-leaflet').Popup;
@@ -18,6 +19,15 @@ var TileLayer = require('react-leaflet').TileLayer;
 
 // Components
 var MapSegment = require('./MapSegment.js');
+
+//var tilesUrl = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
+var tilesUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+
+var pinIcon = L.icon({
+    iconUrl: 'pin.png',
+    iconSize: [42,42],
+    iconAnchor: [ 21,42]
+});
 
 var TrainsMap = React.createClass({
 
@@ -55,12 +65,12 @@ var TrainsMap = React.createClass({
     var actuallyThis = this;
     return <LeafletMap center={position} zoom={this.state.zoom}>
       <TileLayer
-        url='http://tile.stamen.com/toner/{z}/{x}/{y}.png'
+        url={tilesUrl}
         attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>'
       />
       {this.state.stations.map(function(station) {
         return (
-          <Marker key={station.id} position={[station.lat, station.lon]}>
+          <Marker key={station.id} icon={pinIcon} position={[station.lat, station.lon]}>
             <Popup>
               <h4>{station.name}</h4>
             </Popup>
