@@ -42,6 +42,11 @@ body {
   margin-bottom: 5px;
 }
 
+// TrainInputsPanel Form Input
+
+.react-autosuggest {
+  @extend .col-sm-11
+}
 @media(max-width: $screen-sm-max) {
     .leaflet-container {
         display: none;

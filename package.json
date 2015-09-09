@@ -27,6 +27,7 @@
     "leaflet-label": "^0.2.1-0",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
+    "react-autosuggest": "^1.18.3",
     "react-bootstrap": "^0.25.1",
     "react-leaflet": "^0.6.2",
     "react-router": "^0.13.3",
