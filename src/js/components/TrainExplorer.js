@@ -52,7 +52,7 @@ var TrainExplorer = React.createClass({
     return (
       <div>
         <TrainsMap/>
-        <div className="container-fluid" id="main-container">
+        <div className="container" id="main-container">
           <div className="row" id="over-map-row">
             <div className="col-md-6" id="left-column">
             </div>
