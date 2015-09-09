@@ -8,7 +8,6 @@ var ButtonInput = require('react-bootstrap').ButtonInput;
 var Input = require('react-bootstrap').Input;
 var Panel = require('react-bootstrap').Panel;
 
-var panelTitle = (<h3>Describe Train</h3>);
 
 var TrainInputs = React.createClass({
   mixins: [NavigationMixin, React.addons.LinkedStateMixin],
@@ -29,7 +28,7 @@ var TrainInputs = React.createClass({
     console.log("Rendering TrainInputs.");
     return (
       <div className="section" id="start">
-        <Panel header={panelTitle}>
+        <Panel>
           <form className="form-horizontal">
             <Input type="text"
                    ref="fromInput"
