@@ -25,6 +25,9 @@ body {
     padding-top: 20px;
 }
 
+.TrainsPanel .panel-body, .InputsPanel .panel-body {
+  padding: 5px;
+}
 @media(max-width: $screen-sm-max) {
     .leaflet-container {
         display: none;

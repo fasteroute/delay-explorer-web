@@ -28,7 +28,7 @@ var TrainInputs = React.createClass({
     console.log("Rendering TrainInputs.");
     return (
       <div className="section" id="start">
-        <Panel>
+        <Panel className="InputsPanel">
           <form className="form-horizontal">
             <Input type="text"
                    ref="fromInput"

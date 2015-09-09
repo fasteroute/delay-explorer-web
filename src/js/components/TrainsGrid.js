@@ -56,7 +56,7 @@ var TrainsGrid = React.createClass({
     console.log("shouldIncludeCallingPoints = " + shouldIncludeCallingPointsGrid);
     var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
     return (
-      <Panel>
+      <Panel className="TrainsPanel">
         {this.state.loading ? <Alert bsStyle="info">Loading Data...</Alert> : null}
         {this.state.error ? <Alert bsStyle="danger">{this.state.error}</Alert> : null}
         <table style={{width: "100%"}}>
