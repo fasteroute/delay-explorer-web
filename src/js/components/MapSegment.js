@@ -5,42 +5,64 @@ var React = require('react');
 
 var _ = require('lodash');
 
+// Mixins
+var FluxMixin = require('fluxxor').FluxMixin(React);
+var StoreWatchMixin = require('fluxxor').StoreWatchMixin;
+
 var Polyline = require('react-leaflet').Polyline;
 
+var defaultLineColor = "blue";
+
 var MapSegment = React.createClass({
+
+  mixins: [FluxMixin, StoreWatchMixin('ActiveSegmentsStore')],
 
   getInitialState: function() {
     return {};
   },
 
-  componentWillMount: function() {
-    this.state.originLatLng = this.props.origin;
-    this.state.destinationLatLng = this.props.destination;
-    if (this.state.originLatLng !== undefined && this.state.destinationLatLng !== undefined) {
-      this.state.valid = true;
+  getStateFromFlux: function() {
+    var activeSegmentsStore = this.getFlux().store('ActiveSegmentsStore');
+    if (activeSegmentsStore.activeSegments[this.props.sid] === true) {
+      return {selected: true};
     } else {
-      this.state.valid = false;
+      return {selected: false};
     }
+  },  
+
+  componentWillMount: function() {
+    var newState = {};
+    newState.originLatLng = this.props.origin;
+    newState.destinationLatLng = this.props.destination;
+    if (newState.originLatLng !== undefined && newState.destinationLatLng !== undefined) {
+      newState.valid = true;
+    } else {
+      newState.valid = false;
+    }
+    this.setState(newState);
   },
 
   componentWillReceiveProps: function(nextProps) {
-    this.state.originLatLng = nextProps.origin;
-    this.state.destinationLatLng = nextProps.destination;
-    if (this.state.originLatLng !== undefined && this.state.destinationLatLng !== undefined) {
-      this.state.valid = true;
+    var newState = {};
+    newState.originLatLng = nextProps.origin;
+    newState.destinationLatLng = nextProps.destination;
+    if (newState.originLatLng !== undefined && newState.destinationLatLng !== undefined) {
+      newState.valid = true;
     } else {
-      this.state.valid = false;
+      newState.valid = false;
     }
+    this.setState(newState);
   },
 
   shouldComponentUpdate: function(nextProps, nextState) {
-    return (this.props.selected !== nextProps.selected);
+    return (this.state.selected !== nextState.selected) || (this.state.valid !== nextState.valid);
   },
 
   render: function() {
+    var key = "" + this.state.id + this.state.selected + this.state.valid;
     return (
       <div>
-        {this.state.valid ? <Polyline map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} color={this.props.selected ? this.props.colour : "blue"}
+        {this.state.valid ? <Polyline key={key} map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} color={this.state.selected ? this.props.colour : defaultLineColor}
           /> : null}
       </div>
     );

@@ -11,6 +11,7 @@ var TrainExplorer = require('./components/TrainExplorer');
 var TrainsGrid = require('./components/TrainsGrid');
 var CallingPointsGrid = require('./components/CallingPointsGrid');
 
+var ActiveSegmentsStore = require('./stores/ActiveSegmentsStore');
 var RoutesStore = require('./stores/RoutesStore');
 var SegmentsStore = require('./stores/SegmentsStore');
 var StationsStore = require('./stores/StationsStore');
@@ -21,6 +22,7 @@ var TrainExplorerActions = require('./actions/TrainExplorerActions');
 
 // Build an object that contains all the stores for this app.
 var stores = {
+  ActiveSegmentsStore: new ActiveSegmentsStore(),
   RoutesStore: new RoutesStore(),
   SegmentsStore: new SegmentsStore(),
   StationsStore: new StationsStore(),
