@@ -26,10 +26,10 @@ var TrainsGridRow = React.createClass({
   },
   render: function() {
     return (
-      <tr onClick={this.onClick}>
+      <tr onClick={this.props.isCallingPoint ? "" : this.onClick}>
         <th className="rowHeader">{this.props.train.name}</th>
         {this.props.train.lateness.map(function(lateness) {
-          return <TrainsGridCell key={lateness.day} lateness={lateness}/>;
+          return <TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false}/>;
         })}
       </tr>
     );

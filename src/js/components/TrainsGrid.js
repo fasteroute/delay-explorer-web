@@ -41,7 +41,9 @@ var TrainsGrid = React.createClass({
       stations: stationsStore.stations,
       trains: trainsStore.trains,
       callingPoints: callingPointsStore.callingPoints,
-      callingPointTrain: callingPointsStore.train
+      callingPointTrain: callingPointsStore.train,
+      callingPointLoading: callingPointsStore.loading,
+      callingPointLoaded: callingPointsStore.loaded
     };
   },
 
@@ -53,9 +55,10 @@ var TrainsGrid = React.createClass({
     }
     var externalScope = this;
     console.log("shouldIncludeCallingPoints = " + shouldIncludeCallingPointsGrid);
+    var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
     return (
       <Panel header={panelTitle}>
-        {this.state.loading ? <Alert bsStyle="primary">Loading Data...</Alert> : null}
+        {this.state.loading ? <Alert bsStyle="info">Loading Data...</Alert> : null}
         {this.state.error ? <Alert bsStyle="danger">{this.state.error}</Alert> : null}
         <table style={{width: "100%"}}>
           <thead>
@@ -71,14 +74,23 @@ var TrainsGrid = React.createClass({
           <tbody>
             {this.state.trains.map(function(train) {
               if (train.id === externalScope.state.callingPointTrain) {
-              return [
-                <TrainsGridRow key={train.id} train={train} isSelected={true} />,
-                <tr>
-                <td colSpan="8">
-                <CallingPointsGrid key={train.id + "callingPointsGrid"} callingPoints={externalScope.state.callingPoints} trainID={train.id}/>
-                </td>
-                </tr>
-              ];
+                if (externalScope.state.callingPointLoading) {
+                  return [
+                    <TrainsGridRow key={train.id} train={train} isSelected={true} />,
+                    alertBox
+                  ];
+                } else if (externalScope.state.callingPointLoaded) {
+                  return [
+                    <TrainsGridRow key={train.id} train={train} isSelected={true} />,
+                    <tr>
+                    <td colSpan="8">
+                    <CallingPointsGrid key={train.id + "callingPointsGrid"} callingPoints={externalScope.state.callingPoints} trainID={train.id} />
+                    </td>
+                    </tr>
+                  ];
+                } else {
+                  return <TrainsGridRow key={train.id} train={train} isSelected={false} />;
+                }
               } else {
                 return <TrainsGridRow key={train.id} train={train} isSelected={false} />;
               }

@@ -24,7 +24,7 @@ var TrainExplorerActions = {
   },
   loadCallingPoints: function(trainID) {
     console.log("this.dispatch(TrainExplorerConstants.LOAD_CALLING_POINTS);");
-    this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD);
+    this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD, trainID);
     console.log("Starting request to API server for calling points.");
     if (trainID === null) {
       this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, { train: null, callingPoints: [] });
