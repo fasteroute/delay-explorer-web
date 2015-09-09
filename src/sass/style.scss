@@ -77,4 +77,16 @@ body {
   display: none;
 }
 
+/*
+ * Formatting for the train grid
+ */
 
+.rowHeader {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+table.callingPoints {
+  background-color: #eee;
+  width: 100%;
+}

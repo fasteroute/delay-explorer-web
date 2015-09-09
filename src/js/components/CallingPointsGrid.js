@@ -10,7 +10,7 @@ var CallingPointsGrid = React.createClass({
     console.log("rendering callingPointsGrid");
     var externalScope = this;
     return (
-      <table>
+      <table className="callingPoints">
       {externalScope.props.callingPoints.map( function(callingPoint) {
           return (<TrainsGridRow key={callingPoint.name} train={callingPoint} />);
         })
