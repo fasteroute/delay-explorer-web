@@ -28,6 +28,13 @@ body {
 .TrainsPanel .panel-body, .InputsPanel .panel-body {
   padding: 5px;
 }
+
+// Panel > FormGroup
+
+.InputsPanel  div.form-group {
+  margin-bottom: 5px;
+}
+
 @media(max-width: $screen-sm-max) {
     .leaflet-container {
         display: none;
