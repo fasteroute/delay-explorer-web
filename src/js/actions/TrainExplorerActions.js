@@ -21,6 +21,28 @@ var TrainExplorerActions = {
         this.dispatch(TrainExplorerConstants.LOAD_FAIL, {error: err});
       }.bind(this)
     });
+  },
+  loadCallingPoints: function(trainID) {
+    console.log("this.dispatch(TrainExplorerConstants.LOAD_CALLING_POINTS);");
+    this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD);
+    console.log("Starting request to API server for calling points.");
+    if (trainID === null) {
+      this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, { train: null, callingPoints: [] });
+      return;
+    }
+    $.ajax({
+      url: "/data-calling-points.json",
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        console.log(data[trainID]);
+        this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, data[trainID]);
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(status, err.toString());
+        this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_FAIL, {error: err});
+      }.bind(this)
+    });
   }
 };
 

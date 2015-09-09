@@ -1,18 +1,21 @@
 "use strict";
 
 var React = require('react');
+var TrainsGridRow = require('./TrainsGridRow');
 
-var Panel = require('react-bootstrap').Panel;
-
-var panelTitle = (<h3>Calling Points Grid</h3>);
 
 var CallingPointsGrid = React.createClass({
-  
+
   render: function() {
+    console.log("rendering callingPointsGrid");
+    var externalScope = this;
     return (
-      <Panel header={panelTitle}>
-        <h2>Not Doing Anything</h2>
-      </Panel>
+      <table>
+      {externalScope.props.callingPoints.map( function(callingPoint) {
+          return (<TrainsGridRow key={callingPoint.name} train={callingPoint} />);
+        })
+      }
+      </table>
     );
   }
 

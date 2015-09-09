@@ -47,7 +47,6 @@ var TrainsMap = React.createClass({
     if (s === undefined) {
       return undefined;
     }
-    console.log('Something useful');
     return [s.lat, s.lon];
   },
 

@@ -18,7 +18,6 @@ var MapSegment = React.createClass({
     this.state.destinationLatLng = this.props.destination;
     if (this.state.originLatLng !== undefined && this.state.destinationLatLng !== undefined) {
       this.state.valid = true;
-      console.log("Valid component");
     } else {
       this.state.valid = false;
     }
@@ -29,7 +28,6 @@ var MapSegment = React.createClass({
     this.state.destinationLatLng = nextProps.destination;
     if (this.state.originLatLng !== undefined && this.state.destinationLatLng !== undefined) {
       this.state.valid = true;
-      console.log("Valid component");
     } else {
       this.state.valid = false;
     }
@@ -45,4 +43,4 @@ var MapSegment = React.createClass({
 
 });
 
-module.exports = MapSegment;   
+module.exports = MapSegment;

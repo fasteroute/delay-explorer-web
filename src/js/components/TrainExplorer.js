@@ -13,7 +13,7 @@ var TrainExplorer = React.createClass({
   mixins: [FluxMixin, StateMixin],
 
   componentWillMount: function() {
-    this.triggerDataLoad(this.props.params.from, this.props.params.to, this.props.params.type, this.props.params.time);  
+    this.triggerDataLoad(this.props.params.from, this.props.params.to, this.props.params.type, this.props.params.time);
   },
 
   componentWillReceiveProps: function(nextProps) {

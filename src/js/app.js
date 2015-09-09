@@ -15,6 +15,7 @@ var RoutesStore = require('./stores/RoutesStore');
 var SegmentsStore = require('./stores/SegmentsStore');
 var StationsStore = require('./stores/StationsStore');
 var TrainsStore = require('./stores/TrainsStore');
+var CallingPointsStore = require('./stores/CallingPointsStore');
 
 var TrainExplorerActions = require('./actions/TrainExplorerActions');
 
@@ -23,15 +24,17 @@ var stores = {
   RoutesStore: new RoutesStore(),
   SegmentsStore: new SegmentsStore(),
   StationsStore: new StationsStore(),
-  TrainsStore: new TrainsStore()
+  TrainsStore: new TrainsStore(),
+  CallingPointsStore: new CallingPointsStore()
 };
 
 // Build an object which contains all the objects for this app.
 var actions = {
-  loadTrainExplorer: TrainExplorerActions.loadTrainExplorer
+  loadTrainExplorer: TrainExplorerActions.loadTrainExplorer,
+  loadCallingPoints: TrainExplorerActions.loadCallingPoints
 };
 
-// Set up fluxxor 
+// Set up fluxxor
 var flux = new Fluxxor.Flux(stores, actions);
 //window.flux = flux;
 
