@@ -45,8 +45,24 @@ body {
 // TrainInputsPanel Form Input
 
 .react-autosuggest {
-  @extend .col-sm-11
+  @extend .col-sm-11;
 }
+
+.react-autosuggest__suggestions {
+  list-style-type: none;
+  @extend .col-sm-12;
+}
+
+.react-autosuggest__suggestion {
+  @extend .col-sm-12;
+
+  * {
+    height: 20px;
+  }
+
+  height: 20px;
+}
+
 @media(max-width: $screen-sm-max) {
     .leaflet-container {
         display: none;

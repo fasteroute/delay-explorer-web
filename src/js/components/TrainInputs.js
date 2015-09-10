@@ -33,18 +33,31 @@ var TrainInputs = React.createClass({
 
   },
   suggestionRenderer: function(suggestion, input) {
-    return suggestion.name;
+    return (
+      <div className="row">
+        <div className="col-sm-1">
+          <img src="/img/nr.png"/>
+        </div>
+        <div className="col-sm-11">
+          <span>{ suggestion.name + " [" + suggestion.user_code + "]"}</span>
+        </div>
+      </div>
+    );
   },
   suggestionValue: function(suggestionObj) {
     return suggestionObj.name + " [" + suggestionObj.user_code + "]";
   },
   onOriginSelected: function(suggestion, event) {
     event.preventDefault();
-    this.setState({from: suggestion.user_code});
+    if (suggestion !== null) {
+      this.setState({from: suggestion.user_code});
+    }
   },
   onDestinationSelected: function(suggestion, event) {
     event.preventDefault();
-    this.setState({to: suggestion.user_code});
+    if (suggestion !== null) {
+      this.setState({to: suggestion.user_code});
+    }
   },
   render: function() {
     console.log("Rendering TrainInputs.");
