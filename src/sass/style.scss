@@ -9,6 +9,15 @@ $body-bg: #ccc;
 
 @import "bootstrap";
 
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
 // Bootstrap Starter Template Styles
 body {
   padding-top: 50px;
@@ -51,6 +60,13 @@ body {
 .react-autosuggest__suggestions {
   list-style-type: none;
   @extend .col-sm-12;
+  z-index: 1000;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  left: 0;
+  margin: 5px -15px;
+  @include vendor-prefix(box-shadow, 0 0px 40px 10px);
 }
 
 .react-autosuggest__suggestion {
