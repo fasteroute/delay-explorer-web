@@ -114,8 +114,8 @@ var TrainInputs = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    var fromInput = this.refs.fromInput.getValue();
-    var toInput = this.refs.toInput.getValue();
+    var fromInput = this.state.from;
+    var toInput = this.state.to;
     var typeInput = this.refs.typeInput.getValue();
     var timeInput = this.refs.timeInput.getValue();
     console.log(fromInput + " " + toInput + " " + typeInput + " " + timeInput + " ");
