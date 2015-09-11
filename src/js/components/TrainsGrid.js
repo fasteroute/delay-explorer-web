@@ -72,26 +72,27 @@ var TrainsGrid = React.createClass({
           </thead>
           <tbody>
             {this.state.trains.map(function(train) {
+
               if (train.id === externalScope.state.callingPointTrain) {
                 if (externalScope.state.callingPointLoading) {
                   return [
-                    <TrainsGridRow key={train.id} train={train} isSelected={true} />,
+                    <TrainsGridRow key={train.id} train={train} isSelected={true} popoverTitle={train.name}/>,
                     alertBox
                   ];
                 } else if (externalScope.state.callingPointLoaded) {
                   return [
-                    <TrainsGridRow key={train.id} train={train} isSelected={true} />,
+                    <TrainsGridRow key={train.id} train={train} isSelected={true} popoverTitle={train.name}/>,
                     <tr>
                     <td colSpan="8">
-                    <CallingPointsGrid key={train.id + "callingPointsGrid"} callingPoints={externalScope.state.callingPoints} trainID={train.id} />
+                    <CallingPointsGrid key={train.id + "callingPointsGrid"} train={train} callingPoints={externalScope.state.callingPoints} trainID={train.id} />
                     </td>
                     </tr>
                   ];
                 } else {
-                  return <TrainsGridRow key={train.id} train={train} isSelected={false} />;
+                  return <TrainsGridRow key={train.id} train={train} isSelected={false} popoverTitle={train.name}/>;
                 }
               } else {
-                return <TrainsGridRow key={train.id} train={train} isSelected={false} />;
+                return <TrainsGridRow key={train.id} train={train} isSelected={false} popoverTitle={train.name}/>;
               }
             })}
           </tbody>

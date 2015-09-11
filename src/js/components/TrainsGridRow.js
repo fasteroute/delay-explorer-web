@@ -33,11 +33,12 @@ var TrainsGridRow = React.createClass({
     this.getFlux().actions.updateRoute(null);
   },
   render: function() {
+    var externalScope = this;
     return (
       <tr onClick={this.props.isCallingPoint ? "" : this.onClick} onMouseOver={this.onMouseOver} onMouseLeave={this.onMouseLeave}>
         <th className="rowHeader">{this.props.train.name}</th>
         {this.props.train.lateness.map(function(lateness) {
-          return <TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false}/>;
+          return <TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>;
         })}
       </tr>
     );
