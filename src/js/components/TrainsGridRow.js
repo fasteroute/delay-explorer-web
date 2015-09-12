@@ -35,8 +35,11 @@ var TrainsGridRow = React.createClass({
   render: function() {
     var externalScope = this;
     return (
-      <tr onClick={this.props.isCallingPoint ? "" : this.onClick} onMouseOver={this.onMouseOver} onMouseLeave={this.onMouseLeave}>
-        <th className="rowHeader">{this.props.train.name}</th>
+      <tr onClick={this.props.isCallingPoint ? "" : this.onClick} onMouseOver={this.onMouseOver} onMouseLeave={this.onMouseLeave} className={this.props.isSelected ? "selected" : "" }>
+        <th className="rowHeader">
+        {this.props.train.name}
+        {this.props.train.time ? [<br/>, <small>Scheduled at {this.props.train.time}</small>] : null}
+        </th>
         {this.props.train.lateness.map(function(lateness) {
           return <TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>;
         })}

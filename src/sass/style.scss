@@ -141,7 +141,16 @@ body {
   padding-right: 5px;
 }
 
-table.callingPoints {
-  background-color: #eee;
-  width: 100%;
+tr.selected {
+  background-color: #ccc
 }
+table.callingPoints {
+  background-color: #ddd;
+  width: 100%;
+
+  th small {
+    font-weight: normal;
+  }
+}
+
+
