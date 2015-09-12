@@ -29,7 +29,7 @@ d3Chart.update = function(el, state) {
 };
 
 d3Chart._drawHistogram = function(el, state) {
-
+  var palette = ['#12a33c', '#fbf230', '#ecb135', '#de713b', '#d03141'];
   var svg = d3.select(el).selectAll('.d3-canvas');
   var yScale = d3.scale.ordinal()
     .domain(state.domain)
@@ -40,14 +40,17 @@ d3Chart._drawHistogram = function(el, state) {
     .data(state.data)
     .enter()
     .append("g")
+    .attr("height", scales.y.rangeBand() / 0.9)
     .attr("transform", function(d) {
         return "translate(0," + scales.y(d.period) + ")";
     });
 
   var txt = bar.append("text")
   .text(function(d) { return d.period; })
-  .attr("transform", "translate(0," + (scales.y.rangeBand() / 2) + ")")
-  .attr("fill", "black");
+  .attr("fill", "black")
+  .attr("dy", ".4em")
+  .attr("transform", "translate(0," + (scales.y.rangeBand() * 0.5) + ")");
+  //.attr("y", ((scales.y.rangeBand()) / 2))
 
   // Find maximum width of yAxis text so we can add a reasonable offset
   var maxTxtLength = 0;
@@ -71,6 +74,9 @@ d3Chart._drawHistogram = function(el, state) {
     })
     .attr("height", function(d) {
       return scales.y.rangeBand();
+    })
+    .attr('fill', function(d, i) {
+      return palette[i];
     });
     maxTxtLength += 5;
   rects.attr("transform", "translate(" + maxTxtLength + ",0)");

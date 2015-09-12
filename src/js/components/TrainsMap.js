@@ -25,8 +25,8 @@ var tilesUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
 
 var pinIcon = L.icon({
     iconUrl: 'pin.png',
-    iconSize: [42,42],
-    iconAnchor: [ 21,42]
+    iconSize: [42, 42],
+    iconAnchor: [21, 42]
 });
 
 var TrainsMap = React.createClass({
