@@ -3,7 +3,7 @@
 var Fluxxor = require('fluxxor');
 
 var TrainExplorerConstants = require('../constants/TrainExplorerConstants');
-
+var Palette = require('../utils/Palette');
 var SegmentsStore = Fluxxor.createStore({
 
   initialize: function() {
@@ -26,7 +26,7 @@ var SegmentsStore = Fluxxor.createStore({
     this.loading = false;
     this.error = null;
     this.segments = payload.segments.map( function(segment) {
-      segment.colour = "red";
+      segment.colour = Palette.color(segment.lateness);
       segment.selected = false;
       return segment;
     });

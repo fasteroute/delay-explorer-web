@@ -3,7 +3,7 @@
 // With help from http://nicolashery.com/integrating-d3js-visualizations-in-a-react-app/
 
 var d3 = require('d3');
-
+var Palette = require('./Palette')
 var d3Chart = {};
 
 d3Chart.create = function(el, props, state) {
@@ -29,7 +29,7 @@ d3Chart.update = function(el, state) {
 };
 
 d3Chart._drawHistogram = function(el, state) {
-  var palette = ['#12a33c', '#fbf230', '#ecb135', '#de713b', '#d03141'];
+  var palette = [Palette.color(0), Palette.color(10), Palette.color(22), Palette.color(31), '#d03141'];
   var svg = d3.select(el).selectAll('.d3-canvas');
   var yScale = d3.scale.ordinal()
     .domain(state.domain)
