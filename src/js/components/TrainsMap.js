@@ -19,6 +19,7 @@ var TileLayer = require('react-leaflet').TileLayer;
 
 // Components
 var MapSegment = require('./MapSegment.js');
+var MapBounds = require('./MapBounds');
 
 //var tilesUrl = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
 var tilesUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
@@ -46,7 +47,8 @@ var TrainsMap = React.createClass({
     var stationsStore = this.getFlux().store('StationsStore');
     return {
       segments: segmentsStore.segments,
-      stations: stationsStore.stations
+      stations: stationsStore.stations,
+      stationsPoints: stationsStore.points
     };
   },
 
@@ -68,6 +70,7 @@ var TrainsMap = React.createClass({
         url={tilesUrl}
         attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>'
       />
+      <MapBounds />
       {this.state.stations.map(function(station) {
         return (
           <Marker key={station.id} icon={pinIcon} position={[station.lat, station.lon]}>
