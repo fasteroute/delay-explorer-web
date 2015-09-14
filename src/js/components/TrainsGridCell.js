@@ -17,7 +17,7 @@ var TrainsGridCell = React.createClass({
     }
     var timePeriod = "4 weeks";
     return (
-      <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><Chart data={this.props.lateness.histogram} /><small style={{ color: "grey"}}>Data gathered over last {timePeriod}</small></Popover>}>
+      <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><Chart data={this.props.lateness.histogram} /><br/><p className="small">Data gathered over last {timePeriod}</p></Popover>}>
         <td style={{ padding: "2px", width: "50px" }}>
           <div style={{ width: "48px", height: "50px", backgroundColor: lateColor}}>
          </div>

@@ -3,7 +3,7 @@
 // With help from http://nicolashery.com/integrating-d3js-visualizations-in-a-react-app/
 
 var d3 = require('d3');
-var Palette = require('./Palette')
+var Palette = require('./Palette');
 var d3Chart = {};
 
 d3Chart.create = function(el, props, state) {
