@@ -42,7 +42,7 @@ body {
 }
 
 .navbar {
-    background-color: #cccccc;
+    background-color: $brand-primary;
 }
 
 // Panel > FormGroup
@@ -51,7 +51,11 @@ body {
   margin-bottom: 5px;
 }
 
+#findTrains {
+  background-color: $brand-primary;
+}
 // TrainInputsPanel Form Input
+
 
 .react-autosuggest {
   @extend .col-sm-11;
@@ -78,6 +82,7 @@ body {
 
   height: 20px;
 }
+
 
 @media(max-width: $screen-sm-max) {
     .leaflet-container {

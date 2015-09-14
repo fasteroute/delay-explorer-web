@@ -103,7 +103,7 @@ var TrainInputs = React.createClass({
                        wrapperClassName="col-sm-8"/>
               </div>
               <div className="col-xs-4 col-xs-offset-1">
-                  <ButtonInput wrapperClassName="col-sm-6 btn-block" style={{width: "100%"}} type="submit" onClick={this.handleSubmit}>Find Trains</ButtonInput>
+                  <ButtonInput id="findTrains" wrapperClassName="col-sm-6 btn-block" style={{width: "100%"}} type="submit" onClick={this.handleSubmit}>Find Trains</ButtonInput>
               </div>
             </div>
           </form>
