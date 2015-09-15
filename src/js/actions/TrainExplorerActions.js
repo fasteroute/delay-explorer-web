@@ -6,6 +6,10 @@ var TrainExplorerConstants = require('../constants/TrainExplorerConstants');
 
 var TrainExplorerActions = {
   loadTrainExplorer: function(fromCrs, toCrs, typeOfDays, time) {
+    if (fromCrs === undefined && toCrs === undefined) {
+      this.dispatch(TrainExplorerConstants.LOAD);
+      return
+    }
     this.dispatch(TrainExplorerConstants.LOAD);
     console.log("Starting request to API server.");
     $.ajax({

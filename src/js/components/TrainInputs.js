@@ -12,7 +12,10 @@ var TrainInputs = React.createClass({
   mixins: [NavigationMixin, React.addons.LinkedStateMixin],
 
   getInitialState: function() {
-    return {};
+    var d = new Date();
+    var n = d.toTimeString();
+
+    return { time: n.slice(0,5) };
   },
 
   componentWillMount: function() {
@@ -20,7 +23,7 @@ var TrainInputs = React.createClass({
     this.state.from = this.props.from;
     this.state.to = this.props.to;
     this.state.type = this.props.type;
-    this.state.time = this.props.time;
+    this.state.time = this.state.time ? this.state.time : this.props.time;
   },
   suggestions: function(input, callback) {
     console.log('searching for ' + input);
@@ -47,6 +50,16 @@ var TrainInputs = React.createClass({
   suggestionValue: function(suggestionObj) {
     return suggestionObj.name + " [" + suggestionObj.user_code + "]";
   },
+  onOriginChange: function(value) {
+    if (value === "") {
+      this.setState({from: "_"});
+    }
+  },
+  onDestinationChange: function(value) {
+    if (value === "") {
+      this.setState({to: "_"});
+    }
+  },
   onOriginSelected: function(suggestion, event) {
     event.preventDefault();
     if (suggestion !== null) {
@@ -70,15 +83,21 @@ var TrainInputs = React.createClass({
                      suggestionRenderer={this.suggestionRenderer}
                      suggestionValue={this.suggestionValue}
                      onSuggestionSelected={this.onOriginSelected}
-                     inputAttributes={{ className: "col-sm-12 form-control", placeholder: "London Bridge", id: "originAutoSuggest"}}/>
+                     inputAttributes={{ className: "col-sm-12 form-control",
+                                        id: "originAutoSuggest",
+                                        onChange: this.onOriginChange
+                                      }}/>
             </div>
             <div className="form-group">
-               <label className="control-label col-sm-1" htmlFor='originAutoSuggest'>To</label>
+               <label className="control-label col-sm-1" htmlFor='destinationAutoSuggest'>To</label>
                <AutoSuggest suggestions={this.suggestions}
                      suggestionRenderer={this.suggestionRenderer}
                      suggestionValue={this.suggestionValue}
                      onSuggestionSelected={this.onDestinationSelected}
-                     inputAttributes={{ className: "col-sm-12 form-control", placeholder: "East Croydon", id: "originAutoSuggest"}}/>
+                     inputAttributes={{ className: "col-sm-12 form-control",
+                                        id: "destinationAutoSuggest",
+                                        onChange: this.onDestinationChange
+                                    }}/>
             </div>
             <div className="row">
               <div className="col-xs-4">
@@ -97,7 +116,6 @@ var TrainInputs = React.createClass({
                        ref="timeInput"
                        label="Time"
                        valueLink={this.linkState('time')}
-                       placeholder="10:00"
                        labelClassName="col-sm-4"
                        wrapperClassName="col-sm-8"/>
               </div>
