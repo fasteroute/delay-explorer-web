@@ -26,11 +26,12 @@ var StationsStore = Fluxxor.createStore({
     this.loading = false;
     this.error = null;
     this.stations = payload.stations;
+    this.points = [];
     for (var i = 0; i < this.stations.length; i++) {
       this.points.push([this.stations[i].lat, this.stations[i].lon]);
     }
-
     this.emit("change");
+
   },
 
   onLoadFail: function(payload) {
