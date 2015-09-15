@@ -47,13 +47,11 @@ var TrainsGrid = React.createClass({
   },
 
   render: function() {
-    console.log("rendering TrainsGrid");
     var shouldIncludeCallingPointsGrid = false;
     if (this.state.callingPointTrain !== null) {
       shouldIncludeCallingPointsGrid = true;
     }
     var externalScope = this;
-    console.log("shouldIncludeCallingPoints = " + shouldIncludeCallingPointsGrid);
     var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
     return (
       <Panel className="TrainsPanel">

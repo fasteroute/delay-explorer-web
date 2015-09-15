@@ -13,23 +13,18 @@ var TrainsGridRow = React.createClass({
   onClick: function() {
     if (this.props.train.id === null) { return; }
 
-    console.log("isSelected = " + this.state.isSelected);
     if ( !this.state.isSelected ) {
       this.setState({ isSelected: true});
-      console.log("Changed isSelected to " + this.state.isSelected);
       this.getFlux().actions.loadCallingPoints(this.props.train.id);
     } else {
       this.setState({ isSelected: false});
-      console.log("Changed isSelected to " + this.state.isSelected);
       this.getFlux().actions.loadCallingPoints(null);
     }
   },
   onMouseOver: function() {
-    console.log("selects route" + this.props.train.route);
     this.getFlux().actions.updateRoute(this.props.train.route);
   },
   onMouseLeave: function() {
-    console.log("clears Routes");
     this.getFlux().actions.updateRoute(null);
   },
   render: function() {

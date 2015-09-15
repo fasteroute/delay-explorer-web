@@ -60,7 +60,6 @@ var TrainInputs = React.createClass({
     }
   },
   render: function() {
-    console.log("Rendering TrainInputs.");
     return (
       <div className="section" id="start">
         <Panel className="InputsPanel">

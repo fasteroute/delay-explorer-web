@@ -14,7 +14,6 @@ var TrainExplorerActions = {
       cache: false,
       success: function(data) {
         this.dispatch(TrainExplorerConstants.LOAD_SUCCESS, data);
-        console.log(data);
       }.bind(this),
       error: function(xhr, status, err) {
         console.error(status, err.toString());
@@ -35,7 +34,6 @@ var TrainExplorerActions = {
       dataType: 'json',
       cache: false,
       success: function(data) {
-        console.log(data[trainID]);
         this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, data[trainID]);
       }.bind(this),
       error: function(xhr, status, err) {
@@ -45,7 +43,6 @@ var TrainExplorerActions = {
     });
   },
   updateRoute: function(routeID) {
-    console.log("Segment store dispatches update " + routeID);
     this.dispatch(TrainExplorerConstants.UPDATE_ROUTE, routeID);
   }
 };

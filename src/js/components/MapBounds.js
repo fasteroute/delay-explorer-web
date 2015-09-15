@@ -38,7 +38,6 @@ var MapBounds = React.createClass({
         // Adjust east bounds by station width to ensure the right column is empty
 
         SE.lng = SE.lng + boundsWidth;
-
         mapBounds = L.latLngBounds([SE, NW]);
         this.props.map.fitBounds(mapBounds);
       }

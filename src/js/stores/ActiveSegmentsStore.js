@@ -19,7 +19,6 @@ var ActiveSegmentsStore = Fluxxor.createStore({
     var segments = this.flux.store('SegmentsStore').segments;
 
     var len = segments.length;
-    console.log("Starting loop");
     
     if (routeID === null) {
       for (var i = 0; i < len; i++) {
@@ -37,10 +36,8 @@ var ActiveSegmentsStore = Fluxxor.createStore({
           }
         }
       }
-    console.log(this.activeSegments);
 
     }
-    console.log("Ending loop");
     this.emit("change");
   }
 
