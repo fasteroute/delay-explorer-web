@@ -11,19 +11,21 @@ var Panel = require('react-bootstrap').Panel;
 var TrainInputs = React.createClass({
   mixins: [NavigationMixin, React.addons.LinkedStateMixin],
 
-  getInitialState: function() {
+  getTime: function() {
     var d = new Date();
     var n = d.toTimeString();
 
-    return { time: n.slice(0, 5) };
+    return n.slice(0, 5);
   },
-
+  getInitialState: function() {
+    return {};
+  },
   componentWillMount: function() {
     // Move the props from the router into the state for this component.
     this.state.from = this.props.from;
     this.state.to = this.props.to;
     this.state.type = this.props.type;
-    this.state.time = this.state.time ? this.state.time : this.props.time;
+    this.state.time = this.props.time ? this.props.time : this.getTime();
   },
   suggestions: function(input, callback) {
     console.log('searching for ' + input);
@@ -144,7 +146,7 @@ var TrainInputs = React.createClass({
     this.state.from = nextProps.from;
     this.state.to = nextProps.to;
     this.state.type = nextProps.type;
-    this.state.time = nextProps.time;
+    this.state.time = nextProps.time ? nextProps.time : this.state.time;
   }
 
 });
