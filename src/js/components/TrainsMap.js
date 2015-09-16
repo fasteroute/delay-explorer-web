@@ -68,7 +68,7 @@ var TrainsMap = React.createClass({
     return <LeafletMap center={position} zoom={this.state.zoom}>
       <TileLayer
         url={tilesUrl}
-        attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://maps.stamen.com">Stamen</a>'
+        attribution='Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
       />
       <MapBounds />
       {this.state.stations.map(function(station) {

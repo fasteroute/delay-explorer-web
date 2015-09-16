@@ -29,7 +29,7 @@ var TrainsGridRow = React.createClass({
   },
   render: function() {
     var externalScope = this;
-    var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
     var dayLen = days.length;
     var latenessCounter = 0;
     var latenessLen = this.props.train.lateness.length;
