@@ -53,10 +53,19 @@ var TrainsGrid = React.createClass({
     }
     var externalScope = this;
     var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
+    var limitationsBox = this.state.trains.length == 0 ? <tr><td colSpan="8"><Alert bsStyle="warning" style={{ textAlign: "center" }}>We can't show you what you're looking for. To understand more about the limitations of our application click <u>here</u></Alert></td></tr> : null;
+
+    if (limitationsBox !== null || this.state.error) {
+      return (
+      <Panel className="TrainsPanel">
+        {this.state.error ? <Alert bsStyle="danger">Something has gone wrong! Error: {this.state.error}</Alert> : null}
+        {limitationsBox}
+      </Panel>
+      );
+    }
     return (
       <Panel className="TrainsPanel">
         {this.state.loading ? <Alert bsStyle="info">Loading Data...</Alert> : null}
-        {this.state.error ? <Alert bsStyle="danger">{this.state.error}</Alert> : null}
         <table style={{width: "100%"}}>
           <thead>
             <th><div style={{textAlign: "center", margin: "auto"}}><span></span></div></th>
