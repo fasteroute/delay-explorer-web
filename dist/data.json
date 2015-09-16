@@ -2805,34 +2805,8 @@
                             "period": "Cancelled"
                         }
                     ]
-                }, 
-                {
-                    "day": "Sun", 
-                    "average_lateness": 10.22, 
-                    "histogram": [
-                        {
-                            "percent": 60.0, 
-                            "period": "On Time"
-                        }, 
-                        {
-                            "percent": 0.0, 
-                            "period": "15 mins"
-                        }, 
-                        {
-                            "percent": 10.0, 
-                            "period": "30 mins"
-                        }, 
-                        {
-                            "percent": 20.0, 
-                            "period": ">30 mins"
-                        }, 
-                        {
-                            "percent": 10.0, 
-                            "period": "Cancelled"
-                        }
-                    ]
                 }
-            ], 
+            ],
             "route": 0, 
             "name": "20:18 London Cannon Street", 
             "id": "n64kt7e7xpz15r07x7h5s7m766xbjr"

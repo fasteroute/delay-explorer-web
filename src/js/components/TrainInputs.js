@@ -15,7 +15,7 @@ var TrainInputs = React.createClass({
     var d = new Date();
     var n = d.toTimeString();
 
-    return { time: n.slice(0,5) };
+    return { time: n.slice(0, 5) };
   },
 
   componentWillMount: function() {

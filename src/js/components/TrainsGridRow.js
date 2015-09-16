@@ -29,15 +29,30 @@ var TrainsGridRow = React.createClass({
   },
   render: function() {
     var externalScope = this;
+    var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var dayLen = days.length;
+    var latenessCounter = 0;
+    var latenessLen = this.props.train.lateness.length;
+    var latenessArray = this.props.train.lateness;
     return (
       <tr onClick={this.props.isCallingPoint ? "" : this.onClick} onMouseOver={this.onMouseOver} onMouseLeave={this.onMouseLeave} className={this.props.isSelected ? "selected" : "" }>
         <th className="rowHeader">
         {this.props.train.name}
         {this.props.train.time ? [<br/>, <small>Scheduled at {this.props.train.time}</small>] : null}
         </th>
-        {this.props.train.lateness.map(function(lateness) {
-          return <TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>;
-        })}
+        {
+          // Here we receive a list of latenesses for each day that the service is run
+          // Since the service doesn't run on all days we need to keep track of which day to put where
+          days.map(function(day, index) {
+            if (latenessCounter < latenessArray.length && day === latenessArray[latenessCounter].day) {
+              var lateness = latenessArray[latenessCounter];
+              latenessCounter++;
+              return (<TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>);
+            } else {
+              return <TrainsGridCell key={day} lateness={null} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>;
+            }
+          })
+        }
       </tr>
     );
   }
