@@ -26,19 +26,23 @@ var TrainExplorerActions = {
     });
   },
   loadCallingPoints: function(trainID) {
-    console.log("this.dispatch(TrainExplorerConstants.LOAD_CALLING_POINTS);");
-    this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD, trainID);
-    console.log("Starting request to API server for calling points.");
     if (trainID === null) {
       this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, { train: null, callingPoints: [] });
       return;
     }
+    var trainIDCode = trainID[0];
+    var origin = trainID[1];
+    var dest = trainID[2];
+    console.log("this.dispatch(TrainExplorerConstants.LOAD_CALLING_POINTS);");
+    this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD, trainIDCode);
+    console.log("Starting request to API server for calling points.");
     $.ajax({
-      url: "/data-calling-points.json",
+      url: "http://odidemo.fstr.uk:5000/CallingPoints/" + origin + "/" + dest + "/" + trainIDCode,
       dataType: 'json',
       cache: false,
       success: function(data) {
-        this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, data[trainID]);
+        data[trainIDCode].train = trainIDCode;
+        this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, data[trainIDCode]);
       }.bind(this),
       error: function(xhr, status, err) {
         console.error(status, err.toString());

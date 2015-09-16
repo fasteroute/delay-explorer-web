@@ -38,6 +38,7 @@ var TrainExplorer = React.createClass({
     }
     if (this.props.params.to != null) {
       to = this.props.params.to;
+      shouldIncludeTrainsGrid = true;
     }
     if (this.props.params.type != null) {
       type = this.props.params.type;
@@ -48,8 +49,8 @@ var TrainExplorer = React.createClass({
     if (this.props.params.trainId != null) {
       trainId = this.props.params.trainId;
     }
-
     return (
+
       <div>
         <TrainsMap/>
         <div className="container" id="main-container">

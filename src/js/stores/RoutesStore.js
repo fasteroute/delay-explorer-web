@@ -8,7 +8,7 @@ var RoutesStore = Fluxxor.createStore({
 
   initialize: function() {
     this.routes = [];
-  
+
     this.bindActions(
       TrainExplorerConstants.LOAD, this.onLoad,
       TrainExplorerConstants.LOAD_SUCCESS, this.onLoadSuccess,

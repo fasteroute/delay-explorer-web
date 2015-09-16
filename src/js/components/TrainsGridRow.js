@@ -15,7 +15,7 @@ var TrainsGridRow = React.createClass({
 
     if ( !this.state.isSelected ) {
       this.setState({ isSelected: true});
-      this.getFlux().actions.loadCallingPoints(this.props.train.id);
+      this.getFlux().actions.loadCallingPoints([this.props.train.id, this.props.origin, this.props.destination]);
     } else {
       this.setState({ isSelected: false});
       this.getFlux().actions.loadCallingPoints(null);
