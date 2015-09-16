@@ -57,7 +57,11 @@ body {
       padding: 3px;
       height: inherit;
     }
+  }
 }
+
+.leaflet-label {
+  z-index: 1000 !important;
 }
 // Panel > FormGroup
 

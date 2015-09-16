@@ -25,6 +25,7 @@
     "jquery": "^2.1.4",
     "leaflet": "^0.7.5",
     "leaflet-label": "^0.2.1-0",
+    "leaflet.label": "leaflet/Leaflet.label",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-autosuggest": "^1.18.3",
