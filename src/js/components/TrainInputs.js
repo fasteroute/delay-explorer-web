@@ -52,12 +52,12 @@ var TrainInputs = React.createClass({
   },
   onOriginChange: function(value) {
     if (value === "") {
-      this.setState({from: "_"});
+      this.setState({from: null});
     }
   },
   onDestinationChange: function(value) {
     if (value === "") {
-      this.setState({to: "_"});
+      this.setState({to: null});
     }
   },
   onOriginSelected: function(suggestion, event) {
@@ -131,8 +131,8 @@ var TrainInputs = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    var fromInput = this.state.from;
-    var toInput = this.state.to;
+    var fromInput = this.state.from ? this.state.from : "_";
+    var toInput = this.state.to ? this.state.to : "_";
     var typeInput = this.refs.typeInput.getValue();
     var timeInput = this.refs.timeInput.getValue();
     console.log(fromInput + " " + toInput + " " + typeInput + " " + timeInput + " ");
