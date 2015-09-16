@@ -53,7 +53,7 @@ var TrainsGrid = React.createClass({
     }
     var externalScope = this;
     var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
-    var limitationsBox = this.state.trains.length == 0 ? <tr><td colSpan="8"><Alert bsStyle="warning" style={{ textAlign: "center" }}>We can't show you what you're looking for. To understand more about the limitations of our application click <u>here</u></Alert></td></tr> : null;
+    var limitationsBox = this.state.trains.length === 0 && !this.state.loading ? <tr><td colSpan="8"><Alert bsStyle="warning" style={{ textAlign: "center" }}>We can't show you what you're looking for. To understand more about the limitations of our application click <u>here</u></Alert></td></tr> : null;
 
     if (limitationsBox !== null || this.state.error) {
       return (
