@@ -97,9 +97,6 @@ var TrainExplorer = React.createClass({
             </div>
           </div>
         </div>
-        <div id="attribution">
-          <a href="http://www.nationalrail.co.uk"><img src="/img/Powered_by_NRE.png"/></a>
-        </div>
       </div>
     );
   }
