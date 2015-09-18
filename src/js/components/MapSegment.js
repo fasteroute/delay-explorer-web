@@ -63,8 +63,8 @@ var MapSegment = React.createClass({
     return (
       <div>
         {this.state.valid ?
-          [<Polyline key={key + "border"} map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} opacity={0.7} color="white" weight={9} />,
-          <Polyline key={key} map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} opacity={0.7} color={this.state.selected ? this.props.colour : defaultLineColor} />]
+          [<Polyline key={key + "border"} map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} opacity={0.7} color={this.state.selected ? "white" : "black"} weight={9} />,
+          <Polyline key={key} map={this.props.map} positions={[this.state.originLatLng, this.state.destinationLatLng]} opacity={0.7} color={this.props.colour} />]
             : null}
       </div>
     );
