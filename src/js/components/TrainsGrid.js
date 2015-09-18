@@ -55,6 +55,18 @@ var TrainsGrid = React.createClass({
     var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
     var limitationsBox = this.state.trains.length === 0 && !this.state.loading ? <tr><td colSpan="8"><Alert bsStyle="warning" style={{ textAlign: "center" }}>We can't show you what you're looking for. To understand more about the limitations of our application click <u>here</u></Alert></td></tr> : null;
 
+    // If a route has been selected and its calling points have been requested we find the routeID from the callingPoints' trainID
+    // Otherwise no route has been selected so the selectedRoute array is empty.
+    var selectedRoute = [];
+    if (this.state.callingPointTrain !== null) {
+      for (var trainIndex = 0; trainIndex < this.state.trains.length; trainIndex++) {
+        if (this.state.trains[trainIndex].id === this.state.callingPointTrain) {
+          selectedRoute.push(this.state.trains[trainIndex].route);
+          break;
+        }
+      }
+    }
+
     if (limitationsBox !== null || this.state.error) {
       return (
       <Panel className="TrainsPanel">
@@ -83,12 +95,12 @@ var TrainsGrid = React.createClass({
               if (train.id === externalScope.state.callingPointTrain) {
                 if (externalScope.state.callingPointLoading) {
                   return [
-                    <TrainsGridRow key={train.id} train={train} isSelected={true} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to}/>,
+                    <TrainsGridRow key={train.id} train={train} isSelected={true} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to} selectedRow={selectedRoute}/>,
                     alertBox
                   ];
                 } else if (externalScope.state.callingPointLoaded) {
                   return [
-                    <TrainsGridRow key={train.id} train={train} isSelected={true} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to}/>,
+                    <TrainsGridRow key={train.id} train={train} isSelected={true} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to} selectedRow={selectedRoute}/>,
                     <tr>
                     <td colSpan="8">
                     <CallingPointsGrid key={train.id + "callingPointsGrid"} train={train} callingPoints={externalScope.state.callingPoints} trainID={train.id} />
@@ -96,10 +108,10 @@ var TrainsGrid = React.createClass({
                     </tr>
                   ];
                 } else {
-                  return <TrainsGridRow key={train.id} train={train} isSelected={false} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to}/>;
+                  return <TrainsGridRow key={train.id} train={train} isSelected={false} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to} selectedRow={selectedRoute}/>;
                 }
               } else {
-                return <TrainsGridRow key={train.id} train={train} isSelected={false} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to} />;
+                return <TrainsGridRow key={train.id} train={train} isSelected={false} popoverTitle={train.name} origin={externalScope.props.from} destination={externalScope.props.to} selectedRow={selectedRoute}/>;
               }
             })}
           </tbody>

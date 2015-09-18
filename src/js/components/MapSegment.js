@@ -28,7 +28,7 @@ var MapSegment = React.createClass({
     } else {
       return {selected: false};
     }
-  },  
+  },
 
   componentWillMount: function() {
     var newState = {};

@@ -10,6 +10,9 @@ var TrainsGridRow = React.createClass({
   componentWillMount: function() {
     this.setState( { isSelected: this.props.isSelected } );
   },
+  componentDidMount: function() {
+    if (this.props.isSelected) { this.onMouseOver(); }
+  },
   onClick: function() {
     if (this.props.train.id === null) { return; }
 
@@ -22,10 +25,18 @@ var TrainsGridRow = React.createClass({
     }
   },
   onMouseOver: function() {
-    this.getFlux().actions.updateRoute(this.props.train.route);
+    if (this.props.isCallingPoint) { return; }
+
+    var selectedRoutes = this.props.selectedRow.map(function(val) { return val;});
+    if (!this.props.isSelected) {
+      selectedRoutes.push(this.props.train.route);
+    }
+    this.getFlux().actions.updateRoute(selectedRoutes);
   },
   onMouseLeave: function() {
-    this.getFlux().actions.updateRoute(null);
+    if (this.props.isCallingPoint) { return; }
+
+    this.getFlux().actions.updateRoute(this.props.selectedRow);
   },
   render: function() {
     var externalScope = this;

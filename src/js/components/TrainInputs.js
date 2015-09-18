@@ -178,8 +178,8 @@ var TrainInputs = React.createClass({
     var toInput = this.state.to ? this.state.to : "_";
     var typeInput = this.refs.typeInput.getValue();
     var timeInput = this.refs.timeInput.getValue();
-    this.setState({originText: this.refs.originSuggest.state.value})
-    this.setState({destinationText: this.refs.destinationSuggest.state.value})
+    this.setState({originText: this.refs.originSuggest.state.value});
+    this.setState({destinationText: this.refs.destinationSuggest.state.value});
     console.log(fromInput + " " + toInput + " " + typeInput + " " + timeInput + " ");
     this.transitionTo('trainsGrid', {from: fromInput, to: toInput, type: typeInput, time: timeInput});
   },
