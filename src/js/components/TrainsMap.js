@@ -29,7 +29,8 @@ var pinIcon = L.icon({
     iconUrl: 'pin.png',
     iconSize: [42, 42],
     iconAnchor: [21, 42],
-    popupAnchor: [0, -39]
+    popupAnchor: [0, -39],
+    labelAnchor: [10,-30]
 });
 
 

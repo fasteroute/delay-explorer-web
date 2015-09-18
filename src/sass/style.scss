@@ -50,7 +50,6 @@ body {
   top: -40px;
   z-index: 1000;
   height: 40px;
-  //margin-bottom: -50px;
   a {
     height: inherit;
     img {
@@ -62,6 +61,8 @@ body {
 
 .leaflet-label {
   z-index: 1000 !important;
+  border-color: rgba(7, 14, 255, 0.44) !important;
+  background: white !important;
 }
 // Panel > FormGroup
 
