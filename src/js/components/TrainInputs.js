@@ -150,8 +150,8 @@ var TrainInputs = React.createClass({
                        valueLink={this.linkState('type')}
                        labelClassName="col-sm-3"
                        wrapperClassName="col-sm-9">
-                  <option value="weekdays">Week Days</option>
-                  <option value="weekends">Week Ends</option>
+                  <option value="weekdays">Weekdays</option>
+                  <option value="weekends">Weekends</option>
                 </Input>
               </div>
               <div className="col-xs-3">
