@@ -15,8 +15,8 @@ var L = require('leaflet');
 var LeafletLabel = require('leaflet.label');
 var Marker = require('react-leaflet').Marker;
 var Polyline = require('react-leaflet').Polyline;
-var Popup = require('react-leaflet').Popup;
 var TileLayer = require('react-leaflet').TileLayer;
+
 
 // Components
 var MapSegment = require('./MapSegment.js');
@@ -31,6 +31,7 @@ var pinIcon = L.icon({
     iconAnchor: [21, 42],
     popupAnchor: [0, -39]
 });
+
 
 var TrainsMap = React.createClass({
 
@@ -65,13 +66,11 @@ var TrainsMap = React.createClass({
   },
 
   markerAddedToMap: function(event) {
-    console.log(event);
     var marker = event.target;
     marker.bindLabel(marker.options.stationName, {
       direction: 'auto'
     });
   },
-
   render: function() {
     var position = [this.state.lat, this.state.lng];
     var actuallyThis = this;
@@ -84,9 +83,6 @@ var TrainsMap = React.createClass({
       {this.state.stations.map(function(station) {
         return (
           <Marker key={station.id} icon={pinIcon} position={[station.lat, station.lon]} stationName={station.name} onLeafletAdd={actuallyThis.markerAddedToMap}>
-            <Popup>
-              <h4>{station.name}</h4>
-            </Popup>
           </Marker>);
       })}
       {this.state.segments.map(function(segment) {

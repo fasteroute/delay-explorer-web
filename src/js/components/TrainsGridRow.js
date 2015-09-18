@@ -27,7 +27,7 @@ var TrainsGridRow = React.createClass({
   onMouseOver: function() {
     if (this.props.isCallingPoint) { return; }
 
-    var selectedRoutes = this.props.selectedRow.map(function(val) { return val;});
+    var selectedRoutes = this.props.selectedRow.map(function(val) { return val; });
     if (!this.props.isSelected) {
       selectedRoutes.push(this.props.train.route);
     }
