@@ -70,6 +70,7 @@ var TrainInputs = React.createClass({
     return (
       <div>  
         <span>{ suggestion.name + " [" + suggestion.user_code + "]"}</span>
+        <img src="/img/transparent.png" className="overlayimage" />
         <img src="/img/nr.png" className="suggestion_icon" />
       </div>
     );
