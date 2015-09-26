@@ -22,8 +22,8 @@ var TrainExplorer = React.createClass({
     } else {
       return {inInitialPage: false};
     }
-
   },
+
   componentWillMount: function() {
     this.triggerDataLoad(this.props.params.from, this.props.params.to, this.props.params.type, this.props.params.time);
   },
@@ -33,7 +33,7 @@ var TrainExplorer = React.createClass({
   },
 
   closeModal: function() {
-    this.setState({isInitialPage: false});
+    this.setState({isModalVisible: false});
   },
 
   triggerDataLoad: function(from, to, type, time) {
@@ -68,7 +68,7 @@ var TrainExplorer = React.createClass({
     return (
 
       <div>
-        <Modal show={this.state.isInitialPage} onHide={this.closeModal}>
+        <Modal show={this.state.isModalVisible} onHide={this.closeModal}>
           <Modal.Header>
             <Modal.Title>UK Rail Reliability Explorer</Modal.Title>
           </Modal.Header>
