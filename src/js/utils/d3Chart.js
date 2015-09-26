@@ -84,6 +84,7 @@ d3Chart._drawHistogram = function(el, state) {
   var xAxis = d3.svg.axis()
     .scale(scales.x)
     .ticks(5)
+    .tickFormat(function(d) { return d + "%"; })
     .orient("bottom");
 
   svg.append("g")
