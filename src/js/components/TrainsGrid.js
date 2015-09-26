@@ -53,7 +53,7 @@ var TrainsGrid = React.createClass({
     }
     var externalScope = this;
     var alertBox = this.state.callingPointLoading ? <tr><td colSpan="8"><Alert bsStyle="info" style={{ textAlign: "center" }}>Loading Data...</Alert></td></tr> : null;
-    var limitationsBox = this.state.trains.length === 0 && !this.state.loading ? <tr><td colSpan="8"><Alert bsStyle="warning" style={{ textAlign: "center" }}>We can't show you what you're looking for. To understand more about the limitations of our application click <u>here</u></Alert></td></tr> : null;
+    var limitationsBox = this.state.trains.length === 0 && !this.state.loading ? <Alert bsStyle="warning" style={{ textAlign: "center", margin: "0 auto" }}>Sorry, we cannot show you what you're looking for. <u>Why?</u></Alert> : null;
 
     // If a route has been selected and its calling points have been requested we find the routeID from the callingPoints' trainID
     // Otherwise no route has been selected so the selectedRoute array is empty.
