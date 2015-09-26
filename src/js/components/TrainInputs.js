@@ -109,7 +109,7 @@ var TrainInputs = React.createClass({
         <Panel className="InputsPanel">
           <form className="form-horizontal">
              <div className="form-group">
-               <label className="control-label col-sm-1" htmlFor='originAutoSuggest'>From</label>
+               <label className="control-label col-sm-1 control-label-left" htmlFor='originAutoSuggest'>From</label>
                <AutoSuggest suggestions={this.suggestions}
                      suggestionRenderer={this.suggestionRenderer}
                      suggestionValue={this.suggestionValue}
@@ -124,7 +124,7 @@ var TrainInputs = React.createClass({
                                       />
             </div>
             <div className="form-group">
-               <label className="control-label col-sm-1" htmlFor='destinationAutoSuggest'>To</label>
+               <label className="control-label col-sm-1 control-label-left" htmlFor='destinationAutoSuggest'>To</label>
                <AutoSuggest suggestions={this.suggestions}
                      suggestionRenderer={this.suggestionRenderer}
                      suggestionValue={this.suggestionValue}
@@ -142,9 +142,9 @@ var TrainInputs = React.createClass({
               <div className="col-xs-4 col-md-5 col-lg-4">
                 <Input type="select"
                        ref="typeInput"
-                       label="Type"
+                       label="On"
                        valueLink={this.linkState('type')}
-                       labelClassName="col-sm-3 col-md-2 col-lg-3"
+                       labelClassName="col-sm-3 col-md-2 col-lg-3 control-label-left"
                        wrapperClassName="col-sm-9 train-input-type-box">
                   <option value="weekdays">Weekdays</option>
                   <option value="weekends">Weekends</option>
@@ -153,7 +153,7 @@ var TrainInputs = React.createClass({
               <div className="col-xs-3 col-md-4 col-lg-3">
                 <Input type="text"
                        ref="timeInput"
-                       label="Time"
+                       label="At"
                        valueLink={this.linkState('time')}
                        labelClassName="col-sm-4"
                        wrapperClassName="col-sm-8"/>
