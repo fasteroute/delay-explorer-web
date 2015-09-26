@@ -30,7 +30,7 @@ var pinIcon = L.icon({
     iconSize: [42, 42],
     iconAnchor: [21, 42],
     popupAnchor: [0, -39],
-    labelAnchor: [10,-30]
+    labelAnchor: [10, -30]
 });
 
 
