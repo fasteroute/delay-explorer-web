@@ -13,7 +13,8 @@ var TrainExplorerActions = {
     this.dispatch(TrainExplorerConstants.LOAD);
     console.log("Starting request to API server.");
     $.ajax({
-      url: "/data.json",
+      url: "http://odidemo.fstr.uk:5000/TrainExplorer/" + fromCrs + "/" + toCrs + "/" + typeOfDays + "/" + time,
+      //url: "/data.json",
       dataType: 'json',
       cache: false,
       success: function(data) {

@@ -48,11 +48,11 @@ var TrainExplorer = React.createClass({
     var time = null;
     var trainId = null;
     var shouldIncludeTrainsGrid = false;
-    if (this.props.params.from !== null || this.props.params.from !== "_") {
+    if (this.props.params.from !== undefined && this.props.params.from !== "_") {
       from = this.props.params.from;
       shouldIncludeTrainsGrid = true;
     }
-    if (this.props.params.to !== null || this.props.params.to !== "_") {
+    if (this.props.params.to !== undefined && this.props.params.to !== "_") {
       to = this.props.params.to;
       shouldIncludeTrainsGrid = true;
     }

@@ -10,6 +10,7 @@ var CallingPointsStore = Fluxxor.createStore({
     this.callingPoints = [];
     this.train = null;
     this.loaded = false;
+    this.loading = false;
     this.bindActions(
       TrainExplorerConstants.CALLING_POINTS_LOAD, this.onLoad,
       TrainExplorerConstants.CALLING_POINTS_LOAD_SUCCESS, this.onLoadSuccess,
