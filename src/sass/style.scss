@@ -25,7 +25,9 @@ body {
 
 #main-container {
     margin-bottom: 50px;
-    margin-right: 0;
+    @media(min-width: $screen-md-min) {
+        margin-right: 0;
+    }
 }
 
 #left-column {
