@@ -26,7 +26,7 @@ var MapBounds = require('./MapBounds');
 var tilesUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
 
 var pinIcon = L.icon({
-    iconUrl: 'pin.png',
+    iconUrl: 'img/pin.png',
     iconSize: [42, 42],
     iconAnchor: [21, 42],
     popupAnchor: [0, -39],
