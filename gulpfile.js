@@ -16,6 +16,7 @@ var config = {
     devBaseUrl: 'http://localhost',
     paths: {
         html: './src/*.html',
+        img: './src/img/*',
         js: './src/**/*.js',
         sassDir: './src/sass/**/*.scss',
         sassPaths: [
@@ -65,6 +66,9 @@ gulp.task('open', ['connect'], function() {
 gulp.task('html', function() {
     gulp.src(config.paths.html)
         .pipe(gulp.dest(config.paths.dist))
+        .pipe(connect.reload());
+    gulp.src(config.paths.img)
+        .pipe(gulp.dest(config.paths.dist + '/img/'))
         .pipe(connect.reload());
 });
 
