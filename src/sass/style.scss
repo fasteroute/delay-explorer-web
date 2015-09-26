@@ -252,3 +252,9 @@ table.callingPoints {
         width: 50px;
     }
 }
+
+.train-input-type-box {
+        @media(min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            margin-left: 8px;
+    }
+}

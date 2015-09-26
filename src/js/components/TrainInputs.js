@@ -139,18 +139,18 @@ var TrainInputs = React.createClass({
                                     />
             </div>
             <div className="row">
-              <div className="col-xs-4">
+              <div className="col-xs-4 col-md-5 col-lg-4">
                 <Input type="select"
                        ref="typeInput"
                        label="Type"
                        valueLink={this.linkState('type')}
-                       labelClassName="col-sm-3"
-                       wrapperClassName="col-sm-9">
+                       labelClassName="col-sm-3 col-md-2 col-lg-3"
+                       wrapperClassName="col-sm-9 train-input-type-box">
                   <option value="weekdays">Weekdays</option>
                   <option value="weekends">Weekends</option>
                 </Input>
               </div>
-              <div className="col-xs-3">
+              <div className="col-xs-3 col-md-4 col-lg-3">
                 <Input type="text"
                        ref="timeInput"
                        label="Time"
@@ -158,7 +158,7 @@ var TrainInputs = React.createClass({
                        labelClassName="col-sm-4"
                        wrapperClassName="col-sm-8"/>
               </div>
-              <div className="col-xs-4 col-xs-offset-1">
+              <div className="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-4 col-lg-offset-1">
                   <ButtonInput id="findTrains" wrapperClassName="col-sm-6 btn-block" style={{width: "100%"}} type="submit" onClick={this.handleSubmit}>Find Trains</ButtonInput>
               </div>
             </div>
