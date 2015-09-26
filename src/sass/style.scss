@@ -82,26 +82,39 @@ body {
 
 .react-autosuggest__suggestions {
   list-style-type: none;
-  @extend .col-sm-12;
+  //@extend .col-sm-12;
   z-index: 1000;
   position: absolute;
   top: 100%;
   background-color: white;
-  left: 0;
-  margin: 5px -15px;
-  @include vendor-prefix(box-shadow, 0 0px 40px 10px);
+  padding: 0;
+  width: inherit;
+  //left: 0;
+  //margin: 5px -15px;
+  @include vendor-prefix(box-shadow, 0 15px 50px 10px);
 }
 
 .react-autosuggest__suggestion {
   @extend .col-sm-12;
 
   * {
-    height: 20px;
+    height: 35px;
   }
 
-  height: 20px;
+  span {
+
+  line-height: 35px;
+  }
+
+  height: 35px;
+  border-bottom-color: #DEDEDE;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
 }
 
+.react-autosuggest__suggestion--focused {
+  background-color: #eee;
+}
 
 @media(max-width: $screen-sm-max) {
     .leaflet-container {
