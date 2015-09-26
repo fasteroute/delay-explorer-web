@@ -68,13 +68,9 @@ var TrainInputs = React.createClass({
   },
   suggestionRenderer: function(suggestion, input) {
     return (
-      <div className="row">
-        <div className="col-sm-1">
-          <img src="/img/nr.png"/>
-        </div>
-        <div className="col-sm-11">
-          <span>{ suggestion.name + " [" + suggestion.user_code + "]"}</span>
-        </div>
+      <div>  
+        <span>{ suggestion.name + " [" + suggestion.user_code + "]"}</span>
+        <img src="/img/nr.png" className="suggestion_icon" />
       </div>
     );
   },

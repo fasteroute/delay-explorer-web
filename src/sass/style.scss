@@ -76,40 +76,43 @@ body {
 // TrainInputsPanel Form Input
 
 
+/*
+ * Stations Auto-Suggest.
+ */
 .react-autosuggest {
   @extend .col-sm-11;
 }
 
 .react-autosuggest__suggestions {
   list-style-type: none;
-  //@extend .col-sm-12;
   z-index: 1000;
   position: absolute;
   top: 100%;
   background-color: white;
-  padding: 0;
   width: inherit;
-  //left: 0;
-  //margin: 5px -15px;
+  padding-left: 0px;
+  overflow: scroll-y;
   @include vendor-prefix(box-shadow, 0 15px 50px 10px);
 }
 
 .react-autosuggest__suggestion {
-  @extend .col-sm-12;
+  padding-left: 15px;
+  height: 36px;
+  border-bottom: #dedede solid thin;
 
   * {
-    height: 35px;
+    height: 36px;
   }
 
   span {
-
-  line-height: 35px;
+    line-height: 36px;
   }
 
-  height: 35px;
-  border-bottom-color: #DEDEDE;
-  border-bottom-style: solid;
-  border-bottom-width: thin;
+  .suggestion_icon {
+      float: right;
+      padding-right: 15px;
+      height: 36px;
+  }
 }
 
 .react-autosuggest__suggestion--focused {
