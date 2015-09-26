@@ -73,6 +73,9 @@ body {
     height: 50px;
     z-index: 1030;
     margin-bottom: 0;
+    @media(max-width: $screen-sm-max) {
+        z-index: 1;
+    }
     @media(min-width: $screen-md-min) {
         position: fixed;
     }
