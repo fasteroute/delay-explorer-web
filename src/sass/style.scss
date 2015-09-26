@@ -96,6 +96,21 @@ body {
     }
 }
 
+.top-navbar {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 50px;
+    z-index: 1030;
+    @media(max-width: $screen-sm-max) {
+        z-index: 1;
+        position: absolute;
+    }
+    @media(min-width: $screen-md-min) {
+        position: fixed;
+    }
+}
+
 .leaflet-label {
   z-index: 1000 !important;
   border-color: rgba(7, 14, 255, 0.44) !important;

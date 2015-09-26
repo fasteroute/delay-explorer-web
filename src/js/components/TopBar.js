@@ -6,7 +6,7 @@ var TopBar = React.createClass({
 
     render: function() {
         return (
-          <nav className="navbar navbar-default navbar-fixed-top">
+          <nav className="navbar navbar-default top-navbar">
             <div className="container-fluid">
             </div>
           </nav>
