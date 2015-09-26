@@ -110,7 +110,8 @@ body {
   background-color: white;
   width: inherit;
   padding-left: 0px;
-  overflow: scroll-y;
+  overflow: scroll;
+  max-height: 300px;
   @include vendor-prefix(box-shadow, 0 15px 50px 10px);
 }
 
