@@ -43,6 +43,21 @@ body {
   padding: 5px;
 }
 
+.full-version-info .panel-body {
+    padding: 5px;
+
+    .alert {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.full-version-info {
+    @media(min-width: $screen-md-min) {
+        display: none;
+    }
+}
+
 .navbar {
     background-color: $brand-primary;
 }

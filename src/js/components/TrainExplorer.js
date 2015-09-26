@@ -10,9 +10,10 @@ var TrainsGrid = require('./TrainsGrid');
 var TrainsMap = require('./TrainsMap');
 
 // Third Party
-
-var Modal = require('react-bootstrap').Modal;
+var Alert = require('react-bootstrap').Alert;
 var Button = require('react-bootstrap').Button;
+var Modal = require('react-bootstrap').Modal;
+var Panel = require('react-bootstrap').Panel;
 
 var TrainExplorer = React.createClass({
   mixins: [FluxMixin, StateMixin],
@@ -92,6 +93,9 @@ var TrainExplorer = React.createClass({
             <div className="col-md-6" id="left-column">
             </div>
             <div className="col-md-6" id="right-column">
+              <Panel className="full-version-info">
+                <Alert bsStyle="info">This is the lite version of the Delay Explorer. Please use a device with a larger screen to see delay information displayed on a map.</Alert>
+              </Panel>
               <TrainInputs from={from} to={to} type={type} time={time} />
               {shouldIncludeTrainsGrid ? <TrainsGrid from={from} to={to} type={type} time={time} trainId={trainId}/> : false}
             </div>
