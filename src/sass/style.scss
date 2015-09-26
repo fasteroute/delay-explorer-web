@@ -216,4 +216,39 @@ table.callingPoints {
   }
 }
 
+.trains-grid-cell-outer-block {
+    padding: 2px;
+    width: 50px;
 
+    @media(min-width: $screen-md-min) {
+        width: 36px;
+    }
+    @media(min-width: $screen-lg-min) {
+        width: 50px;
+    }
+}
+
+.trains-grid-cell-inner-block {
+    width: 48px;
+    height: 50px;
+    
+    @media(min-width: $screen-md-min) {
+        width: 34px;
+    }
+    @media(min-width: $screen-lg-min) {
+        width: 48px;
+    }
+}
+
+.trains-grid-cell-header {
+    width: 50px;
+    margin: auto;
+    text-align: center;
+
+    @media(min-width: $screen-md-min) {
+        width: 36px;
+    }
+    @media(min-width: $screen-lg-min) {
+        width: 50px;
+    }
+}

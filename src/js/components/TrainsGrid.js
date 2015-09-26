@@ -81,13 +81,13 @@ var TrainsGrid = React.createClass({
         <table style={{width: "100%"}}>
           <thead>
             <th><div style={{textAlign: "center", margin: "auto"}}><span></span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>M</span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>T</span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>W</span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>T</span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>F</span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>S</span></div></th>
-            <th><div style={{width: "50px", textAlign: "center", margin: "auto"}}><span>S</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>M</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>T</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>W</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>T</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>F</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>S</span></div></th>
+            <th><div className="trains-grid-cell-header"><span>S</span></div></th>
           </thead>
           <tbody>
             {this.state.trains.map(function(train) {

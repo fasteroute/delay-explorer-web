@@ -15,8 +15,8 @@ var TrainsGridCell = React.createClass({
       lateColor = "#b5b5b5"; // grey
       return (
         <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><p>This train does not run on this day</p><p className="small">Data gathered over last {timePeriod}</p></Popover>}>
-          <td style={{ padding: "2px", width: "50px" }}>
-            <div style={{ width: "48px", height: "50px", backgroundColor: lateColor}}>
+          <td className="trains-grid-cell-outer-block">
+            <div className="trains-grid-cell-inner-block" style={{backgroundColor: lateColor}}>
            </div>
           </td>
         </OverlayTrigger>
@@ -26,8 +26,8 @@ var TrainsGridCell = React.createClass({
     }
     return (
       <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><Chart data={this.props.lateness.histogram} /><p className="small">Data gathered over last {timePeriod}</p></Popover>}>
-        <td style={{ padding: "2px", width: "50px" }}>
-          <div style={{ width: "48px", height: "50px", backgroundColor: lateColor}}>
+        <td className="trains-grid-cell-outer-block">
+          <div className="trains-grid-cell-inner-block" style={{backgroundColor: lateColor}}>
          </div>
         </td>
       </OverlayTrigger>
