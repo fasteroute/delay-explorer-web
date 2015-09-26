@@ -113,6 +113,7 @@ body {
     margin-bottom: 0;
     @media(max-width: $screen-sm-max) {
         z-index: 1;
+        height: inherit;
     }
     @media(min-width: $screen-md-min) {
         position: fixed;
