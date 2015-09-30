@@ -13,7 +13,7 @@ var TrainExplorerActions = {
     this.dispatch(TrainExplorerConstants.LOAD);
     console.log("Starting request to API server.");
     $.ajax({
-      url: "http://odidemo.fstr.uk:5000/TrainExplorer/" + fromCrs + "/" + toCrs + "/" + typeOfDays + "/" + time,
+      url: "http://localhost:5000/TrainExplorer/" + fromCrs + "/" + toCrs + "/" + typeOfDays + "/" + time,
       //url: "/data.json",
       dataType: 'json',
       cache: false,
@@ -38,7 +38,7 @@ var TrainExplorerActions = {
     this.dispatch(TrainExplorerConstants.CALLING_POINTS_LOAD, trainIDCode);
     console.log("Starting request to API server for calling points.");
     $.ajax({
-      url: "http://odidemo.fstr.uk:5000/CallingPoints/" + origin + "/" + dest + "/" + trainIDCode,
+      url: "http://localhost:5000/CallingPoints/" + origin + "/" + dest + "/" + trainIDCode,
       dataType: 'json',
       cache: false,
       success: function(data) {
