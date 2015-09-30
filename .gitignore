@@ -1,4 +1,2 @@
 node_modules
 dist/*
-!dist/data.json
-!dist/data-calling-points.json
