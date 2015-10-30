@@ -9,6 +9,10 @@ $body-bg: #ccc;
 
 @import "bootstrap";
 
+// Makes iOS respond to click events
+* {cursor:pointer;}
+
+
 #helpModal.modal.in,
 #helpModal.modal.in + .modal-backdrop.in {
     @media(max-width: $screen-sm-max) {
