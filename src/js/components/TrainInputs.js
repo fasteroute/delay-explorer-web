@@ -10,6 +10,7 @@ var $ = require('jquery');
 var ButtonInput = require('react-bootstrap').ButtonInput;
 var Input = require('react-bootstrap').Input;
 var Panel = require('react-bootstrap').Panel;
+var Alert = require('react-bootstrap').Alert;
 
 var TrainInputs = React.createClass({
   mixins: [
@@ -125,6 +126,11 @@ var TrainInputs = React.createClass({
                                       />
             </div>
             <div className="form-group">
+              <div className="form-invalid">
+                {this.state.formStationError === true ? <Alert bsStyle="danger">Please choose at least <strong>one</strong> station.</Alert> : null}
+              </div>
+            </div>
+            <div className="form-group">
                <label className="control-label col-sm-1 control-label-left" htmlFor='destinationAutoSuggest'>To</label>
                <AutoSuggest suggestions={this.suggestions}
                      suggestionRenderer={this.suggestionRenderer}
@@ -139,30 +145,37 @@ var TrainInputs = React.createClass({
                      ref="destinationSuggest"
                                     />
             </div>
-            <div className="row">
-              <div className="col-xs-4 col-md-5 col-lg-4">
-                <Input type="select"
-                       ref="typeInput"
-                       label="On"
-                       valueLink={this.linkState('type')}
-                       labelClassName="col-sm-3 col-md-2 col-lg-3 control-label-left"
-                       wrapperClassName="col-sm-9 train-input-type-box">
-                  <option value="weekdays">Weekdays</option>
-                  <option value="weekends">Weekends</option>
-                </Input>
-              </div>
-              <div className="col-xs-3 col-md-4 col-lg-3">
-                <Input type="text"
-                       ref="timeInput"
-                       label="At"
-                       valueLink={this.linkState('time')}
-                       labelClassName="col-sm-4"
-                       wrapperClassName="col-sm-8"/>
-              </div>
-              <div className="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-4 col-lg-offset-1">
-                  <ButtonInput id="findTrains" wrapperClassName="col-sm-6 btn-block" style={{width: "100%"}} type="submit" onClick={this.handleSubmit}>Find Trains</ButtonInput>
+            <div className="form-group">
+              <div className="form-invalid">
+              {this.state.formTimeError === true ? <Alert bsStyle="danger">Please enter time in <strong>hh:mm</strong> format.</Alert> : null}
               </div>
             </div>
+            <div className="form-group">
+              <div>
+                <div className="col-xs-4 col-md-5 col-lg-4">
+                  <Input type="select"
+                         ref="typeInput"
+                         label="On"
+                         valueLink={this.linkState('type')}
+                         labelClassName="col-sm-3 col-md-2 col-lg-3 control-label-left"
+                         wrapperClassName="col-sm-9 train-input-type-box">
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                  </Input>
+                </div>
+                <div className="col-xs-3 col-md-4 col-lg-3">
+                  <Input type="text"
+                         ref="timeInput"
+                         label="At"
+                         valueLink={this.linkState('time')}
+                         labelClassName="col-sm-4"
+                         wrapperClassName="col-sm-8"/>
+                </div>
+                <div className="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-4 col-lg-offset-1">
+                    <ButtonInput id="findTrains" wrapperClassName="col-sm-6 btn-block" style={{width: "100%"}} type="submit" onClick={this.handleSubmit}>Find Trains</ButtonInput>
+                </div>
+             </div>
+           </div>
           </form>
         </Panel>
       </div>
@@ -175,19 +188,29 @@ var TrainInputs = React.createClass({
     var toInput = this.state.to ? this.state.to : "_";
     var typeInput = this.refs.typeInput.getValue();
     var timeInput = this.refs.timeInput.getValue();
+    var formTimeError = false;
+    var formStationError = false;
     if (timeInput === "" || timeInput === null || this.validateTime(timeInput) === false) {
-      alert("Please enter a valid time in the format hh:mm");
+      this.setState({formTimeError: true});
       this.refs.timeInput.props.valueLink.requestChange(this.getTime());
-      return;
+      formTimeError = true;
     } else {
       // Correct time format (if needed) and update time input field.
+      this.setState({formTimeError: undefined});
       timeInput = this.correctTimeFormat(timeInput);
       this.refs.timeInput.props.valueLink.requestChange(timeInput);
     }
     if (fromInput === "_" && toInput === "_") {
-      alert("Please enter either an origin station, a destination station, or both");
+      this.setState({formStationError: true});
+      formStationError = true;
+    } else {
+      this.setState({formStationError: undefined});
+    }
+    if (formTimeError === true || formStationError === true) {
+      console.log("errors", this.state);
       return;
     }
+
     this.setState({originText: this.refs.originSuggest.state.value});
     this.setState({destinationText: this.refs.destinationSuggest.state.value});
     console.log(fromInput + " " + toInput + " " + typeInput + " " + timeInput + " ");

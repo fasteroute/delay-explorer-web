@@ -146,6 +146,10 @@ body {
   margin-bottom: 5px;
 }
 
+div.form-invalid {
+  margin: 0 15px -15px 15px;
+}
+
 #findTrains {
   background-color: $brand-primary;
 }
