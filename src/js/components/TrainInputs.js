@@ -194,7 +194,7 @@ var TrainInputs = React.createClass({
     this.transitionTo('trainsGrid', {from: fromInput, to: toInput, type: typeInput, time: timeInput});
   },
   validateTime: function(timeString) {
-    var timeArray = timeString.split(":");
+    var timeArray = timeString.split(/[:\.]+/);
     if (timeArray.length !== 2) { return false; }
     var hr = parseInt(timeArray[0]);
     var min = parseInt(timeArray[1]);
@@ -205,7 +205,7 @@ var TrainInputs = React.createClass({
     return true;
   },
   correctTimeFormat: function(timeString) {
-    var timeArray = timeString.split(":");
+    var timeArray = timeString.split(/[:\.]+/);
     var hr = timeArray[0];
     var min = timeArray[1];
     if (hr.length !== 2) { hr = "0" + hr; }
