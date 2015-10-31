@@ -68,7 +68,7 @@ var TrainInputs = React.createClass({
   },
   suggestionRenderer: function(suggestion, input) {
     return (
-      <div>  
+      <div>
         <span>{ suggestion.name + " [" + suggestion.user_code + "]"}</span>
         <img src="/img/transparent.png" className="overlayimage" />
         <img src="/img/nr.png" className="suggestion_icon" />
@@ -175,12 +175,43 @@ var TrainInputs = React.createClass({
     var toInput = this.state.to ? this.state.to : "_";
     var typeInput = this.refs.typeInput.getValue();
     var timeInput = this.refs.timeInput.getValue();
+    if (timeInput === "" || timeInput === null || this.validateTime(timeInput) === false) {
+      alert("Please enter a valid time in the format hh:mm");
+      this.refs.timeInput.props.valueLink.requestChange(this.getTime());
+      return;
+    } else {
+      // Correct time format (if needed) and update time input field.
+      timeInput = this.correctTimeFormat(timeInput);
+      this.refs.timeInput.props.valueLink.requestChange(timeInput);
+    }
+    if (fromInput === "_" && toInput === "_") {
+      alert("Please enter either an origin station, a destination station, or both");
+      return;
+    }
     this.setState({originText: this.refs.originSuggest.state.value});
     this.setState({destinationText: this.refs.destinationSuggest.state.value});
     console.log(fromInput + " " + toInput + " " + typeInput + " " + timeInput + " ");
     this.transitionTo('trainsGrid', {from: fromInput, to: toInput, type: typeInput, time: timeInput});
   },
+  validateTime: function(timeString) {
+    var timeArray = timeString.split(":");
+    if (timeArray.length !== 2) { return false; }
+    var hr = parseInt(timeArray[0]);
+    var min = parseInt(timeArray[1]);
 
+    if (isNaN(hr) || hr > 23 || hr < 0) { return false; }
+    if (isNaN(min) || min > 59 || min < 0) { return false; }
+
+    return true;
+  },
+  correctTimeFormat: function(timeString) {
+    var timeArray = timeString.split(":");
+    var hr = timeArray[0];
+    var min = timeArray[1];
+    if (hr.length !== 2) { hr = "0" + hr; }
+    if (min.length !== 2) { min = "0" + min; }
+    return hr + ":" + min;
+  },
   componentWillReceiveProps: function(nextProps) {
     // Received new props from the router. Need to update the state of the component.
     this.state.from = nextProps.from;
