@@ -9,12 +9,12 @@ var Palette = require('../utils/Palette');
 var TrainsGridCell = React.createClass({
   render: function() {
 
-    var timePeriod = "4 weeks";
+    var timePeriod = this.props.timePeriod;
     var lateColor;
     if (this.props.lateness === null ) {
       lateColor = "#b5b5b5"; // grey
       return (
-        <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><p>This train does not run on this day</p><p className="small">Data gathered over last {timePeriod}</p></Popover>}>
+        <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><p>This train does not run on this day</p><p className="small">{timePeriod}</p></Popover>}>
           <td className="trains-grid-cell-outer-block">
             <div className="trains-grid-cell-inner-block" style={{backgroundColor: lateColor}}>
            </div>
@@ -25,7 +25,7 @@ var TrainsGridCell = React.createClass({
       lateColor = Palette.color(this.props.lateness.average_lateness);
     }
     return (
-      <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><Chart data={this.props.lateness.histogram} /><p className="small">Data gathered over last {timePeriod}</p></Popover>}>
+      <OverlayTrigger trigger={['hover', 'focus']} placement='top' overlay={<Popover title={this.props.popoverTitle}><Chart data={this.props.lateness.histogram} /><p className="small">{timePeriod}</p></Popover>}>
         <td className="trains-grid-cell-outer-block">
           <div className="trains-grid-cell-inner-block" style={{backgroundColor: lateColor}}>
          </div>
