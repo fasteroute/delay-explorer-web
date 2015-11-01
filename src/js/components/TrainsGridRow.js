@@ -58,9 +58,9 @@ var TrainsGridRow = React.createClass({
             if (latenessCounter < latenessArray.length && day === latenessArray[latenessCounter].day) {
               var lateness = latenessArray[latenessCounter];
               latenessCounter++;
-              return (<TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>);
+              return (<TrainsGridCell key={lateness.day} lateness={lateness} isSelected={false} popoverTitle={externalScope.props.popoverTitle} timePeriod={externalScope.props.train.period}/>);
             } else {
-              return <TrainsGridCell key={day} lateness={null} isSelected={false} popoverTitle={externalScope.props.popoverTitle}/>;
+              return <TrainsGridCell key={day} lateness={null} isSelected={false} popoverTitle={externalScope.props.popoverTitle} timePeriod={externalScope.props.train.period} />;
             }
           })
         }
